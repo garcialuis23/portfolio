@@ -202,16 +202,6 @@ const Header = () => {
                 {language === 'es' ? 'EN' : 'ES'}
               </span>
             </button>
-
-            {/* Download CV */}
-            <a 
-              href="/cv.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn btn-primary btn-sm"
-            >
-              {t.descargarCV}
-            </a>
           </div>
 
           {/* Mobile Menu Button */}
