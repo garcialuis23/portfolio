@@ -26,6 +26,18 @@ body {
   overflow-x: hidden;
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /* === TIPOGRAFÍA GLOBAL === */
 h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-bold);
