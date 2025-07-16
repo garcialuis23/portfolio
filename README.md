@@ -111,9 +111,37 @@ npm run lint         # Ejecutar ESLint
 
 ## 🎨 Sistema de Design
 
-El proyecto utilizará un sistema de design basado en **CSS Variables** para garantizar consistencia visual. 
+El proyecto utiliza una paleta profesional y minimalista basada en variables CSS:
 
-> 🚧 **En desarrollo** - Las variables CSS y tokens de design se implementarán en las próximas iteraciones del proyecto.
+```css
+:root {
+  /* Backgrounds */
+  --bg-primary: #0F172A;      /* Fondo general */
+  --bg-secondary: #1E293B;    /* Tarjetas / bloques */
+  --bg-card: #1E293B;         /* Tarjetas / bloques */
+
+  /* Colores principales */
+  --primary: #3B82F6;         /* Botones / enlaces hover */
+  --primary-hover: #2563EB;   /* Hover botones */
+  --accent: #60A5FA;          /* Detalles / íconos hover */
+  --accent-hover: #93C5FD;    /* Hover detalles */
+
+  /* Textos */
+  --text-primary: #F8FAFC;    /* Texto principal */
+  --text-secondary: #CBD5E1;  /* Texto menor, detalles */
+  --text-muted: #64748B;      /* Texto menos importante */
+
+  /* Estados */
+  --success: #10B981;         /* Verde éxito */
+  --warning: #F59E0B;         /* Amarillo advertencia */
+  --error: #EF4444;           /* Rojo error */
+
+  /* Bordes */
+  --border: #334155;          /* Bordes sutiles */
+}
+```
+
+> Puedes modificar estos valores en `src/styles/variables.css` para personalizar el diseño visual de tu portfolio.
 
 ## 📱 Responsive Design
 
