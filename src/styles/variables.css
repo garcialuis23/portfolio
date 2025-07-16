@@ -1,34 +1,189 @@
 :root {
+  /* === BACKGROUNDS === */
+  --bg-primary: #0F172A;      /* Fondo principal de la página */
+  --bg-secondary: #1E293B;    /* Fondo de secciones alternas */
+  --bg-card: #1E293B;         /* Fondo de tarjetas y componentes */
+  --bg-hero: #0F172A;         /* Fondo específico del hero */
+  --bg-gradient: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+
+  /* === COLORES PRINCIPALES === */
+  --primary: #3B82F6;         /* Azul principal para CTAs */
+  --primary-hover: #2563EB;   /* Hover de botones primarios */
+  --primary-light: #93C5FD;   /* Versión clara del primary */
+  --accent: #60A5FA;          /* Azul de acento para detalles */
+  --accent-hover: #93C5FD;    /* Hover de elementos de acento */
+
+  /* === TEXTOS === */
+  --text-primary: #F8FAFC;    /* Texto principal - títulos */
+  --text-secondary: #CBD5E1;  /* Texto secundario - párrafos */
+  --text-muted: #64748B;      /* Texto menos importante */
+  --text-hero: #FFFFFF;       /* Texto del hero (más blanco) */
+  --text-link: #60A5FA;       /* Color de enlaces */
+
+  /* === ESTADOS === */
+  --success: #10B981;         /* Verde para éxito */
+  --warning: #F59E0B;         /* Amarillo para advertencias */
+  --error: #EF4444;           /* Rojo para errores */
+  --info: #06B6D4;            /* Cian para información */
+
+  /* === BORDES Y LÍNEAS === */
+  --border: #334155;          /* Bordes sutiles */
+  --border-light: #475569;    /* Bordes más visibles */
+  --divider: #1E293B;         /* Líneas divisorias */
+
+  /* === SOMBRAS === */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 8px 25px rgba(59, 130, 246, 0.15);
+
+  /* === TIPOGRAFÍA === */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  
+  /* Tamaños de fuente */
+  --text-xs: 0.75rem;         /* 12px */
+  --text-sm: 0.875rem;        /* 14px */
+  --text-base: 1rem;          /* 16px */
+  --text-lg: 1.125rem;        /* 18px */
+  --text-xl: 1.25rem;         /* 20px */
+  --text-2xl: 1.5rem;         /* 24px */
+  --text-3xl: 1.875rem;       /* 30px */
+  --text-4xl: 2.25rem;        /* 36px */
+  --text-5xl: 3rem;           /* 48px */
+  --text-6xl: 3.75rem;        /* 60px */
+
+  /* Pesos de fuente */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* === ESPACIADO === */
+  --spacing-xs: 0.25rem;      /* 4px */
+  --spacing-sm: 0.5rem;       /* 8px */
+  --spacing-md: 1rem;         /* 16px */
+  --spacing-lg: 1.5rem;       /* 24px */
+  --spacing-xl: 2rem;         /* 32px */
+  --spacing-2xl: 3rem;        /* 48px */
+  --spacing-3xl: 4rem;        /* 64px */
+  --spacing-4xl: 5rem;        /* 80px */
+
+  /* === BORDES REDONDEADOS === */
+  --radius-sm: 0.375rem;      /* 6px */
+  --radius-md: 0.5rem;        /* 8px */
+  --radius-lg: 0.75rem;       /* 12px */
+  --radius-xl: 1rem;          /* 16px */
+  --radius-full: 9999px;      /* Circular completo */
+
+  /* === TRANSICIONES === */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+  --transition-bounce: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* === Z-INDEX === */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal: 400;
+  --z-popover: 500;
+  --z-tooltip: 600;
+
+  /* === BREAKPOINTS (para uso en JS) === */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* === ESPECÍFICAS POR SECCIÓN === */
+  
+  /* Hero Section */
+  --hero-title-size: var(--text-5xl);
+  --hero-subtitle-size: var(--text-xl);
+  --hero-padding: var(--spacing-4xl) 0;
+
+  /* Cards de Proyectos */
+  --card-bg: var(--bg-card);
+  --card-border: var(--border);
+  --card-radius: var(--radius-lg);
+  --card-padding: var(--spacing-lg);
+  --card-shadow: var(--shadow-card);
+  --card-hover-shadow: var(--shadow-hover);
+
+  /* Badges/Chips de tecnologías */
+  --badge-bg: rgba(59, 130, 246, 0.1);
+  --badge-text: var(--accent);
+  --badge-border: rgba(59, 130, 246, 0.2);
+  --badge-radius: var(--radius-full);
+  --badge-padding: var(--spacing-xs) var(--spacing-sm);
+
+  /* Botones */
+  --btn-primary-bg: var(--primary);
+  --btn-primary-hover: var(--primary-hover);
+  --btn-secondary-bg: transparent;
+  --btn-secondary-border: var(--primary);
+  --btn-padding: var(--spacing-sm) var(--spacing-lg);
+  --btn-radius: var(--radius-md);
+
+  /* Timeline (Experiencia) */
+  --timeline-line: var(--border);
+  --timeline-dot: var(--primary);
+  --timeline-bg: var(--bg-card);
+}
+
+/* === TEMA OSCURO === */
+[data-theme="dark"] {
   /* Backgrounds */
   --bg-primary: #0F172A;
   --bg-secondary: #1E293B;
   --bg-card: #1E293B;
-
-  /* Colores principales */
-  --primary: #3B82F6;
-  --primary-hover: #2563EB;
-  --accent: #60A5FA;
-  --accent-hover: #93C5FD;
-
+  --bg-hero: #0F172A;
+  
   /* Textos */
   --text-primary: #F8FAFC;
   --text-secondary: #CBD5E1;
   --text-muted: #64748B;
-
-  /* Estados */
-  --success: #10B981;
-  --warning: #F59E0B;
-  --error: #EF4444;
-
+  --text-hero: #FFFFFF;
+  
   /* Bordes */
   --border: #334155;
+  --border-light: #475569;
+  --divider: #1E293B;
+  
+  /* Sombras más intensas para tema oscuro */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.7);
+  --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-[data-theme="dark"] {
-  --bg-primary: #0F172A;
-  --bg-secondary: #1E293B;
-  --bg-card: #1E293B;
-  --text-primary: #F8FAFC;
-  --text-secondary: #CBD5E1;
-  --text-muted: #64748B;
+/* === TEMA CLARO (futuro) === */
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-hero: #F8FAFC;
+  
+  /* Textos */
+  --text-primary: #1F2937;
+  --text-secondary: #4B5563;
+  --text-muted: #9CA3AF;
+  --text-hero: #1F2937;
+  
+  /* Bordes */
+  --border: #E5E7EB;
+  --border-light: #D1D5DB;
+  --divider: #F3F4F6;
+  
+  /* Sombras más suaves para tema claro */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
