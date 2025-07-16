@@ -1,4 +1,6 @@
-:root {
+/* === TEMA OSCURO (por defecto) === */
+:root,
+[data-theme="dark"] {
   /* === BACKGROUNDS === */
   --bg-primary: #0F172A;      /* Fondo principal de la página */
   --bg-secondary: #1E293B;    /* Fondo de secciones alternas */
@@ -30,7 +32,45 @@
   --border: #334155;          /* Bordes sutiles */
   --border-light: #475569;    /* Bordes más visibles */
   --divider: #1E293B;         /* Líneas divisorias */
+}
 
+/* === TEMA CLARO === */
+[data-theme="light"] {
+  /* === BACKGROUNDS === */
+  --bg-primary: #FFFFFF;      /* Fondo principal blanco */
+  --bg-secondary: #F8FAFC;    /* Fondo de secciones alternas */
+  --bg-card: #FFFFFF;         /* Fondo de tarjetas blanco */
+  --bg-hero: #F8FAFC;         /* Fondo específico del hero */
+  --bg-gradient: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+
+  /* === COLORES PRINCIPALES === */
+  --primary: #2563EB;         /* Azul más oscuro para contraste */
+  --primary-hover: #1D4ED8;   /* Hover más oscuro */
+  --primary-light: #3B82F6;   /* Versión clara del primary */
+  --accent: #0891B2;          /* Azul de acento más oscuro */
+  --accent-hover: #0E7490;    /* Hover de elementos de acento */
+
+  /* === TEXTOS === */
+  --text-primary: #0F172A;    /* Texto principal negro */
+  --text-secondary: #475569;  /* Texto secundario gris oscuro */
+  --text-muted: #64748B;      /* Texto menos importante */
+  --text-hero: #1E293B;       /* Texto del hero */
+  --text-link: #2563EB;       /* Color de enlaces */
+
+  /* === ESTADOS === */
+  --success: #059669;         /* Verde más oscuro */
+  --warning: #D97706;         /* Amarillo más oscuro */
+  --error: #DC2626;           /* Rojo más oscuro */
+  --info: #0891B2;            /* Cian más oscuro */
+
+  /* === BORDES Y LÍNEAS === */
+  --border: #E2E8F0;          /* Bordes sutiles */
+  --border-light: #CBD5E1;    /* Bordes más visibles */
+  --divider: #F1F5F9;         /* Líneas divisorias */
+}
+
+/* === VARIABLES GLOBALES === */
+:root {
   /* === SOMBRAS === */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
@@ -86,12 +126,12 @@
   --transition-bounce: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   /* === Z-INDEX === */
-  --z-dropdown: 100;
-  --z-sticky: 200;
-  --z-fixed: 300;
-  --z-modal: 400;
-  --z-popover: 500;
-  --z-tooltip: 600;
+  --z-base: 1;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-header: 100;
+  --z-modal: 1000;
+  --z-toast: 9999;
 
   /* === BREAKPOINTS (para uso en JS) === */
   --breakpoint-sm: 640px;
@@ -134,56 +174,4 @@
   --timeline-line: var(--border);
   --timeline-dot: var(--primary);
   --timeline-bg: var(--bg-card);
-}
-
-/* === TEMA OSCURO === */
-[data-theme="dark"] {
-  /* Backgrounds */
-  --bg-primary: #0F172A;
-  --bg-secondary: #1E293B;
-  --bg-card: #1E293B;
-  --bg-hero: #0F172A;
-  
-  /* Textos */
-  --text-primary: #F8FAFC;
-  --text-secondary: #CBD5E1;
-  --text-muted: #64748B;
-  --text-hero: #FFFFFF;
-  
-  /* Bordes */
-  --border: #334155;
-  --border-light: #475569;
-  --divider: #1E293B;
-  
-  /* Sombras más intensas para tema oscuro */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.6);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.7);
-  --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
-
-/* === TEMA CLARO (futuro) === */
-[data-theme="light"] {
-  /* Backgrounds */
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F8FAFC;
-  --bg-card: #FFFFFF;
-  --bg-hero: #F8FAFC;
-  
-  /* Textos */
-  --text-primary: #1F2937;
-  --text-secondary: #4B5563;
-  --text-muted: #9CA3AF;
-  --text-hero: #1F2937;
-  
-  /* Bordes */
-  --border: #E5E7EB;
-  --border-light: #D1D5DB;
-  --divider: #F3F4F6;
-  
-  /* Sombras más suaves para tema claro */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.1);
 }

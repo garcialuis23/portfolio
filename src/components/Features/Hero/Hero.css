@@ -5,6 +5,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  /* Removed padding-top since header starts transparent */
 }
 
 .hero::before {
