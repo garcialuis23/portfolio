@@ -1,7 +1,6 @@
 /* Footer Styles */
 .footer {
   background: var(--bg-primary);
-  border-top: 1px solid var(--border);
   margin-top: 0;
 }
 
