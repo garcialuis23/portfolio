@@ -38,27 +38,37 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__content">
-          {/* Social Links */}
-          <div className="footer__social">
-            {socialLinks.map((link) => (
-              <a 
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer__social-link"
-                aria-label={link.name}
-                title={link.name}
-              >
-                {link.icon}
-              </a>
-            ))}
+          {/* Header Info */}
+          <div className="footer__header">
+            <div className="footer__name-section">
+              <h2 className="footer__name">Luis <span className="footer__surname">García</span></h2>
+              <p className="footer__role"> Junior Full Stack Developer </p>
+            </div>
+            
+            {/* Social Links */}
+            <div className="footer__social">
+              {socialLinks.map((link) => (
+                <a 
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer__social-link"
+                  aria-label={link.name}
+                  title={link.name}
+                >
+                  {link.icon}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Copyright */}
-          <p className="footer__copyright">
-            © {currentYear} Luis García - Todos los derechos reservados.
-          </p>
+          <div className="footer__bottom">
+            <p className="footer__copyright">
+              © {currentYear} Luis García. Todos los derechos reservados.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
