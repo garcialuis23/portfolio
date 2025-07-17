@@ -38,6 +38,16 @@ body {
   flex-direction: column;
 }
 
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main > section:last-child {
+  margin-bottom: 0;
+}
+
 /* === TIPOGRAFÍA GLOBAL === */
 h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-bold);

@@ -2,6 +2,7 @@ import './styles/globals.css';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
 import Hero from './components/Features/Hero/Hero';
+import Contact from './components/Features/Contact';
 
 function App() {
   return (
@@ -54,20 +55,7 @@ function App() {
             <p style={{ fontSize: '1.2rem' }}>Sección temporal para probar el header</p>
           </div>
         </section>
-
-        <section id="contacto" style={{
-          height: '100vh',
-          background: 'linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: '#ffffff'
-        }}>
-          <div style={{ textAlign: 'center' }}>
-            <h2 style={{ fontSize: '3rem', marginBottom: '1rem' }}>Contacto</h2>
-            <p style={{ fontSize: '1.2rem' }}>Sección temporal para probar el header</p>
-          </div>
-        </section>
+        <Contact />
       </main>
       <Footer />
     </div>
