@@ -2,6 +2,7 @@ import './styles/globals.css';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
 import Hero from './components/Features/Hero/Hero';
+import About from './components/Features/About';
 import Contact from './components/Features/Contact';
 
 function App() {
@@ -13,20 +14,7 @@ function App() {
           <Hero />
         </section>
         
-        {/* Secciones temporales para probar el header */}
-        <section id="sobre-mi" style={{
-          height: '100vh',
-          background: 'linear-gradient(135deg, #1E293B 0%, #334155 100%)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: '#ffffff'
-        }}>
-          <div style={{ textAlign: 'center' }}>
-            <h2 style={{ fontSize: '3rem', marginBottom: '1rem' }}>Sobre Mí</h2>
-            <p style={{ fontSize: '1.2rem' }}>Sección temporal para probar el header</p>
-          </div>
-        </section>
+        <About />
 
         <section id="habilidades" style={{
           height: '100vh',

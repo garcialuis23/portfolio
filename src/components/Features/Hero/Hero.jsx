@@ -31,8 +31,9 @@ const Hero = () => {
 
                         {/* Descripción */}
                         <p className="hero-description">
-                            Desarrollador apasionado por enfrentar nuevos desafíos y nunca parar de aprender.
-                            Actualmente trabajo en Sexta Dimensión mientras amplío mis conocimientos en
+                            Desarrollador Full Stack apasionado por crear soluciones completas y escalables.
+                            Trabajo tanto en backend como en frontend, siempre enfrentando nuevos desafíos.
+                            Actualmente en Sexta Dimensión mientras amplío mis conocimientos en
                             Big Data e Inteligencia Artificial.
                         </p>
 
