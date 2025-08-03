@@ -63,15 +63,6 @@ const About = () => {
     }
   ];
 
-  const personalValues = [
-    "� Desarrollo Backend sólido",
-    "� Frontend moderno y responsive", 
-    "🏗️ Arquitectura escalable",
-    "📚 Aprendizaje continuo",
-    "🚀 Pasión por la tecnología",
-    "⚡ Performance y optimización"
-  ];
-
   return (
     <section className="about" id="sobre-mi">
       <div className="container">
@@ -84,8 +75,41 @@ const About = () => {
         </div>
 
         <div className="about-content">
-          {/* Información personal principal */}
-          <div className="about-intro">
+          {/* Hero personal con imagen */}
+          <div className="about-hero">
+            <div className="about-hero-image">
+              <img 
+                src={aboutIllustration} 
+                alt="Luis García - Full Stack Developer"
+                className="hero-profile-image"
+              />
+              <div className="hero-image-decoration"></div>
+            </div>
+            <div className="about-hero-content">
+              <div className="about-personal-info">
+                <h3 className="personal-name">{personalInfo.name}</h3>
+                <p className="personal-role">{personalInfo.role}</p>
+                <p className="personal-location">{personalInfo.location}</p>
+              </div>
+              <div className="about-stats">
+                <div className="stat-item">
+                  <span className="stat-number">1+</span>
+                  <span className="stat-label">Años de experiencia</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-number">15+</span>
+                  <span className="stat-label">Proyectos completados</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-number">10+</span>
+                  <span className="stat-label">Tecnologías dominadas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Información textual */}
+          <div className="about-description">
             <div className="about-text">
               {aboutText.map((paragraph, index) => (
                 <p key={index} className="about-paragraph">
@@ -93,38 +117,27 @@ const About = () => {
                 </p>
               ))}
             </div>
-
-            <div className="about-personal-section">
-              {/* Ilustración profesional */}
-              <div className="about-illustration">
-                <img 
-                  src={aboutIllustration} 
-                  alt="Luis García - Full Stack Developer"
-                  className="illustration-image"
-                />
-                <div className="illustration-background"></div>
+            
+            <div className="about-info-card">
+              <h3 className="info-card-title">Detalles Profesionales</h3>
+              <div className="info-grid">
+              <div className="info-item">
+                <span className="info-label">Experiencia:</span>
+                <span className="info-value">{personalInfo.experience}</span>
               </div>
-
-              <div className="about-info-card">
-                <h3 className="info-card-title">Información Personal</h3>
-                <div className="info-grid">
-                <div className="info-item">
-                  <span className="info-label">Nombre:</span>
-                  <span className="info-value">{personalInfo.name}</span>
-                </div>
-                <div className="info-item">
-                  <span className="info-label">Rol:</span>
-                  <span className="info-value">{personalInfo.role}</span>
-                </div>
-                <div className="info-item">
-                  <span className="info-label">Experiencia:</span>
-                  <span className="info-value">{personalInfo.experience}</span>
-                </div>
-                <div className="info-item">
-                  <span className="info-label">Empresa:</span>
-                  <span className="info-value">{personalInfo.currentJob}</span>
-                </div>
+              <div className="info-item">
+                <span className="info-label">Empresa Actual:</span>
+                <span className="info-value">{personalInfo.currentJob}</span>
               </div>
+              <div className="info-item">
+                <span className="info-label">Formación:</span>
+                <span className="info-value">{personalInfo.education}</span>
+              </div>
+              <div className="info-item">
+                <span className="info-label">Ubicación:</span>
+                <span className="info-value">{personalInfo.location}</span>
+              </div>
+            </div>
             </div>
           </div>
 
@@ -139,18 +152,6 @@ const About = () => {
                   </div>
                   <h4 className="highlight-title">{highlight.title}</h4>
                   <p className="highlight-description">{highlight.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Valores personales */}
-          <div className="about-values">
-            <h3 className="values-title">Mis Valores</h3>
-            <div className="values-grid">
-              {personalValues.map((value, index) => (
-                <div key={index} className="value-item">
-                  <span className="value-text">{value}</span>
                 </div>
               ))}
             </div>
