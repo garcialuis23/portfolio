@@ -30,7 +30,8 @@ const Skills = () => {
       skills: [
         { name: "PHP", level: 85, color: "#777BB4" },
         { name: "Python", level: 75, color: "#3776AB" },
-        { name: "Java", level: 65, color: "#007396" }
+        { name: "Java", level: 65, color: "#007396" },
+        { name: "C++", level: 70, color: "#00599C" }
       ]
     },
     {
@@ -48,7 +49,8 @@ const Skills = () => {
         { name: "React", level: 75, color: "#61DAFB" },
         { name: "Laravel", level: 80, color: "#FF2D20" },
         { name: "Django", level: 70, color: "#092E20" },
-        { name: "Node.js", level: 70, color: "#339933" }
+        { name: "Node.js", level: 70, color: "#339933" },
+        { name: "Spring Boot", level: 65, color: "#6DB33F" }
       ]
     },
     {
@@ -80,23 +82,28 @@ const Skills = () => {
         { name: "GitHub", level: 80, color: "#181717" },
         { name: "VS Code", level: 90, color: "#007ACC" },
         { name: "Docker", level: 60, color: "#2496ED" },
-        { name: "Linux", level: 70, color: "#FCC624" }
+        { name: "Linux", level: 70, color: "#FCC624" },
+        { name: "Postman", level: 85, color: "#FF6C37" }
       ]
     },
     {
-      title: "IA & Tecnologías Emergentes",
+      title: "Hardware & IoT",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M12 2L2 7v10c0 5.55 3.84 10 9 9 5.16 1 9-3.45 9-9V7l-10-5z"></path>
-          <circle cx="12" cy="11" r="3"></circle>
+          <rect x="4" y="4" width="16" height="12" rx="2"></rect>
+          <path d="M8 12h.01"></path>
+          <path d="M16 12h.01"></path>
+          <path d="M12 12h.01"></path>
+          <path d="M12 16h.01"></path>
+          <path d="M16 16h.01"></path>
+          <path d="M8 16h.01"></path>
         </svg>
       ),
       skills: [
-        { name: "ChatGPT", level: 85, color: "#74AA9C" },
-        { name: "Machine Learning", level: 60, color: "#FF6F00" },
-        { name: "Big Data", level: 65, color: "#E97627" },
-        { name: "TensorFlow", level: 55, color: "#FF6F00" },
-        { name: "Python AI", level: 70, color: "#3776AB" }
+        { name: "Arduino", level: 75, color: "#00979D" },
+        { name: "Raspberry Pi", level: 60, color: "#C51A4A" },
+        { name: "Sensores", level: 70, color: "#FF9500" },
+        { name: "Robótica", level: 65, color: "#34495E" }
       ]
     }
   ];

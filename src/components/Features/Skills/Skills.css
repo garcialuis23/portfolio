@@ -307,6 +307,7 @@
 .skill-category:nth-child(4) { animation-delay: 0.4s; }
 .skill-category:nth-child(5) { animation-delay: 0.5s; }
 .skill-category:nth-child(6) { animation-delay: 0.6s; }
+.skill-category:nth-child(7) { animation-delay: 0.7s; }
 
 /* === RESPONSIVE === */
 @media (min-width: 768px) {
