@@ -101,32 +101,47 @@
 
 .hero-profile-image {
   width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  height: 240px;
+  border-radius: var(--radius-xl);
   object-fit: cover;
-  border: 4px solid var(--primary);
-  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
+  border: 3px solid var(--primary);
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.25);
   transition: all var(--transition-normal);
   position: relative;
   z-index: 2;
+  animation: floatImage 6s ease-in-out infinite;
 }
 
 .hero-profile-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.4);
+  transform: translateY(-12px) rotateY(5deg);
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.4);
+  border-color: var(--accent);
 }
 
 .hero-image-decoration {
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
   border: 2px solid var(--accent);
-  border-radius: 50%;
-  opacity: 0.3;
-  animation: pulse 3s ease-in-out infinite;
+  border-radius: var(--radius-xl);
+  opacity: 0.4;
+  animation: breatheDecoration 4s ease-in-out infinite;
   z-index: 1;
+}
+
+.hero-image-decoration::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-xl);
+  opacity: 0.3;
+  animation: breatheDecoration 6s ease-in-out infinite reverse;
 }
 
 .about-hero-content {
@@ -413,6 +428,40 @@
   }
 }
 
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  75% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes breatheDecoration {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.04);
+  }
+  75% {
+    opacity: 0.4;
+    transform: scale(1.02);
+  }
+}
+
 /* === CTA === */
 .about-cta {
   background: var(--bg-card);
@@ -458,7 +507,7 @@
 
   .hero-profile-image {
     width: 200px;
-    height: 200px;
+    height: 260px;
   }
 
   .about-hero-content {
@@ -517,7 +566,7 @@
 @media (min-width: 1024px) {
   .hero-profile-image {
     width: 220px;
-    height: 220px;
+    height: 280px;
   }
 
   .about-hero {
@@ -561,6 +610,6 @@
 
   .hero-profile-image {
     width: 240px;
-    height: 240px;
+    height: 300px;
   }
 }
