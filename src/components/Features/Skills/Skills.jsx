@@ -110,14 +110,8 @@ const Skills = () => {
     }
   ];
 
-  const personalValues = [
-    "⚙️ Desarrollo Backend sólido",
-    "🎨 Frontend moderno y responsive", 
-    "🏗️ Arquitectura escalable",
-    "📚 Aprendizaje continuo",
-    "🚀 Pasión por la tecnología",
-    "⚡ Performance y optimización"
-  ];
+  // Get personal values from translations
+  const personalValues = t('skills.values.items');
 
   return (
     <section className="skills" id="habilidades">
@@ -167,7 +161,7 @@ const Skills = () => {
 
           {/* Valores y filosofía */}
           <div className="skills-values">
-            <h3 className="values-title">Mi Enfoque de Desarrollo</h3>
+            <h3 className="values-title">{t('skills.values.title')}</h3>
             <div className="values-grid">
               {personalValues.map((value, index) => (
                 <div key={index} className="value-item">
@@ -181,19 +175,19 @@ const Skills = () => {
           <div className="skills-stats">
             <div className="stat-card">
               <div className="stat-number">15+</div>
-              <div className="stat-label">Proyectos Completados</div>
+              <div className="stat-label">{t('skills.stats.projects')}</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">5+</div>
-              <div className="stat-label">Tecnologías Dominadas</div>
+              <div className="stat-label">{t('skills.stats.technologies')}</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">1+</div>
-              <div className="stat-label">Años de Experiencia</div>
+              <div className="stat-label">{t('skills.stats.experience')}</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">100%</div>
-              <div className="stat-label">Dedicación</div>
+              <div className="stat-label">{t('skills.stats.dedication')}</div>
             </div>
           </div>
         </div>

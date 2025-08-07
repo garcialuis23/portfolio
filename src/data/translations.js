@@ -157,6 +157,23 @@ export const translations = {
         databases: 'Bases de Datos',
         tools: 'Herramientas & DevOps',
         hardware: 'Hardware & IoT'
+      },
+      values: {
+        title: 'Mi Enfoque de Desarrollo',
+        items: [
+          '⚙️ Desarrollo Backend sólido',
+          '🎨 Frontend moderno y responsive',
+          '🏗️ Arquitectura escalable',
+          '📚 Aprendizaje continuo',
+          '🚀 Pasión por la tecnología',
+          '⚡ Performance y optimización'
+        ]
+      },
+      stats: {
+        projects: 'Proyectos Completados',
+        technologies: 'Tecnologías Dominadas',
+        experience: 'Años de Experiencia',
+        dedication: 'Dedicación'
       }
     },
 
@@ -395,6 +412,23 @@ export const translations = {
         databases: 'Databases',
         tools: 'Tools & DevOps',
         hardware: 'Hardware & IoT'
+      },
+      values: {
+        title: 'My Development Approach',
+        items: [
+          '⚙️ Solid Backend development',
+          '🎨 Modern and responsive Frontend',
+          '🏗️ Scalable architecture',
+          '📚 Continuous learning',
+          '🚀 Passion for technology',
+          '⚡ Performance and optimization'
+        ]
+      },
+      stats: {
+        projects: 'Completed Projects',
+        technologies: 'Technologies Mastered',
+        experience: 'Years of Experience',
+        dedication: 'Dedication'
       }
     },
 
