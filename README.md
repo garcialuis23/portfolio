@@ -2,10 +2,15 @@
 
 > Un portfolio moderno y responsivo desarrollado con React + Vite, diseñado para mostrar proyectos y habilidades de desarrollo frontend.
 
+## 🌐 Ver Portfolio en Vivo
+
+**🚀 [https://luis-garcia-portfolio.vercel.app/](https://luis-garcia-portfolio.vercel.app/)**
+
 ![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+[![Portfolio](https://img.shields.io/badge/Portfolio-LIVE-4F46E5?style=for-the-badge&logo=vercel&logoColor=white)](https://luis-garcia-portfolio.vercel.app/)
 
 ## 🚀 Características
 
@@ -200,10 +205,12 @@ Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 
 ## 👨‍💻 Autor
 
-**García Luis**
+**García Luis**  
+🌐 **Portfolio:** [https://luis-garcia-portfolio.vercel.app/](https://luis-garcia-portfolio.vercel.app/)
+
 - GitHub: [@garcialuis23](https://github.com/garcialuis23)
 - LinkedIn: [Luis García Díaz](https://www.linkedin.com/in/luis-garc%C3%ADa-d%C3%ADaz-b67175313/)
-- Email: garciadiazluis23@gmail.com
+- Email: [garciadiazluis23@gmail.com](mailto:garciadiazluis23@gmail.com)
 
 ---
 
