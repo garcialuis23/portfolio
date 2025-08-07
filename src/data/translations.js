@@ -33,6 +33,9 @@ export const translations = {
       subtitle: 'Conoce más sobre mi trayectoria, experiencia y lo que me motiva como desarrollador',
       role: 'Junior Full Stack Developer',
       location: 'España',
+      personalInfo: {
+        name: 'Luis García Díaz'
+      },
       paragraphs: [
         'Soy un desarrollador Full Stack apasionado por la tecnología y el aprendizaje continuo. Mi viaje en el desarrollo comenzó con curiosidad por entender cómo funcionan las aplicaciones completas, desde la base de datos hasta la interfaz de usuario.',
         'Actualmente trabajo en Sexta Dimensión, donde he tenido la oportunidad de colaborar en proyectos reales trabajando tanto en el backend como en el frontend. Esta experiencia me ha enseñado la importancia del trabajo en equipo y las buenas prácticas de desarrollo en todo el stack tecnológico.',
@@ -54,6 +57,9 @@ export const translations = {
         educationValue: 'Estudiando Big Data e IA',
         location: 'Ubicación:',
         locationValue: 'España'
+      },
+      experience: {
+        title: 'Mi Trayectoria Profesional'
       },
       timeline: {
         title: 'Mi Trayectoria Profesional',
@@ -120,68 +126,75 @@ export const translations = {
       cta: {
         title: '¿Trabajamos juntos?',
         description: 'Estoy siempre abierto a nuevas oportunidades y colaboraciones interesantes',
-        contactar: 'Contactar',
-        verProyectos: 'Ver Proyectos',
-        descargarCV: 'Descargar CV'
+        contact: 'Contactar',
+        viewProjects: 'Ver Proyectos',
+        downloadCV: 'Descargar CV'
       }
     },
 
     // Skills Section
     skills: {
-      title: 'Habilidades',
-      subtitle: 'Tecnologías y herramientas que domino',
+      title: 'Habilidades Técnicas',
+      subtitle: 'Mi stack tecnológico y las herramientas que domino para crear soluciones completas',
       categories: {
         frontend: 'Frontend',
         backend: 'Backend',
         frameworks: 'Frameworks',
         databases: 'Bases de Datos',
-        tools: 'Herramientas'
+        tools: 'Herramientas & DevOps',
+        hardware: 'Hardware & IoT'
       }
     },
 
     // Projects Section
     projects: {
-      title: 'Proyectos',
-      subtitle: 'Algunos de mis trabajos más destacados',
+      title: 'Mis Proyectos',
+      subtitle: 'Una selección de mis trabajos más destacados, desde desarrollo full stack hasta proyectos de IoT y ciberseguridad',
+      allProjects: 'Todos los Proyectos',
+      projectsOf: 'Proyectos de',
       filters: {
-        todos: 'Todos',
-        fullstack: 'Full Stack',
+        all: 'Todos',
+        fullStack: 'Full Stack',
         backend: 'Backend',
         frontend: 'Frontend',
         iot: 'IoT/Hardware',
-        seguridad: 'Seguridad'
+        security: 'Seguridad'
       },
+      noProjects: {
+        title: 'No hay proyectos en esta categoría',
+        message: 'Pero estoy trabajando en nuevos proyectos emocionantes. ¡Mantente atento!'
+      },
+      viewCode: 'Ver código',
+      viewLive: 'Ver proyecto en vivo',
       status: {
         completado: 'Completado',
         enProgreso: 'En Progreso',
         planeado: 'Planeado'
-      },
-      buttons: {
-        verCodigo: 'Ver Código',
-        verProyecto: 'Ver Proyecto',
-        verDemo: 'Ver Demo'
       }
     },
 
     // Contact Section
     contact: {
       title: 'Contacto',
-      subtitle: 'Hablemos sobre tu próximo proyecto',
-      form: {
-        nombre: 'Nombre',
-        email: 'Email',
-        asunto: 'Asunto',
-        mensaje: 'Mensaje',
-        enviar: 'Enviar Mensaje',
-        enviando: 'Enviando...',
-        exito: '¡Mensaje enviado con éxito!',
-        error: 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.'
-      },
+      subtitle: '¿Tienes un proyecto en mente? ¡Hablemos! Estoy disponible para nuevas oportunidades y colaboraciones.',
       info: {
+        title: 'Información de Contacto',
         email: 'Email',
-        telefono: 'Teléfono',
-        ubicacion: 'Ubicación',
-        disponibilidad: 'Disponibilidad'
+        location: 'Ubicación',
+        locationValue: 'España'
+      },
+      form: {
+        title: 'Envíame un Mensaje',
+        name: 'Nombre',
+        email: 'Email',
+        subject: 'Asunto',
+        subjectPlaceholder: '¿En qué puedo ayudarte?',
+        message: 'Mensaje',
+        messagePlaceholder: 'Cuéntame sobre tu proyecto...',
+        send: 'Enviar Mensaje',
+        sending: 'Enviando...',
+        successMessage: '¡Mensaje enviado exitosamente! Te responderé pronto.',
+        errorMessage: 'Error al enviar el mensaje. Se abrirá tu cliente de email como alternativa.'
       }
     },
 
@@ -244,6 +257,9 @@ export const translations = {
       subtitle: 'Learn more about my journey, experience and what motivates me as a developer',
       role: 'Junior Full Stack Developer',
       location: 'Spain',
+      personalInfo: {
+        name: 'Luis García Díaz'
+      },
       paragraphs: [
         'I am a Full Stack developer passionate about technology and continuous learning. My journey in development began with curiosity to understand how complete applications work, from the database to the user interface.',
         'I currently work at Sexta Dimensión, where I have had the opportunity to collaborate on real projects working on both backend and frontend. This experience has taught me the importance of teamwork and good development practices across the entire technology stack.',
@@ -265,6 +281,9 @@ export const translations = {
         educationValue: 'Studying Big Data & AI',
         location: 'Location:',
         locationValue: 'Spain'
+      },
+      experience: {
+        title: 'My Professional Journey'
       },
       timeline: {
         title: 'My Professional Journey',
@@ -331,68 +350,75 @@ export const translations = {
       cta: {
         title: 'Shall we work together?',
         description: 'I am always open to new opportunities and interesting collaborations',
-        contactar: 'Contact',
-        verProyectos: 'View Projects',
-        descargarCV: 'Download CV'
+        contact: 'Contact',
+        viewProjects: 'View Projects',
+        downloadCV: 'Download CV'
       }
     },
 
     // Skills Section
     skills: {
-      title: 'Skills',
-      subtitle: 'Technologies and tools I master',
+      title: 'Technical Skills',
+      subtitle: 'My technology stack and the tools I master to create complete solutions',
       categories: {
         frontend: 'Frontend',
         backend: 'Backend',
         frameworks: 'Frameworks',
         databases: 'Databases',
-        tools: 'Tools'
+        tools: 'Tools & DevOps',
+        hardware: 'Hardware & IoT'
       }
     },
 
     // Projects Section
     projects: {
-      title: 'Projects',
-      subtitle: 'Some of my most outstanding work',
+      title: 'My Projects',
+      subtitle: 'A selection of my most outstanding work, from full stack development to IoT and cybersecurity projects',
+      allProjects: 'All Projects',
+      projectsOf: 'Projects of',
       filters: {
-        todos: 'All',
-        fullstack: 'Full Stack',
+        all: 'All',
+        fullStack: 'Full Stack',
         backend: 'Backend',
         frontend: 'Frontend',
         iot: 'IoT/Hardware',
-        seguridad: 'Security'
+        security: 'Security'
       },
+      noProjects: {
+        title: 'No projects in this category',
+        message: 'But I\'m working on exciting new projects. Stay tuned!'
+      },
+      viewCode: 'View code',
+      viewLive: 'View live project',
       status: {
         completado: 'Completed',
         enProgreso: 'In Progress',
         planeado: 'Planned'
-      },
-      buttons: {
-        verCodigo: 'View Code',
-        verProyecto: 'View Project',
-        verDemo: 'View Demo'
       }
     },
 
     // Contact Section
     contact: {
       title: 'Contact',
-      subtitle: 'Let\'s talk about your next project',
-      form: {
-        nombre: 'Name',
-        email: 'Email',
-        asunto: 'Subject',
-        mensaje: 'Message',
-        enviar: 'Send Message',
-        enviando: 'Sending...',
-        exito: 'Message sent successfully!',
-        error: 'Error sending message. Please try again.'
-      },
+      subtitle: 'Have a project in mind? Let\'s talk! I\'m available for new opportunities and collaborations.',
       info: {
+        title: 'Contact Information',
         email: 'Email',
-        telefono: 'Phone',
-        ubicacion: 'Location',
-        disponibilidad: 'Availability'
+        location: 'Location',
+        locationValue: 'Spain'
+      },
+      form: {
+        title: 'Send me a Message',
+        name: 'Name',
+        email: 'Email',
+        subject: 'Subject',
+        subjectPlaceholder: 'How can I help you?',
+        message: 'Message',
+        messagePlaceholder: 'Tell me about your project...',
+        send: 'Send Message',
+        sending: 'Sending...',
+        successMessage: 'Message sent successfully! I\'ll respond soon.',
+        errorMessage: 'Error sending message. Your email client will open as an alternative.'
       }
     },
 
