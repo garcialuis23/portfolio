@@ -285,14 +285,6 @@ const About = () => {
               <a href="#proyectos" className="btn btn-secondary">
                 {t('about.cta.viewProjects')}
               </a>
-              <a 
-                href="/cv.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn btn-outline"
-              >
-                {t('about.cta.downloadCV')}
-              </a>
             </div>
           </div>
         </div>

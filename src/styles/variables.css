@@ -2,25 +2,37 @@
 :root,
 [data-theme="dark"] {
   /* === BACKGROUNDS === */
-  --bg-primary: #0F172A;      /* Fondo principal de la página */
-  --bg-secondary: #1E293B;    /* Fondo de secciones alternas */
-  --bg-card: #1E293B;         /* Fondo de tarjetas y componentes */
-  --bg-hero: #0F172A;         /* Fondo específico del hero */
-  --bg-gradient: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  --bg-primary: #0A0F1C;      /* Fondo más profundo y elegante */
+  --bg-secondary: #1A202C;    /* Fondo de secciones más sofisticado */
+  --bg-card: rgba(26, 32, 44, 0.7); /* Tarjetas con transparencia */
+  --bg-hero: linear-gradient(135deg, #0A0F1C 0%, #1A202C 50%, #2D3748 100%);
+  --bg-gradient: linear-gradient(135deg, #0A0F1C 0%, #1A202C 100%);
 
   /* === COLORES PRINCIPALES === */
-  --primary: #3B82F6;         /* Azul principal para CTAs */
-  --primary-hover: #2563EB;   /* Hover de botones primarios */
-  --primary-light: #93C5FD;   /* Versión clara del primary */
-  --accent: #60A5FA;          /* Azul de acento para detalles */
-  --accent-hover: #93C5FD;    /* Hover de elementos de acento */
+  --primary: #4F46E5;         /* Violeta más profesional */
+  --primary-hover: #4338CA;   /* Hover más sofisticado */
+  --primary-light: #A78BFA;   /* Versión clara más elegante */
+  --accent: #06B6D4;          /* Cian para contraste */
+  --accent-hover: #0891B2;    /* Hover de elementos de acento */
+
+  /* === GRADIENTES PROFESIONALES === */
+  --gradient-primary: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%);
+  --gradient-card: linear-gradient(145deg, rgba(26, 32, 44, 0.8) 0%, rgba(45, 55, 72, 0.6) 100%);
+  --gradient-text: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%);
 
   /* === TEXTOS === */
-  --text-primary: #F8FAFC;    /* Texto principal - títulos */
-  --text-secondary: #CBD5E1;  /* Texto secundario - párrafos */
-  --text-muted: #64748B;      /* Texto menos importante */
-  --text-hero: #FFFFFF;       /* Texto del hero (más blanco) */
-  --text-link: #60A5FA;       /* Color de enlaces */
+  --text-primary: #FFFFFF;    /* Texto principal más puro */
+  --text-secondary: #E2E8F0;  /* Texto secundario más claro */
+  --text-muted: #A0AEC0;      /* Texto menos importante */
+  --text-hero: #FFFFFF;       /* Texto del hero */
+  --text-link: #06B6D4;       /* Color de enlaces más profesional */
+
+  /* === SOMBRAS PROFESIONALES === */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-glow: 0 0 20px rgba(79, 70, 229, 0.3);
 
   /* === ESTADOS === */
   --success: #10B981;         /* Verde para éxito */
@@ -29,9 +41,14 @@
   --info: #06B6D4;            /* Cian para información */
 
   /* === BORDES Y LÍNEAS === */
-  --border: #334155;          /* Bordes sutiles */
-  --border-light: #475569;    /* Bordes más visibles */
-  --divider: #1E293B;         /* Líneas divisorias */
+  --border: rgba(75, 85, 99, 0.3);
+  --border-light: rgba(156, 163, 175, 0.2);
+  --divider: rgba(31, 41, 55, 0.5);
+
+  /* === ANIMACIONES === */
+  --transition-fast: all 0.15s ease-in-out;
+  --transition: all 0.3s ease-in-out;
+  --transition-slow: all 0.5s ease-in-out;
 }
 
 /* === TEMA CLARO === */

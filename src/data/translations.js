@@ -21,7 +21,15 @@ export const translations = {
       greeting: 'Hola, soy',
       name: 'Luis García',
       role: 'Junior Full Stack Developer',
-      description: 'Desarrollador Full Stack apasionado por crear soluciones completas y escalables. Trabajo tanto en backend como en frontend, siempre enfrentando nuevos desafíos. Actualmente en Sexta Dimensión mientras amplío mis conocimientos en Big Data e Inteligencia Artificial.',
+      description: 'Desarrollador Full Stack especializado en crear soluciones web modernas y escalables. Combino experiencia en frontend y backend para construir aplicaciones completas que generan impacto real.',
+      metrics: {
+        projects: '15+',
+        projectsLabel: 'Proyectos Completados',
+        experience: '1+',
+        experienceLabel: 'Años de Experiencia',
+        technologies: '10+',
+        technologiesLabel: 'Tecnologías Dominadas'
+      },
       verProyectos: 'Ver Proyectos',
       contactar: 'Contactar',
       descargarCV: 'Descargar CV'
@@ -276,7 +284,15 @@ export const translations = {
       greeting: 'Hello, I\'m',
       name: 'Luis García',
       role: 'Junior Full Stack Developer',
-      description: 'Full Stack developer passionate about creating complete and scalable solutions. I work on both backend and frontend, always facing new challenges. Currently at Sexta Dimensión while expanding my knowledge in Big Data and Artificial Intelligence.',
+      description: 'Full Stack Developer specialized in creating modern and scalable web solutions. I combine frontend and backend expertise to build complete applications that generate real impact.',
+      metrics: {
+        projects: '15+',
+        projectsLabel: 'Completed Projects',
+        experience: '1+',
+        experienceLabel: 'Years of Experience',
+        technologies: '10+',
+        technologiesLabel: 'Technologies Mastered'
+      },
       verProyectos: 'View Projects',
       contactar: 'Contact',
       descargarCV: 'Download CV'
