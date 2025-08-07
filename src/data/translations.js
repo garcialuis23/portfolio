@@ -63,42 +63,56 @@ export const translations = {
       },
       timeline: {
         title: 'Mi Trayectoria Profesional',
+        badges: {
+          current: 'ACTUAL',
+          temporary: 'TEMPORAL',
+          internship: 'PRÁCTICAS',
+          contract: 'CONTRATO'
+        },
         jobs: [
           {
+            id: 1,
             position: 'Desarrollador de software',
             company: 'Sexta Dimensión Software',
             location: 'Granada, Híbrido',
             period: 'mar. 2025 - actualidad · 6 meses',
             type: 'Jornada parcial',
             description: 'Desarrollador full stack junior con experiencia en aplicaciones web modernas. Trabajo con tecnologías frontend y backend para crear soluciones completas y funcionales.',
-            technologies: ['React', 'Laravel', 'PHP', 'JavaScript', 'MySQL', 'Git']
+            technologies: ['React', 'Laravel', 'PHP', 'JavaScript', 'MySQL', 'Git'],
+            current: true
           },
           {
+            id: 2,
             position: 'Especialista en ventas',
             company: 'Carrefour España',
             location: 'Antequera, Andalucía, España · Presencial',
             period: 'jun. 2024 - sept. 2024 · 4 meses',
             type: 'Contrato temporal',
             description: 'Atención al cliente y ventas en entorno dinámico. Desarrollo de habilidades de comunicación y trabajo en equipo.',
-            technologies: []
+            technologies: [],
+            current: false
           },
           {
+            id: 3,
             position: 'Especialista en ventas',
             company: 'Carrefour España',
             location: 'Antequera, Andalucía, España · Presencial',
             period: 'jun. 2023 - sept. 2023 · 4 meses',
             type: 'Contrato temporal',
             description: 'Experiencia continuada en retail, fortaleciendo competencias en comunicación y trabajo en equipo.',
-            technologies: []
+            technologies: [],
+            current: false
           },
           {
+            id: 4,
             position: 'Técnico de reparación de equipos informáticos',
             company: 'TecnoManzana Antequera',
             location: 'Antequera, Andalucía, España · Presencial',
             period: 'mar. 2022 - jun. 2022 · 4 meses',
             type: 'Contrato de prácticas',
             description: 'Diagnóstico y reparación de equipos informáticos. Desarrollo de habilidades técnicas y resolución de problemas en hardware y software.',
-            technologies: ['Hardware', 'Software', 'Diagnóstico', 'Reparación']
+            technologies: ['Hardware', 'Software', 'Diagnóstico', 'Reparación'],
+            current: false
           }
         ]
       },
@@ -287,42 +301,56 @@ export const translations = {
       },
       timeline: {
         title: 'My Professional Journey',
+        badges: {
+          current: 'CURRENT',
+          temporary: 'TEMPORARY',
+          internship: 'INTERNSHIP',
+          contract: 'CONTRACT'
+        },
         jobs: [
           {
+            id: 1,
             position: 'Software Developer',
             company: 'Sexta Dimensión Software',
             location: 'Granada, Hybrid',
             period: 'Mar. 2025 - Present · 6 months',
             type: 'Part-time',
             description: 'Junior full stack developer with experience in modern web applications. Working with frontend and backend technologies to create complete and functional solutions.',
-            technologies: ['React', 'Laravel', 'PHP', 'JavaScript', 'MySQL', 'Git']
+            technologies: ['React', 'Laravel', 'PHP', 'JavaScript', 'MySQL', 'Git'],
+            current: true
           },
           {
+            id: 2,
             position: 'Sales Specialist',
             company: 'Carrefour España',
             location: 'Antequera, Andalusia, Spain · On-site',
             period: 'Jun. 2024 - Sep. 2024 · 4 months',
             type: 'Temporary contract',
             description: 'Customer service and sales in dynamic environment. Development of communication skills and teamwork.',
-            technologies: []
+            technologies: [],
+            current: false
           },
           {
+            id: 3,
             position: 'Sales Specialist',
             company: 'Carrefour España',
             location: 'Antequera, Andalusia, Spain · On-site',
             period: 'Jun. 2023 - Sep. 2023 · 4 months',
             type: 'Temporary contract',
             description: 'Continued experience in retail, strengthening communication and teamwork skills.',
-            technologies: []
+            technologies: [],
+            current: false
           },
           {
+            id: 4,
             position: 'IT Equipment Repair Technician',
             company: 'TecnoManzana Antequera',
             location: 'Antequera, Andalusia, Spain · On-site',
             period: 'Mar. 2022 - Jun. 2022 · 4 months',
             type: 'Internship contract',
             description: 'Diagnosis and repair of computer equipment. Development of technical skills and problem solving in hardware and software.',
-            technologies: ['Hardware', 'Software', 'Diagnostics', 'Repair']
+            technologies: ['Hardware', 'Software', 'Diagnostics', 'Repair'],
+            current: false
           }
         ]
       },

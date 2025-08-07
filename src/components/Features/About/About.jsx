@@ -9,7 +9,7 @@ const About = () => {
   const [isTimelineVisible, setIsTimelineVisible] = useState(false);
   const timelineRef = useRef(null);
 
-  // Intersection Observer para activar animaciones cuando la timeline sea visible
+  // Intersection Observer to trigger animations when timeline becomes visible
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -20,8 +20,8 @@ const About = () => {
         });
       },
       {
-        threshold: 0.3, // Se activa cuando el 30% de la timeline es visible
-        rootMargin: '-50px' // Se activa un poco antes de que sea completamente visible
+        threshold: 0.3, // Triggers when 30% of timeline is visible
+        rootMargin: '-50px' // Triggers slightly before becoming fully visible
       }
     );
 
@@ -36,76 +36,27 @@ const About = () => {
     };
   }, []);
 
-  const experience = [
-    {
-      id: 1,
-      position: "Desarrollador de software",
-      company: "Sexta Dimensión Software",
-      location: "Granada, Híbrido",
-      period: "mar. 2025 - actualidad · 6 meses",
-      type: "Jornada parcial",
-      description: "Desarrollador full stack junior con experiencia en aplicaciones web modernas. Trabajo con tecnologías frontend y backend para crear soluciones completas y funcionales.",
-      technologies: ["React", "Laravel", "PHP", "JavaScript", "MySQL", "Git"],
-      current: true
-    },
-    {
-      id: 2,
-      position: "Especialista en ventas",
-      company: "Carrefour España",
-      location: "Antequera, Andalucía, España · Presencial",
-      period: "jun. 2024 - sept. 2024 · 4 meses",
-      type: "Contrato temporal",
-      description: "Atención al cliente y ventas en entorno dinámico. Desarrollo de habilidades de comunicación y trabajo en equipo.",
-      technologies: [],
-      current: false
-    },
-    {
-      id: 3,
-      position: "Especialista en ventas",
-      company: "Carrefour España",
-      location: "Antequera, Andalucía, España · Presencial",
-      period: "jun. 2023 - sept. 2023 · 4 meses",
-      type: "Contrato temporal",
-      description: "Experiencia continuada en retail, fortaleciendo competencias en comunicación y trabajo en equipo.",
-      technologies: [],
-      current: false
-    },
-    {
-      id: 4,
-      position: "Técnico de reparación de equipos informáticos",
-      company: "TecnoManzana Antequera",
-      location: "Antequera, Andalucía, España · Presencial",
-      period: "mar. 2022 - jun. 2022 · 4 meses",
-      type: "Contrato de prácticas",
-      description: "Diagnóstico y reparación de equipos informáticos. Desarrollo de habilidades técnicas y resolución de problemas en hardware y software.",
-      technologies: ["Hardware", "Software", "Diagnóstico", "Reparación"],
-      current: false
-    }
-  ];
-
-  const highlights = [
-    {
-      icon: (
+  // Get experience and highlights data from translations
+  const experience = t('about.timeline.jobs');
+  const highlights = t('about.highlights.items').map((item, index) => ({
+    ...item,
+    icon: [
+      // Full Stack Development icon
+      (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
           <line x1="8" y1="21" x2="16" y2="21"></line>
           <line x1="12" y1="17" x2="12" y2="21"></line>
         </svg>
       ),
-      title: "Desarrollo Full Stack",
-      description: "Experiencia completa desde bases de datos y APIs hasta interfaces de usuario modernas y responsive."
-    },
-    {
-      icon: (
+      // Continuous Learning icon
+      (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M12 2L2 7v10c0 5.55 3.84 10 9 9 5.16 1 9-3.45 9-9V7l-10-5z"></path>
         </svg>
       ),
-      title: "Aprendizaje Continuo",
-      description: "Estudiando Big Data e IA para mantenerme a la vanguardia de la tecnología y ampliar mi stack."
-    },
-    {
-      icon: (
+      // Teamwork icon
+      (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
           <circle cx="9" cy="7" r="4"></circle>
@@ -113,20 +64,15 @@ const About = () => {
           <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
         </svg>
       ),
-      title: "Trabajo en Equipo",
-      description: "Experiencia colaborando en equipos multidisciplinarios y aplicando metodologías ágiles en proyectos reales."
-    },
-    {
-      icon: (
+      // Complete Architecture icon
+      (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="12" cy="12" r="3"></circle>
           <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
         </svg>
-      ),
-      title: "Arquitectura Completa",
-      description: "Enfocado en crear soluciones escalables y eficientes que abarquen toda la stack tecnológica."
-    }
-  ];
+      )
+    ][index]
+  }));
 
   return (
     <section className="about" id="sobre-mi">
@@ -232,15 +178,27 @@ const About = () => {
                   
                   const year = getYear(job.period);
                   
-                  // Colores para diferentes tipos de trabajos
-                  const getJobTypeColor = (type, isCurrent) => {
-                    if (isCurrent) return '#10B981'; // Verde para actual
-                    if (type.includes('temporal')) return '#F59E0B'; // Amarillo para temporal
-                    if (type.includes('prácticas')) return '#8B5CF6'; // Morado para prácticas
-                    return '#3B82F6'; // Azul por defecto
+                  // Colors for different job types - now using index instead of text matching
+                  const getJobTypeColor = (jobIndex, isCurrent) => {
+                    if (isCurrent) return '#10B981'; // Green for current
+                    // Based on job index: 0=current, 1=temporal, 2=temporal, 3=internship
+                    const reversedIndex = experience.length - 1 - index; // Since we reverse the array
+                    if (reversedIndex === 1 || reversedIndex === 2) return '#F59E0B'; // Yellow for temporary
+                    if (reversedIndex === 3) return '#8B5CF6'; // Purple for internship
+                    return '#3B82F6'; // Blue by default
                   };
                   
-                  const jobColor = getJobTypeColor(job.type, job.current);
+                  const jobColor = getJobTypeColor(index, job.current);
+                  
+                  // Get badge text based on job characteristics using translations
+                  const getBadgeText = (job) => {
+                    if (job.current) return t('about.timeline.badges.current');
+                    // Use index to determine type since text can be in different languages
+                    const reversedIndex = experience.length - 1 - index;
+                    if (reversedIndex === 1 || reversedIndex === 2) return t('about.timeline.badges.temporary');
+                    if (reversedIndex === 3) return t('about.timeline.badges.internship');
+                    return t('about.timeline.badges.contract');
+                  };
                   
                   return (
                     <div key={job.id} className={`horizontal-timeline-item ${isTimelineVisible ? 'item-animate' : ''}`}>
@@ -263,7 +221,7 @@ const About = () => {
                               border: `1px solid ${jobColor}50`
                             }}
                           >
-                            {job.current ? 'ACTUAL' : job.type.includes('temporal') ? 'TEMPORAL' : job.type.includes('prácticas') ? 'PRÁCTICAS' : 'CONTRATO'}
+                            {getBadgeText(job)}
                           </span>
                         </div>
                         <h4 className="job-title">{job.position}</h4>
@@ -300,7 +258,7 @@ const About = () => {
 
           {/* Aspectos destacados */}
           <div className="about-highlights">
-            <h3 className="highlights-title">Lo que me caracteriza</h3>
+            <h3 className="highlights-title">{t('about.highlights.title')}</h3>
             <div className="highlights-grid">
               {highlights.map((highlight, index) => (
                 <div key={index} className="highlight-card">
