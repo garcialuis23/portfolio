@@ -292,7 +292,8 @@ const Header = () => {
             
             <li className="nav__mobile-item">
               <a 
-                href="/cv.pdf" 
+                href="/curriculum-luis-garcia.pdf" 
+                download="Luis García - Curriculum.pdf"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn btn-primary btn-sm nav__mobile-cta"
