@@ -1,9 +1,11 @@
 import './Skills.css';
+import { useLanguage } from '../../../context/LanguageContext';
 
 const Skills = () => {
+  const { t } = useLanguage();
   const skillCategories = [
     {
-      title: "Frontend",
+      title: t('skills.categories.frontend'),
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
@@ -18,7 +20,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Backend",
+      title: t('skills.categories.backend'),
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
@@ -35,7 +37,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Frameworks",
+      title: t('skills.categories.frameworks'),
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M12 2L3.09 8.26l1.78 1.78L12 4.6l7.13 5.44 1.78-1.78L12 2z"></path>
@@ -54,7 +56,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Bases de Datos",
+      title: t('skills.categories.databases'),
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
@@ -70,7 +72,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Herramientas & DevOps",
+      title: t('skills.categories.tools'),
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="12" cy="12" r="3"></circle>
@@ -87,7 +89,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "Hardware & IoT",
+      title: t('skills.categories.hardware'),
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="4" y="4" width="16" height="12" rx="2"></rect>
@@ -122,9 +124,9 @@ const Skills = () => {
       <div className="container">
         {/* Header de la sección */}
         <div className="skills-header">
-          <h2 className="section-title">Habilidades Técnicas</h2>
+          <h2 className="section-title">{t('skills.title')}</h2>
           <p className="section-subtitle">
-            Mi stack tecnológico y las herramientas que domino para crear soluciones completas
+            {t('skills.subtitle')}
           </p>
         </div>
 

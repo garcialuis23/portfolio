@@ -1,9 +1,11 @@
 import './About.css';
 import './Timeline.css';
+import { useLanguage } from '../../../context/LanguageContext';
 import aboutIllustration from '../../../assets/images/Fotografía_personal_about.png';
 import { useState, useEffect, useRef } from 'react';
 
 const About = () => {
+  const { t } = useLanguage();
   const [isTimelineVisible, setIsTimelineVisible] = useState(false);
   const timelineRef = useRef(null);
 
@@ -33,22 +35,6 @@ const About = () => {
       }
     };
   }, []);
-
-  const personalInfo = {
-    name: "Luis García Díaz",
-    role: "Junior Full Stack Developer",
-    location: "España",
-    experience: "1+ años de experiencia",
-    currentJob: "Sexta Dimensión",
-    education: "Estudiando Big Data e IA"
-  };
-
-  const aboutText = [
-    "Soy un desarrollador Full Stack apasionado por la tecnología y el aprendizaje continuo. Mi viaje en el desarrollo comenzó con curiosidad por entender cómo funcionan las aplicaciones completas, desde la base de datos hasta la interfaz de usuario.",
-    "Actualmente trabajo en Sexta Dimensión, donde he tenido la oportunidad de colaborar en proyectos reales trabajando tanto en el backend como en el frontend. Esta experiencia me ha enseñado la importancia del trabajo en equipo y las buenas prácticas de desarrollo en todo el stack tecnológico.",
-    "Mi enfoque está en crear soluciones completas y escalables, trabajando desde la arquitectura de la base de datos hasta la experiencia de usuario final. Manejo tecnologías tanto del lado del servidor como del cliente, y estoy ampliando mis conocimientos hacia el mundo de Big Data e Inteligencia Artificial.",
-    "Cuando no estoy programando, disfruto explorando nuevas tecnologías de todo el ecosistema de desarrollo, contribuyendo a proyectos open source y manteniéndome al día con las últimas tendencias tanto en backend como en frontend."
-  ];
 
   const experience = [
     {
@@ -147,9 +133,9 @@ const About = () => {
       <div className="container">
         {/* Header de la sección */}
         <div className="about-header">
-          <h2 className="section-title">Sobre Mí</h2>
+          <h2 className="section-title">{t('about.title')}</h2>
           <p className="section-subtitle">
-            Conoce más sobre mi trayectoria, experiencia y lo que me motiva como desarrollador
+            {t('about.subtitle')}
           </p>
         </div>
 
@@ -166,22 +152,22 @@ const About = () => {
             </div>
             <div className="about-hero-content">
               <div className="about-personal-info">
-                <h3 className="personal-name">{personalInfo.name}</h3>
-                <p className="personal-role">{personalInfo.role}</p>
-                <p className="personal-location">{personalInfo.location}</p>
+                <h3 className="personal-name">{t('about.personalInfo.name')}</h3>
+                <p className="personal-role">{t('about.role')}</p>
+                <p className="personal-location">{t('about.location')}</p>
               </div>
               <div className="about-stats">
                 <div className="stat-item">
                   <span className="stat-number">1+</span>
-                  <span className="stat-label">Años de experiencia</span>
+                  <span className="stat-label">{t('about.stats.experience')}</span>
                 </div>
                 <div className="stat-item">
                   <span className="stat-number">15+</span>
-                  <span className="stat-label">Proyectos completados</span>
+                  <span className="stat-label">{t('about.stats.projects')}</span>
                 </div>
                 <div className="stat-item">
                   <span className="stat-number">10+</span>
-                  <span className="stat-label">Tecnologías dominadas</span>
+                  <span className="stat-label">{t('about.stats.technologies')}</span>
                 </div>
               </div>
             </div>
@@ -190,7 +176,7 @@ const About = () => {
           {/* Información textual */}
           <div className="about-description">
             <div className="about-text">
-              {aboutText.map((paragraph, index) => (
+              {t('about.paragraphs').map((paragraph, index) => (
                 <p key={index} className="about-paragraph">
                   {paragraph}
                 </p>
@@ -198,23 +184,23 @@ const About = () => {
             </div>
             
             <div className="about-info-card">
-              <h3 className="info-card-title">Detalles Profesionales</h3>
+              <h3 className="info-card-title">{t('about.details.title')}</h3>
               <div className="info-grid">
               <div className="info-item">
-                <span className="info-label">Experiencia:</span>
-                <span className="info-value">{personalInfo.experience}</span>
+                <span className="info-label">{t('about.details.experience')}</span>
+                <span className="info-value">{t('about.details.experienceValue')}</span>
               </div>
               <div className="info-item">
-                <span className="info-label">Empresa Actual:</span>
-                <span className="info-value">{personalInfo.currentJob}</span>
+                <span className="info-label">{t('about.details.currentJob')}</span>
+                <span className="info-value">{t('about.details.currentJobValue')}</span>
               </div>
               <div className="info-item">
-                <span className="info-label">Formación:</span>
-                <span className="info-value">{personalInfo.education}</span>
+                <span className="info-label">{t('about.details.education')}</span>
+                <span className="info-value">{t('about.details.educationValue')}</span>
               </div>
               <div className="info-item">
-                <span className="info-label">Ubicación:</span>
-                <span className="info-value">{personalInfo.location}</span>
+                <span className="info-label">{t('about.details.location')}</span>
+                <span className="info-value">{t('about.details.locationValue')}</span>
               </div>
             </div>
             </div>
@@ -222,7 +208,7 @@ const About = () => {
 
           {/* Experiencia Profesional - Timeline Horizontal */}
           <div className="about-experience">
-            <h3 className="experience-title">Mi Trayectoria Profesional</h3>
+            <h3 className="experience-title">{t('about.experience.title')}</h3>
             <div 
               ref={timelineRef}
               className={`horizontal-timeline ${isTimelineVisible ? 'timeline-animated' : ''}`}
@@ -330,16 +316,16 @@ const About = () => {
 
           {/* Call to action */}
           <div className="about-cta">
-            <h3 className="cta-title">¿Trabajamos juntos?</h3>
+            <h3 className="cta-title">{t('about.cta.title')}</h3>
             <p className="cta-description">
-              Estoy siempre abierto a nuevas oportunidades y colaboraciones interesantes
+              {t('about.cta.description')}
             </p>
             <div className="cta-buttons">
               <a href="#contacto" className="btn btn-primary">
-                Contactar
+                {t('about.cta.contact')}
               </a>
               <a href="#proyectos" className="btn btn-secondary">
-                Ver Proyectos
+                {t('about.cta.viewProjects')}
               </a>
               <a 
                 href="/cv.pdf" 
@@ -347,7 +333,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 className="btn btn-outline"
               >
-                Descargar CV
+                {t('about.cta.downloadCV')}
               </a>
             </div>
           </div>

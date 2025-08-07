@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useLanguage } from '../../../context/LanguageContext';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,7 +23,7 @@ const Contact = () => {
           <polyline points="22,6 12,13 2,6"/>
         </svg>
       ),
-      label: 'Email',
+      label: t('contact.info.email'),
       value: 'garciadiazluis23@gmail.com',
       href: 'mailto:garciadiazluis23@gmail.com'
     },
@@ -32,8 +34,8 @@ const Contact = () => {
           <circle cx="12" cy="10" r="3"/>
         </svg>
       ),
-      label: 'Ubicación',
-      value: 'España',
+      label: t('contact.info.location'),
+      value: t('contact.info.locationValue'),
       href: null
     },
     {
@@ -112,16 +114,16 @@ const Contact = () => {
         <div className="contact__content">
           {/* Header */}
           <div className="contact__header">
-            <h2 className="contact__title">Contacto</h2>
+            <h2 className="contact__title">{t('contact.title')}</h2>
             <p className="contact__subtitle">
-              ¿Tienes un proyecto en mente? ¡Hablemos! Estoy disponible para nuevas oportunidades y colaboraciones.
+              {t('contact.subtitle')}
             </p>
           </div>
 
           <div className="contact__main">
             {/* Contact Info */}
             <div className="contact__info">
-              <h3 className="contact__info-title">Información de Contacto</h3>
+              <h3 className="contact__info-title">{t('contact.info.title')}</h3>
               <div className="contact__info-list">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="contact__info-item">
@@ -150,10 +152,10 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="contact__form-container">
-              <h3 className="contact__form-title">Envíame un Mensaje</h3>
+              <h3 className="contact__form-title">{t('contact.form.title')}</h3>
               <form className="contact__form" onSubmit={handleSubmit}>
                 <div className="contact__form-group">
-                  <label htmlFor="name" className="contact__form-label">Nombre</label>
+                  <label htmlFor="name" className="contact__form-label">{t('contact.form.name')}</label>
                   <input
                     type="text"
                     id="name"
@@ -166,7 +168,7 @@ const Contact = () => {
                 </div>
 
                 <div className="contact__form-group">
-                  <label htmlFor="email" className="contact__form-label">Email</label>
+                  <label htmlFor="email" className="contact__form-label">{t('contact.form.email')}</label>
                   <input
                     type="email"
                     id="email"
@@ -179,7 +181,7 @@ const Contact = () => {
                 </div>
 
                 <div className="contact__form-group">
-                  <label htmlFor="subject" className="contact__form-label">Asunto</label>
+                  <label htmlFor="subject" className="contact__form-label">{t('contact.form.subject')}</label>
                   <input
                     type="text"
                     id="subject"
@@ -187,12 +189,12 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     className="contact__form-input"
-                    placeholder="¿En qué puedo ayudarte?"
+                    placeholder={t('contact.form.subjectPlaceholder')}
                   />
                 </div>
 
                 <div className="contact__form-group">
-                  <label htmlFor="message" className="contact__form-label">Mensaje</label>
+                  <label htmlFor="message" className="contact__form-label">{t('contact.form.message')}</label>
                   <textarea
                     id="message"
                     name="message"
@@ -200,7 +202,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     className="contact__form-textarea"
                     rows="5"
-                    placeholder="Cuéntame sobre tu proyecto..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                     required
                   ></textarea>
                 </div>
@@ -216,7 +218,7 @@ const Contact = () => {
                         <circle cx="12" cy="12" r="10"/>
                         <path d="M12 2 A10 10 0 0 1 22 12"/>
                       </svg>
-                      Enviando...
+                      {t('contact.form.sending')}
                     </>
                   ) : (
                     <>
@@ -224,7 +226,7 @@ const Contact = () => {
                         <line x1="22" y1="2" x2="11" y2="13"></line>
                         <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
                       </svg>
-                      Enviar Mensaje
+                      {t('contact.form.send')}
                     </>
                   )}
                 </button>
@@ -232,13 +234,13 @@ const Contact = () => {
                 {/* Status Messages */}
                 {submitStatus === 'success' && (
                   <div className="contact__form-message contact__form-message--success">
-                    ✅ ¡Mensaje enviado exitosamente! Te responderé pronto.
+                    ✅ {t('contact.form.successMessage')}
                   </div>
                 )}
                 
                 {submitStatus === 'error' && (
                   <div className="contact__form-message contact__form-message--error">
-                    ❌ Error al enviar el mensaje. Se abrirá tu cliente de email como alternativa.
+                    ❌ {t('contact.form.errorMessage')}
                   </div>
                 )}
               </form>

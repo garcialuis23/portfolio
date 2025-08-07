@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLanguage } from '../../../context/LanguageContext';
 import './Header.css';
 
 const Header = () => {
@@ -6,7 +7,9 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentSection, setCurrentSection] = useState('inicio');
   const [isDarkMode, setIsDarkMode] = useState(true); // Por defecto modo oscuro
-  const [language, setLanguage] = useState('es'); // 'es' para español, 'en' para inglés
+  
+  // Usar el contexto de idioma
+  const { language, toggleLanguage, t } = useLanguage();
 
   // Detectar scroll y sección actual
   useEffect(() => {
@@ -52,32 +55,6 @@ const Header = () => {
     setIsDarkMode(!isDarkMode);
   };
 
-  const toggleLanguage = () => {
-    setLanguage(language === 'es' ? 'en' : 'es');
-  };
-
-  // Textos según idioma
-  const texts = {
-    es: {
-      inicio: 'Inicio',
-      sobreMi: 'Sobre Mí',
-      habilidades: 'Habilidades',
-      proyectos: 'Proyectos',
-      contacto: 'Contacto',
-      descargarCV: 'Descargar CV'
-    },
-    en: {
-      inicio: 'Home',
-      sobreMi: 'About Me',
-      habilidades: 'Skills',
-      proyectos: 'Projects',
-      contacto: 'Contact',
-      descargarCV: 'Download CV'
-    }
-  };
-
-  const t = texts[language];
-
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -118,7 +95,7 @@ const Header = () => {
                   scrollToSection('inicio');
                 }}
               >
-                {t.inicio}
+                {t('header.inicio')}
               </a>
             </li>
             <li className="nav__item">
@@ -130,7 +107,7 @@ const Header = () => {
                   scrollToSection('sobre-mi');
                 }}
               >
-                {t.sobreMi}
+                {t('header.sobreMi')}
               </a>
             </li>
             <li className="nav__item">
@@ -142,7 +119,7 @@ const Header = () => {
                   scrollToSection('habilidades');
                 }}
               >
-                {t.habilidades}
+                {t('header.habilidades')}
               </a>
             </li>
             <li className="nav__item">
@@ -154,7 +131,7 @@ const Header = () => {
                   scrollToSection('proyectos');
                 }}
               >
-                {t.proyectos}
+                {t('header.proyectos')}
               </a>
             </li>
             <li className="nav__item">
@@ -166,7 +143,7 @@ const Header = () => {
                   scrollToSection('contacto');
                 }}
               >
-                {t.contacto}
+                {t('header.contacto')}
               </a>
             </li>
           </ul>
@@ -178,7 +155,7 @@ const Header = () => {
               className="nav__control-btn" 
               onClick={toggleTheme}
               aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-              title={isDarkMode ? 'Modo claro' : 'Modo oscuro'}
+              title={isDarkMode ? t('header.modoClaro') : t('header.modoOscuro')}
             >
               {isDarkMode ? (
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -228,7 +205,7 @@ const Header = () => {
                   scrollToSection('inicio');
                 }}
               >
-                {t.inicio}
+                {t('header.inicio')}
               </a>
             </li>
             <li className="nav__mobile-item">
@@ -240,7 +217,7 @@ const Header = () => {
                   scrollToSection('sobre-mi');
                 }}
               >
-                {t.sobreMi}
+                {t('header.sobreMi')}
               </a>
             </li>
             <li className="nav__mobile-item">
@@ -252,7 +229,7 @@ const Header = () => {
                   scrollToSection('habilidades');
                 }}
               >
-                {t.habilidades}
+                {t('header.habilidades')}
               </a>
             </li>
             <li className="nav__mobile-item">
@@ -264,7 +241,7 @@ const Header = () => {
                   scrollToSection('proyectos');
                 }}
               >
-                {t.proyectos}
+                {t('header.proyectos')}
               </a>
             </li>
             <li className="nav__mobile-item">
@@ -276,7 +253,7 @@ const Header = () => {
                   scrollToSection('contacto');
                 }}
               >
-                {t.contacto}
+                {t('header.contacto')}
               </a>
             </li>
             
@@ -297,7 +274,7 @@ const Header = () => {
                       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   )}
-                  <span>{isDarkMode ? 'Claro' : 'Oscuro'}</span>
+                  <span>{isDarkMode ? t('header.claro') : t('header.oscuro')}</span>
                 </button>
 
                 <button 
@@ -320,7 +297,7 @@ const Header = () => {
                 rel="noopener noreferrer"
                 className="btn btn-primary btn-sm nav__mobile-cta"
               >
-                {t.descargarCV}
+                {t('header.descargarCV')}
               </a>
             </li>
           </ul>

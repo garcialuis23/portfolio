@@ -1,4 +1,5 @@
 import './styles/globals.css';
+import { LanguageProvider } from './context/LanguageContext';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
 import Hero from './components/Features/Hero/Hero';
@@ -9,23 +10,25 @@ import Contact from './components/Features/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <main>
-        <section id="inicio">
-          <Hero />
-        </section>
-        
-        <About />
+    <LanguageProvider>
+      <div className="App">
+        <Header />
+        <main>
+          <section id="inicio">
+            <Hero />
+          </section>
+          
+          <About />
 
-        <Skills />
+          <Skills />
 
-        <Projects />
-        
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+          <Projects />
+          
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 }
 
