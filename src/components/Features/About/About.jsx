@@ -1,7 +1,39 @@
 import './About.css';
+import './Timeline.css';
 import aboutIllustration from '../../../assets/images/Fotografía_personal_about.png';
+import { useState, useEffect, useRef } from 'react';
 
 const About = () => {
+  const [isTimelineVisible, setIsTimelineVisible] = useState(false);
+  const timelineRef = useRef(null);
+
+  // Intersection Observer para activar animaciones cuando la timeline sea visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsTimelineVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Se activa cuando el 30% de la timeline es visible
+        rootMargin: '-50px' // Se activa un poco antes de que sea completamente visible
+      }
+    );
+
+    if (timelineRef.current) {
+      observer.observe(timelineRef.current);
+    }
+
+    return () => {
+      if (timelineRef.current) {
+        observer.unobserve(timelineRef.current);
+      }
+    };
+  }, []);
+
   const personalInfo = {
     name: "Luis García Díaz",
     role: "Junior Full Stack Developer",
@@ -16,6 +48,53 @@ const About = () => {
     "Actualmente trabajo en Sexta Dimensión, donde he tenido la oportunidad de colaborar en proyectos reales trabajando tanto en el backend como en el frontend. Esta experiencia me ha enseñado la importancia del trabajo en equipo y las buenas prácticas de desarrollo en todo el stack tecnológico.",
     "Mi enfoque está en crear soluciones completas y escalables, trabajando desde la arquitectura de la base de datos hasta la experiencia de usuario final. Manejo tecnologías tanto del lado del servidor como del cliente, y estoy ampliando mis conocimientos hacia el mundo de Big Data e Inteligencia Artificial.",
     "Cuando no estoy programando, disfruto explorando nuevas tecnologías de todo el ecosistema de desarrollo, contribuyendo a proyectos open source y manteniéndome al día con las últimas tendencias tanto en backend como en frontend."
+  ];
+
+  const experience = [
+    {
+      id: 1,
+      position: "Desarrollador de software",
+      company: "Sexta Dimensión Software",
+      location: "Granada, Híbrido",
+      period: "mar. 2025 - actualidad · 6 meses",
+      type: "Jornada parcial",
+      description: "Desarrollador full stack junior con experiencia en aplicaciones web modernas. Trabajo con tecnologías frontend y backend para crear soluciones completas y funcionales.",
+      technologies: ["React", "Laravel", "PHP", "JavaScript", "MySQL", "Git"],
+      current: true
+    },
+    {
+      id: 2,
+      position: "Especialista en ventas",
+      company: "Carrefour España",
+      location: "Antequera, Andalucía, España · Presencial",
+      period: "jun. 2024 - sept. 2024 · 4 meses",
+      type: "Contrato temporal",
+      description: "Atención al cliente y ventas en entorno dinámico. Desarrollo de habilidades de comunicación y trabajo en equipo.",
+      technologies: [],
+      current: false
+    },
+    {
+      id: 3,
+      position: "Especialista en ventas",
+      company: "Carrefour España",
+      location: "Antequera, Andalucía, España · Presencial",
+      period: "jun. 2023 - sept. 2023 · 4 meses",
+      type: "Contrato temporal",
+      description: "Experiencia continuada en retail, fortaleciendo competencias en comunicación y trabajo en equipo.",
+      technologies: [],
+      current: false
+    },
+    {
+      id: 4,
+      position: "Técnico de reparación de equipos informáticos",
+      company: "TecnoManzana Antequera",
+      location: "Antequera, Andalucía, España · Presencial",
+      period: "mar. 2022 - jun. 2022 · 4 meses",
+      type: "Contrato de prácticas",
+      description: "Diagnóstico y reparación de equipos informáticos. Desarrollo de habilidades técnicas y resolución de problemas en hardware y software.",
+      technologies: ["Hardware", "Software", "Diagnóstico", "Reparación"],
+      current: false
+    }
   ];
 
   const highlights = [
@@ -138,6 +217,98 @@ const About = () => {
                 <span className="info-value">{personalInfo.location}</span>
               </div>
             </div>
+            </div>
+          </div>
+
+          {/* Experiencia Profesional - Timeline Horizontal */}
+          <div className="about-experience">
+            <h3 className="experience-title">Mi Trayectoria Profesional</h3>
+            <div 
+              ref={timelineRef}
+              className={`horizontal-timeline ${isTimelineVisible ? 'timeline-animated' : ''}`}
+            >
+              {/* Barra de progreso arriba */}
+              <div className="timeline-progress-bar-top">
+                <div className={`timeline-progress-top ${isTimelineVisible ? 'progress-animate' : ''}`}></div>
+              </div>
+              
+              <div className="timeline-items-container">
+                {/* Invertimos el array para mostrar cronológicamente: más antiguo (izquierda) → más nuevo (derecha) */}
+                {experience.slice().reverse().map((job, index) => {
+                  // Extraer año del período de forma más robusta
+                  const getYear = (period) => {
+                    if (period.includes('2025')) return '2025';
+                    if (period.includes('2024')) return '2024';
+                    if (period.includes('2023')) return '2023';
+                    if (period.includes('2022')) return '2022';
+                    return period.split(' ')[0];
+                  };
+                  
+                  const year = getYear(job.period);
+                  
+                  // Colores para diferentes tipos de trabajos
+                  const getJobTypeColor = (type, isCurrent) => {
+                    if (isCurrent) return '#10B981'; // Verde para actual
+                    if (type.includes('temporal')) return '#F59E0B'; // Amarillo para temporal
+                    if (type.includes('prácticas')) return '#8B5CF6'; // Morado para prácticas
+                    return '#3B82F6'; // Azul por defecto
+                  };
+                  
+                  const jobColor = getJobTypeColor(job.type, job.current);
+                  
+                  return (
+                    <div key={job.id} className={`horizontal-timeline-item ${isTimelineVisible ? 'item-animate' : ''}`}>
+                      <div 
+                        className="timeline-point" 
+                        style={{ background: jobColor }}
+                      >
+                        <div className="timeline-point-inner"></div>
+                      </div>
+                      <div className="timeline-card">
+                        <div className="timeline-card-header">
+                          <span className="job-year" style={{ color: jobColor }}>
+                            {year}
+                          </span>
+                          <span 
+                            className="job-type-badge"
+                            style={{ 
+                              background: `${jobColor}20`,
+                              color: jobColor,
+                              border: `1px solid ${jobColor}50`
+                            }}
+                          >
+                            {job.current ? 'ACTUAL' : job.type.includes('temporal') ? 'TEMPORAL' : job.type.includes('prácticas') ? 'PRÁCTICAS' : 'CONTRATO'}
+                          </span>
+                        </div>
+                        <h4 className="job-title">{job.position}</h4>
+                        <div className="job-company-info">
+                          <span className="company">{job.company}</span>
+                          <span className="location">{job.location.split(' ·')[0]}</span>
+                        </div>
+                        <div className="job-period">{job.period}</div>
+                        <p className="job-desc">{job.description}</p>
+                        {job.technologies.length > 0 && (
+                          <div className="job-tech-list">
+                            {job.technologies.map((tech, techIndex) => (
+                              <span 
+                                key={techIndex} 
+                                className="tech-chip"
+                                style={{ 
+                                  background: `${jobColor}15`,
+                                  color: jobColor,
+                                  border: `1px solid ${jobColor}30`
+                                }}
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
 

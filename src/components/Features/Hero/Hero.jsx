@@ -31,10 +31,7 @@ const Hero = () => {
 
                         {/* Descripción */}
                         <p className="hero-description">
-                            Desarrollador Full Stack apasionado por crear soluciones completas y escalables.
-                            Trabajo tanto en backend como en frontend, siempre enfrentando nuevos desafíos.
-                            Actualmente en Sexta Dimensión mientras amplío mis conocimientos en
-                            Big Data e Inteligencia Artificial.
+                            Diseño y desarrollo aplicaciones web de principio a fin, fusionando interfaces intuitivas con potentes arquitecturas backend, usando tecnologías modernas como React, Node.js y más.
                         </p>
 
                         {/* CTAs */}

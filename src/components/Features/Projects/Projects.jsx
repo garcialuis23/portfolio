@@ -205,15 +205,6 @@ const Projects = () => {
             </div>
           )}
         </div>
-
-        {/* Call to Action */}
-        <div className="projects-cta">
-          <h3>¿Tienes un proyecto en mente?</h3>
-          <p>Estaré encantado de ayudarte a hacerlo realidad</p>
-          <a href="#contacto" className="btn btn-primary btn-lg">
-            Hablemos
-          </a>
-        </div>
       </div>
     </section>
   );

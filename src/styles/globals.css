@@ -470,6 +470,21 @@ input:focus, textarea:focus {
   }
 }
 
+/* === VARIABLES PARA TIMELINE === */
+:root {
+  --timeline-bg: rgba(255, 255, 255, 0.05);
+  --timeline-border: rgba(255, 255, 255, 0.1);
+  --timeline-hover-bg: rgba(255, 255, 255, 0.08);
+  --timeline-hover-border: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] {
+  --timeline-bg: rgba(0, 0, 0, 0.02);
+  --timeline-border: rgba(0, 0, 0, 0.05);
+  --timeline-hover-bg: rgba(0, 0, 0, 0.03);
+  --timeline-hover-border: rgba(0, 0, 0, 0.1);
+}
+
 /* === UTILIDADES DE DESARROLLO === */
 .debug {
   border: 2px solid red !important;
