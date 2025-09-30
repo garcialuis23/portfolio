@@ -69,6 +69,21 @@ const Projects = () => {
     },
     {
       id: 5,
+      title: "SleepSync",
+      description: "Aplicación Full Stack para la gestión y monitoreo del sueño. Permite a los usuarios rastrear patrones de sueño, establecer rutinas personalizadas y obtener insights detallados sobre la calidad del descanso mediante análisis de datos avanzados.",
+      image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop&crop=center",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "JavaScript", "REST API"],
+      category: "Full Stack",
+      featured: true,
+      links: {
+        github: "https://github.com/garcialuis23/sleepsync",
+        live: null
+      },
+      status: "En desarrollo",
+      year: "2025"
+    },
+    {
+      id: 6,
       title: "Portfolio Personal",
       description: "Portfolio personal moderno y responsivo desarrollado con React y Vite. Incluye sistema de diseño completo, tema oscuro/claro y arquitectura modular escalable.",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop&crop=center",
