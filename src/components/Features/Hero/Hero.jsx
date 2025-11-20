@@ -45,8 +45,8 @@ const Hero = () => {
                                 {t('hero.contactar')}
                             </a>
                             <a
-                                href="/curriculum-luis-garcia.pdf"
-                                download="Luis García - Curriculum.pdf"
+                                href="/Curriculum-Luis-Garcia.pdf"
+                                download="Curriculum-Luis-Garcia.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn btn-secondary btn-lg"
