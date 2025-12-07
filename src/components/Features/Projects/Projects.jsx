@@ -8,6 +8,21 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "Heart Attack Prediction - ML",
+      description: "Sistema de Machine Learning para predicción de enfermedades cardíacas alcanzando 90% de accuracy en Kaggle. Implementación de múltiples modelos (Random Forest, SVM, KNN, Decision Trees) con análisis exploratorio exhaustivo, feature engineering, y optimización de hiperparámetros sobre dataset clínico de 735 pacientes.",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop&crop=center",
+      technologies: ["Python", "Scikit-learn", "Pandas", "Machine Learning", "Random Forest", "Data Science"],
+      category: "Backend",
+      featured: true,
+      links: {
+        github: "https://github.com/garcialuis23/heart-attack-prediction",
+        live: null
+      },
+      status: "Completado",
+      year: "2025"
+    },
+    {
+      id: 2,
       title: "Hellcorp - Data Engineering",
       description: "Proyecto integral de ingeniería de datos para gestión infernal. Pipeline completo de limpieza y transformación de 27,500+ registros con Pandas, integración en MySQL con integridad referencial perfecta, consultas SQL avanzadas y diseño teórico de sistemas de IA para optimización de operaciones.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=center",
@@ -22,7 +37,7 @@ const Projects = () => {
       year: "2025"
     },
     {
-      id: 2,
+      id: 3,
       title: "StemFounding Platform",
       description: "Plataforma completa de crowdfunding para proyectos STEM. Un ecosistema completo con frontend en React y backend en Laravel, permitiendo a usuarios crear proyectos, gestionar perfiles y realizar donaciones de manera segura.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center",
@@ -38,7 +53,7 @@ const Projects = () => {
       year: "2024"
     },
     {
-      id: 3,
+      id: 4,
       title: "Monarch API",
       description: "API RESTful desarrollada con Spring Boot para la gestión de reinos medievales y monarcas. Incluye base de datos MySQL robusta y documentación completa con Postman para facilitar la integración.",
       image: "https://images.unsplash.com/photo-1544256718-3bcf237f3974?w=600&h=400&fit=crop&crop=center",
@@ -53,7 +68,7 @@ const Projects = () => {
       year: "2024"
     },
     {
-      id: 4,
+      id: 5,
       title: "Mini Vehicle Arduino",
       description: "Coche inteligente autónomo desarrollado con Arduino. Incluye control de movimiento, detección de obstáculos y navegación autónoma. Proyecto ideal para iniciarse en robótica y sistemas embebidos.",
       image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop&crop=center",
@@ -68,7 +83,7 @@ const Projects = () => {
       year: "2024"
     },
     {
-      id: 5,
+      id: 6,
       title: "Cybersecurity Project",
       description: "Proyecto de ciberseguridad enfocado en la seguridad de aplicaciones web mediante el uso de Inteligencia Artificial. Implementa técnicas avanzadas de detección y prevención de amenazas.",
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop&crop=center",
@@ -83,7 +98,7 @@ const Projects = () => {
       year: "2024"
     },
     {
-      id: 6,
+      id: 7,
       title: "SleepSync",
       description: "Aplicación Full Stack para la gestión y monitoreo del sueño. Permite a los usuarios rastrear patrones de sueño, establecer rutinas personalizadas y obtener insights detallados sobre la calidad del descanso mediante análisis de datos avanzados.",
       image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop&crop=center",
@@ -98,7 +113,7 @@ const Projects = () => {
       year: "2025"
     },
     {
-      id: 7,
+      id: 8,
       title: "Portfolio Personal",
       description: "Portfolio personal moderno y responsivo desarrollado con React y Vite. Incluye sistema de diseño completo, tema oscuro/claro y arquitectura modular escalable.",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop&crop=center",
