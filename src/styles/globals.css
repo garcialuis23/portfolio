@@ -1,6 +1,11 @@
 /* === IMPORTS === */
 @import url('./variables.css');
 
+/* === GOOGLE FONTS - Ice Blue Engineering Typography === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
 /* === RESET Y NORMALIZACIÓN === */
 *,
 *::before,
@@ -21,9 +26,14 @@ body {
   font-weight: var(--font-normal);
   line-height: 1.6;
   color: var(--text-primary);
-  background-color: var(--bg-primary);
+  background-color: var(--bg-canvas);
   transition: background-color var(--transition-normal), color var(--transition-normal);
   overflow-x: hidden;
+  
+  /* Subtle dot matrix pattern - Ice Blue Engineering */
+  background-image: radial-gradient(circle, rgba(15, 76, 117, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
 }
 
 #root {
@@ -36,6 +46,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin-left: 80px; /* Espacio para sidebar */
+  transition: margin-left var(--transition-normal);
 }
 
 main {
@@ -48,10 +60,20 @@ main > section:last-child {
   margin-bottom: 0;
 }
 
-/* === TIPOGRAFÍA GLOBAL === */
+/* === RESPONSIVE LAYOUT === */
+@media (max-width: 768px) {
+  .App {
+    margin-left: 0;
+    margin-top: 70px; /* Espacio para sidebar en mobile (top bar) */
+  }
+}
+
+/* === TIPOGRAFÍA GLOBAL - Ice Blue Engineering === */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
   font-weight: var(--font-bold);
   line-height: 1.2;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-primary);
   margin-bottom: var(--spacing-md);
 }
@@ -59,11 +81,13 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: var(--text-5xl);
   font-weight: var(--font-extrabold);
+  letter-spacing: -0.03em;
 }
 
 h2 {
   font-size: var(--text-4xl);
   font-weight: var(--font-bold);
+  letter-spacing: -0.025em;
 }
 
 h3 {
@@ -90,6 +114,39 @@ p {
   color: var(--text-secondary);
   margin-bottom: var(--spacing-md);
   line-height: 1.7;
+}
+
+/* === CÓDIGO Y DATOS - JetBrains Mono === */
+code, kbd, samp, pre,
+.code, .mono, .data-value {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  font-weight: var(--font-normal);
+}
+
+code {
+  background-color: rgba(15, 76, 117, 0.08);
+  color: var(--primary);
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875em;
+}
+
+pre {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
 }
 
 /* === ENLACES === */
