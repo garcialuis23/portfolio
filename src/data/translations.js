@@ -197,7 +197,9 @@ export const translations = {
         backend: 'Backend',
         frontend: 'Frontend',
         iot: 'IoT/Hardware',
-        security: 'Seguridad'
+        security: 'Seguridad',
+        dataScience: 'Data Science',
+        machineLearning: 'Machine Learning'
       },
       noProjects: {
         title: 'No hay proyectos en esta categoría',
@@ -460,7 +462,9 @@ export const translations = {
         backend: 'Backend',
         frontend: 'Frontend',
         iot: 'IoT/Hardware',
-        security: 'Security'
+        security: 'Security',
+        dataScience: 'Data Science',
+        machineLearning: 'Machine Learning'
       },
       noProjects: {
         title: 'No projects in this category',

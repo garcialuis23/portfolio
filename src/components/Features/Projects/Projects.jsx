@@ -12,7 +12,7 @@ const Projects = () => {
       description: "Sistema de Machine Learning para predicción de enfermedades cardíacas alcanzando 90% de accuracy en Kaggle. Implementación de múltiples modelos (Random Forest, SVM, KNN, Decision Trees) con análisis exploratorio exhaustivo, feature engineering, y optimización de hiperparámetros sobre dataset clínico de 735 pacientes.",
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop&crop=center",
       technologies: ["Python", "Scikit-learn", "Pandas", "Machine Learning", "Random Forest", "Data Science"],
-      category: "Backend",
+      category: "Machine Learning",
       featured: true,
       links: {
         github: "https://github.com/garcialuis23/heart-attack-prediction",
@@ -27,7 +27,7 @@ const Projects = () => {
       description: "Proyecto integral de ingeniería de datos para gestión infernal. Pipeline completo de limpieza y transformación de 27,500+ registros con Pandas, integración en MySQL con integridad referencial perfecta, consultas SQL avanzadas y diseño teórico de sistemas de IA para optimización de operaciones.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=center",
       technologies: ["Python", "Pandas", "MySQL", "SQLAlchemy", "Jupyter", "Data Analysis", "AI Design"],
-      category: "Backend",
+      category: "Data Science",
       featured: true,
       links: {
         github: "https://github.com/garcialuis23/hellcorp",
@@ -134,7 +134,7 @@ const Projects = () => {
     return projects.filter(project => project.category === category).length;
   };
 
-  const categories = ["Todos", "Full Stack", "Backend", "Frontend", "IoT/Hardware", "Seguridad"];
+  const categories = ["Todos", "Full Stack", "Backend", "Frontend", "IoT/Hardware", "Seguridad", "Data Science", "Machine Learning"];
 
   // Función para obtener la traducción de la categoría
   const getCategoryTranslation = (category) => {
@@ -144,7 +144,9 @@ const Projects = () => {
       "Backend": t('projects.filters.backend'),
       "Frontend": t('projects.filters.frontend'),
       "IoT/Hardware": t('projects.filters.iot'),
-      "Seguridad": t('projects.filters.security')
+      "Seguridad": t('projects.filters.security'),
+      "Data Science": t('projects.filters.dataScience'),
+      "Machine Learning": t('projects.filters.machineLearning')
     };
     return translations[category] || category;
   };
