@@ -1,7 +1,22 @@
-/* Footer Styles */
+/* === FOOTER - GLASSMORPHISM ULTRA === */
 .footer {
-  background: var(--bg-primary);
+  background: rgba(15, 23, 42, 0.5);
   margin-top: 0;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), var(--accent), transparent);
+  opacity: 0.5;
 }
 
 .footer__container {
@@ -29,14 +44,18 @@
 
 .footer__name {
   font-size: var(--text-3xl);
-  font-weight: var(--font-bold);
+  font-weight: var(--font-extrabold);
   color: var(--text-primary);
-  margin: 0 0 var(--spacing-xs) 0;
+  margin: 0 0 var(--spacing-sm) 0;
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .footer__surname {
-  color: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .footer__role {
@@ -44,6 +63,7 @@
   color: var(--text-secondary);
   margin: 0;
   max-width: 400px;
+  line-height: 1.6;
 }
 
 /* Social Links */
@@ -55,16 +75,24 @@
 
 .footer__social-link {
   color: var(--text-secondary);
-  transition: all 0.3s ease;
-  padding: var(--spacing-xs);
+  transition: all var(--transition-normal);
+  padding: var(--spacing-sm);
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(148, 163, 184, 0.1);
 }
 
 .footer__social-link:hover {
   color: var(--primary);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  background: rgba(99, 102, 241, 0.15);
+  border-color: var(--primary);
+  box-shadow: 
+    0 10px 25px rgba(99, 102, 241, 0.3),
+    0 0 40px rgba(236, 72, 153, 0.2);
 }
 
 /* Footer Bottom */

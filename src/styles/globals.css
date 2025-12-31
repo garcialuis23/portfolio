@@ -30,10 +30,24 @@ body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
   overflow-x: hidden;
   
-  /* Subtle dot matrix pattern - Ice Blue Engineering */
-  background-image: radial-gradient(circle, rgba(15, 76, 117, 0.03) 1px, transparent 1px);
-  background-size: 24px 24px;
-  background-position: 0 0, 12px 12px;
+  /* Modern Gradient Mesh Background */
+  background-image: var(--gradient-mesh);
+  background-attachment: fixed;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at top right, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(236, 72, 153, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 #root {
@@ -201,31 +215,37 @@ input, textarea {
   padding: var(--spacing-sm) var(--spacing-md);
   background-color: var(--bg-card);
   color: var(--text-primary);
-  transition: border-color var(--transition-fast);
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(10px);
 }
 
 input:focus, textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1), var(--shadow-sm);
+  transform: translateY(-1px);
 }
 
-/* === SCROLLBAR PERSONALIZADA === */
+/* === SCROLLBAR PERSONALIZADA - MODERN === */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
   background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   border-radius: var(--radius-full);
+  border: 2px solid var(--bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-hover);
+  background: linear-gradient(135deg, var(--primary-hover) 0%, var(--accent-hover) 100%);
+  box-shadow: var(--shadow-glow);
 }
 
 /* Para Firefox */
@@ -357,14 +377,36 @@ input:focus, textarea:focus {
 }
 
 .btn-primary {
-  background-color: var(--btn-primary-bg);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
 }
 
 .btn-primary:hover {
-  background-color: var(--btn-primary-hover);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-primary span {
+  position: relative;
+  z-index: 1;
 }
 
 .btn-secondary {
@@ -397,11 +439,39 @@ input:focus, textarea:focus {
   padding: var(--card-padding);
   box-shadow: var(--card-shadow);
   transition: all var(--transition-normal);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-normal);
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
   box-shadow: var(--card-hover-shadow);
+  border-color: var(--primary);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card-glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 /* Badges */
@@ -422,7 +492,7 @@ input:focus, textarea:focus {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -433,7 +503,7 @@ input:focus, textarea:focus {
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-50px);
   }
   to {
     opacity: 1;
@@ -444,7 +514,7 @@ input:focus, textarea:focus {
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(50px);
   }
   to {
     opacity: 1;
@@ -455,26 +525,72 @@ input:focus, textarea:focus {
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
+    transform: scale(1);
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(236, 72, 153, 0.5), 0 0 60px rgba(99, 102, 241, 0.3);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes rotate3d {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
   }
 }
 
 .fade-in {
-  animation: fadeIn 0.6s ease-out;
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .slide-in-left {
-  animation: slideInLeft 0.6s ease-out;
+  animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .slide-in-right {
-  animation: slideInRight 0.6s ease-out;
+  animation: slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.glow {
+  animation: glow 3s ease-in-out infinite;
 }
 
 /* === RESPONSIVE === */
