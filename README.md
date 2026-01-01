@@ -101,9 +101,29 @@ cd portfolio
 # Instalar dependencias
 npm install
 
+# Configurar variables de entorno
+cp .env.example .env
+# Edita .env y agrega tus credenciales de EmailJS
+
 # Iniciar el servidor de desarrollo
 npm run dev
 ```
+
+### **Configuración de Variables de Entorno**
+
+Para que el formulario de contacto funcione, necesitas configurar las credenciales de EmailJS:
+
+1. Crea una cuenta en [EmailJS](https://www.emailjs.com/)
+2. Copia el archivo `.env.example` a `.env`
+3. Completa las variables con tus credenciales:
+
+```env
+VITE_EMAILJS_SERVICE_ID=tu_service_id
+VITE_EMAILJS_TEMPLATE_ID=tu_template_id
+VITE_EMAILJS_PUBLIC_KEY=tu_public_key
+```
+
+> ⚠️ **Importante**: Nunca subas el archivo `.env` a GitHub. Ya está incluido en `.gitignore`.
 
 ### **Scripts Disponibles**
 
@@ -188,6 +208,40 @@ Implementación completa de temas con:
 - [ ] **TypeScript** - Tipado estático
 - [ ] **Testing** - Jest + React Testing Library
 - [ ] **Storybook** - Documentación de componentes
+
+## 🔒 Seguridad
+
+Este proyecto implementa las siguientes medidas de seguridad:
+
+### **Protecciones Implementadas**
+
+- ✅ **Variables de Entorno** - API keys protegidas (no expuestas en el código)
+- ✅ **Content Security Policy (CSP)** - Headers de seguridad en HTML
+- ✅ **Input Sanitization** - Limpieza de inputs del formulario
+- ✅ **Rate Limiting** - Protección contra spam (5 segundos entre envíos)
+- ✅ **XSS Protection** - React escapa automáticamente el contenido
+- ✅ **Secure Links** - `rel="noopener noreferrer"` en enlaces externos
+- ✅ **Dependencies Audit** - Revisión regular de vulnerabilidades
+
+### **Comandos de Seguridad**
+
+```bash
+# Auditar vulnerabilidades en dependencias
+npm audit
+
+# Corregir vulnerabilidades automáticamente
+npm audit fix
+
+# Ver reporte detallado
+npm audit --json
+```
+
+### **Recomendaciones**
+
+- 🔐 Mantén actualizadas las dependencias regularmente
+- 🔑 No compartas tus credenciales de EmailJS públicamente
+- 🛡️ Revisa periódicamente los logs de npm audit
+- 🔒 Usa HTTPS en producción (Vercel lo hace automáticamente)
 
 ## 🤝 Contribución
 

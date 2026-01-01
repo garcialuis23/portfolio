@@ -14,6 +14,7 @@ const Contact = () => {
   
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
+  const [lastSubmitTime, setLastSubmitTime] = useState(0); // Rate limiting
 
   const contactInfo = [
     {
@@ -60,34 +61,62 @@ const Contact = () => {
     }
   ];
 
+  // Función para sanitizar inputs
+  const sanitizeInput = (input) => {
+    return input.trim().replace(/[<>]/g, '');
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    // Sanitizar el input
+    const sanitizedValue = sanitizeInput(value);
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: sanitizedValue
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Rate limiting: Evitar envíos múltiples en menos de 5 segundos
+    const now = Date.now();
+    const timeSinceLastSubmit = now - lastSubmitTime;
+    
+    if (timeSinceLastSubmit < 5000) {
+      setSubmitStatus('rate-limit');
+      setTimeout(() => setSubmitStatus(null), 3000);
+      return;
+    }
+    
     setIsLoading(true);
     setSubmitStatus(null);
+    setLastSubmitTime(now);
 
     try {
-      // Configuración de EmailJS
+      // Validar que las variables de entorno estén configuradas
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS credentials not configured');
+      }
+
+      // Configuración de EmailJS con datos sanitizados
       const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject || 'Contacto desde Portfolio',
-        message: formData.message,
+        from_name: sanitizeInput(formData.name),
+        from_email: sanitizeInput(formData.email),
+        subject: sanitizeInput(formData.subject) || 'Contacto desde Portfolio',
+        message: sanitizeInput(formData.message),
         to_email: 'garciadiazluis23@gmail.com'
       };
 
       await emailjs.send(
-        'service_gb385pp',     // ✅ Tu Service ID (configurado)
-        'template_aqhod2g',    // ✅ Tu Template ID (configurado)
+        serviceId,
+        templateId,
         templateParams,
-        'Lolj_UMh2gh2pL5M8'    // ✅ Tu Public Key (configurado)
+        publicKey
       );
 
       setSubmitStatus('success');
@@ -241,6 +270,12 @@ const Contact = () => {
                 {submitStatus === 'error' && (
                   <div className="contact__form-message contact__form-message--error">
                     ❌ {t('contact.form.errorMessage')}
+                  </div>
+                )}
+                
+                {submitStatus === 'rate-limit' && (
+                  <div className="contact__form-message contact__form-message--error">
+                    ⚠️ Por favor espera unos segundos antes de enviar otro mensaje.
                   </div>
                 )}
               </form>
