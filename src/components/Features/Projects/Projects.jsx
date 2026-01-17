@@ -126,23 +126,37 @@ const Projects = () => {
       },
       status: "En desarrollo",
       year: "2025"
-    }
-    ,
+    },
     {
       id: 9,
       title: "Product Passport",
       description: "Aplicación web desplegada en Vercel para gestión y visualización de información de productos. Interfaz responsiva y acceso público al prototipo en la URL proporcionada.",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981d?w=600&h=400&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=center",
       technologies: ["Next.js", "React Native", "Vercel"],
       category: "Frontend",
-      featured: true,
+      featured: false,
       links: {
         github: null,
         live: "https://product-passport-six.vercel.app/"
       },
       status: "En desarrollo",
       year: "2026"
-    }
+    },
+    {
+      id: 10,
+      title: "Granada Smart City - Energy Forecast",
+      description: "Sistema de predicción energética desarrollado para el Ayuntamiento de Granada. Proyecto de Data Science integral que transforma datos históricos de consumo eléctrico en modelos de Machine Learning. Incluye limpieza exhaustiva de datos, ingeniería de features, benchmark de algoritmos y aplicación web con FastAPI y PostgreSQL.",
+      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop&crop=center",
+      technologies: ["Python", "FastAPI", "PostgreSQL", "scikit-learn", "Pandas", "Machine Learning", "Data Engineering"],
+      category: "Data Science",
+      featured: true,
+      links: {
+        github: "https://github.com/garcialuis23/granada-energy-forecast",
+        live: null
+      },
+      status: "Completado",
+      year: "2025"
+    },
   ];
 
   const getProjectCount = (category) => {
