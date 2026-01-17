@@ -127,6 +127,22 @@ const Projects = () => {
       status: "En desarrollo",
       year: "2025"
     }
+    ,
+    {
+      id: 9,
+      title: "Product Passport",
+      description: "Aplicación web desplegada en Vercel para gestión y visualización de información de productos. Interfaz responsiva y acceso público al prototipo en la URL proporcionada.",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981d?w=600&h=400&fit=crop&crop=center",
+      technologies: ["Next.js", "React Native", "Vercel"],
+      category: "Frontend",
+      featured: true,
+      links: {
+        github: null,
+        live: "https://product-passport-six.vercel.app/"
+      },
+      status: "En desarrollo",
+      year: "2026"
+    }
   ];
 
   const getProjectCount = (category) => {
