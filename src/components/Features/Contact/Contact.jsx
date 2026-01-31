@@ -63,7 +63,7 @@ const Contact = () => {
 
   // Función para sanitizar inputs
   const sanitizeInput = (input) => {
-    return input.trim().replace(/[<>]/g, '');
+    return input.replace(/[<>]/g, '');
   };
 
   const handleInputChange = (e) => {
