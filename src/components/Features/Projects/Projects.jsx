@@ -9,9 +9,9 @@ const Projects = () => {
     {
       id: 1,
       title: "Heart Attack Prediction - ML",
-      description: "Sistema de Machine Learning para predicción de enfermedades cardíacas alcanzando 90% de accuracy en Kaggle. Implementación de múltiples modelos (Random Forest, SVM, KNN, Decision Trees) con análisis exploratorio exhaustivo, feature engineering, y optimización de hiperparámetros sobre dataset clínico de 735 pacientes.",
+      description: "Sistema de Machine Learning para predicción de enfermedades cardíacas alcanzando ~90% de accuracy. Ciclo completo del dato: EDA, feature engineering, tratamiento de valores nulos e imputación de variables clínicas. Entrenamiento y comparación de SVM, KNN y Árboles de Decisión con validación cruzada.",
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop&crop=center",
-      technologies: ["Python", "Scikit-learn", "Pandas", "Machine Learning", "Random Forest", "Data Science"],
+      technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "Machine Learning", "EDA"],
       category: "Machine Learning",
       featured: true,
       links: {
@@ -19,15 +19,15 @@ const Projects = () => {
         live: null
       },
       status: "Completado",
-      year: "2025"
+      year: "2026"
     },
     {
       id: 2,
       title: "Hellcorp - Data Engineering",
-      description: "Proyecto integral de ingeniería de datos para gestión infernal. Pipeline completo de limpieza y transformación de 27,500+ registros con Pandas, integración en MySQL con integridad referencial perfecta, consultas SQL avanzadas y diseño teórico de sistemas de IA para optimización de operaciones.",
+      description: "Pipeline completo de ingeniería de datos: limpieza y transformación de 27,500+ registros con Pandas, integración en MySQL con integridad referencial, consultas SQL avanzadas y diseño teórico de sistemas de IA para optimización de operaciones.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=center",
-      technologies: ["Python", "Pandas", "MySQL", "SQLAlchemy", "Jupyter", "Data Analysis", "AI Design"],
-      category: "Data Science",
+      technologies: ["Python", "Pandas", "MySQL", "SQLAlchemy", "Jupyter", "ETL"],
+      category: "Data Engineering",
       featured: true,
       links: {
         github: "https://github.com/garcialuis23/hellcorp",
@@ -147,8 +147,8 @@ const Projects = () => {
       title: "Granada Smart City - Energy Forecast",
       description: "Sistema de predicción energética desarrollado para el Ayuntamiento de Granada. Proyecto de Data Science integral que transforma datos históricos de consumo eléctrico en modelos de Machine Learning. Incluye limpieza exhaustiva de datos, ingeniería de features, benchmark de algoritmos y aplicación web con FastAPI y PostgreSQL.",
       image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop&crop=center",
-      technologies: ["Python", "FastAPI", "PostgreSQL", "scikit-learn", "Pandas", "Machine Learning", "Data Engineering"],
-      category: "Data Science",
+      technologies: ["Python", "FastAPI", "PostgreSQL", "Scikit-learn", "Pandas", "Machine Learning"],
+      category: "Data Engineering",
       featured: true,
       links: {
         github: "https://github.com/garcialuis23/granada-energy-forecast",
@@ -164,9 +164,8 @@ const Projects = () => {
     return projects.filter(project => project.category === category).length;
   };
 
-  const categories = ["Todos", "Full Stack", "Backend", "Frontend", "IoT/Hardware", "Seguridad", "Data Science", "Machine Learning"];
+  const categories = ["Todos", "Data Engineering", "Machine Learning", "Data Science", "Backend", "Full Stack", "Frontend", "IoT/Hardware", "Seguridad"];
 
-  // Función para obtener la traducción de la categoría
   const getCategoryTranslation = (category) => {
     const translations = {
       "Todos": t('projects.filters.all'),
@@ -176,7 +175,8 @@ const Projects = () => {
       "IoT/Hardware": t('projects.filters.iot'),
       "Seguridad": t('projects.filters.security'),
       "Data Science": t('projects.filters.dataScience'),
-      "Machine Learning": t('projects.filters.machineLearning')
+      "Machine Learning": t('projects.filters.machineLearning'),
+      "Data Engineering": t('projects.filters.dataEngineering')
     };
     return translations[category] || category;
   };

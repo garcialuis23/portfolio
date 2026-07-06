@@ -20,14 +20,14 @@ export const translations = {
     hero: {
       greeting: 'Hola, soy',
       name: 'Luis García',
-      role: 'Junior Full Stack Developer',
-      description: 'Desarrollador Full Stack especializado en crear soluciones web modernas y escalables. Combino experiencia en frontend y backend para construir aplicaciones completas que generan impacto real.',
+      role: 'Data Engineer & Backend Developer',
+      description: 'Ingeniero de Datos y Desarrollador Backend con experiencia en construcción de pipelines escalables, optimización de bases de datos relacionales e integración de APIs RESTful. Formación especializada en IA y Big Data aplicada a soluciones de producción reales.',
       metrics: {
-        projects: '15+',
+        projects: '10+',
         projectsLabel: 'Proyectos Completados',
-        experience: '1+',
+        experience: '2+',
         experienceLabel: 'Años de Experiencia',
-        technologies: '10+',
+        technologies: '15+',
         technologiesLabel: 'Tecnologías Dominadas'
       },
       verProyectos: 'Ver Proyectos',
@@ -38,17 +38,17 @@ export const translations = {
     // About Section
     about: {
       title: 'Sobre Mí',
-      subtitle: 'Conoce más sobre mi trayectoria, experiencia y lo que me motiva como desarrollador',
-      role: 'Junior Full Stack Developer',
-      location: 'España',
+      subtitle: 'Conoce mi trayectoria, experiencia técnica y lo que me motiva como ingeniero de datos',
+      role: 'Data Engineer & Backend Developer',
+      location: 'Granada, España',
       personalInfo: {
         name: 'Luis García Díaz'
       },
       paragraphs: [
-        'Soy un desarrollador Full Stack apasionado por la tecnología y el aprendizaje continuo. Mi viaje en el desarrollo comenzó con curiosidad por entender cómo funcionan las aplicaciones completas, desde la base de datos hasta la interfaz de usuario.',
-        'Actualmente trabajo en Sexta Dimensión, donde he tenido la oportunidad de colaborar en proyectos reales trabajando tanto en el backend como en el frontend. Esta experiencia me ha enseñado la importancia del trabajo en equipo y las buenas prácticas de desarrollo en todo el stack tecnológico.',
-        'Mi enfoque está en crear soluciones completas y escalables, trabajando desde la arquitectura de la base de datos hasta la experiencia de usuario final. Manejo tecnologías tanto del lado del servidor como del cliente, y estoy ampliando mis conocimientos hacia el mundo de Big Data e Inteligencia Artificial.',
-        'Cuando no estoy programando, disfruto explorando nuevas tecnologías de todo el ecosistema de desarrollo, contribuyendo a proyectos open source y manteniéndome al día con las últimas tendencias tanto en backend como en frontend.'
+        'Soy Ingeniero de Datos y Desarrollador Backend con una base sólida en procesamiento de datos, arquitecturas ETL y desarrollo de APIs. Mi trayectoria combina experiencia práctica en entornos profesionales con formación especializada en IA y Big Data.',
+        'Actualmente trabajo en NaturalSoft SL como Data Engineer / Backend Developer, donde desarrollo y mantengo procesos ETL con PHP y SQL, realizo modelado de bases de datos y optimizo consultas complejas para mejorar el rendimiento y disponibilidad de los datos.',
+        'Mi stack principal gira en torno a Python, SQL y herramientas modernas de ingeniería de datos como Snowflake, ClickHouse y dbt. En el lado backend he trabajado con Spring Boot, Django y Node.js, diseñando e integrando APIs RESTful en entornos de producción.',
+        'Estoy cursando el Máster en IA y Big Data en Escuela STEM Granada, lo que me permite aplicar técnicas de Machine Learning y análisis avanzado de datos directamente en proyectos reales. Me motiva diseñar arquitecturas robustas que transformen datos en valor tangible.'
       ],
       stats: {
         experience: 'Años de experiencia',
@@ -58,13 +58,13 @@ export const translations = {
       details: {
         title: 'Detalles Profesionales',
         experience: 'Experiencia:',
-        experienceValue: '1+ años de experiencia',
+        experienceValue: '2+ años en tecnología',
         currentJob: 'Empresa Actual:',
-        currentJobValue: 'Sexta Dimensión',
+        currentJobValue: 'NaturalSoft SL',
         education: 'Formación:',
-        educationValue: 'Estudiando Big Data e IA',
+        educationValue: 'Máster IA y Big Data',
         location: 'Ubicación:',
-        locationValue: 'España'
+        locationValue: 'Granada, España'
       },
       experience: {
         title: 'Mi Trayectoria Profesional'
@@ -80,46 +80,35 @@ export const translations = {
         jobs: [
           {
             id: 1,
-            position: 'Desarrollador de software',
-            company: 'Sexta Dimensión Software',
-            location: 'Granada, Híbrido',
-            period: 'mar. 2025 - dic. 2025 · 10 meses',
-            type: 'Jornada parcial',
-            description: 'Desarrollador full stack junior con experiencia en aplicaciones web modernas. Trabajo con tecnologías frontend y backend para crear soluciones completas y funcionales.',
-            technologies: ['React', 'Laravel', 'PHP', 'JavaScript', 'MySQL', 'Git'],
+            position: 'Data Engineer / Backend Developer',
+            company: 'NaturalSoft SL',
+            location: 'Granada, España',
+            period: 'feb. 2026 - Actualidad',
+            type: 'Jornada completa',
+            description: 'Desarrollo y mantenimiento de procesos ETL mediante scripts PHP y consultas SQL. Modelado de bases de datos y optimización de consultas complejas para mejorar el rendimiento y la disponibilidad de los datos.',
+            technologies: ['PHP', 'SQL', 'ETL', 'MySQL', 'Data Modeling'],
             current: true
           },
           {
             id: 2,
-            position: 'Especialista en ventas',
-            company: 'Carrefour España',
-            location: 'Antequera, Andalucía, España · Presencial',
-            period: 'jun. 2024 - sept. 2024 · 4 meses',
-            type: 'Contrato temporal',
-            description: 'Atención al cliente y ventas en entorno dinámico. Desarrollo de habilidades de comunicación y trabajo en equipo.',
-            technologies: [],
+            position: 'Junior Full Stack Developer',
+            company: 'Sexta Dimensión',
+            location: 'Granada, Híbrido',
+            period: 'mar. 2025 - dic. 2025 · 10 meses',
+            type: 'Jornada parcial',
+            description: 'Desarrollo de lógica de negocio backend con Spring Boot y Django. Diseño e integración de APIs RESTful, optimización de consultas en PostgreSQL y MySQL, e implementación de flujos CI/CD con Docker.',
+            technologies: ['Spring Boot', 'Django', 'PostgreSQL', 'MySQL', 'Docker', 'Git'],
             current: false
           },
           {
             id: 3,
-            position: 'Especialista en ventas',
-            company: 'Carrefour España',
-            location: 'Antequera, Andalucía, España · Presencial',
-            period: 'jun. 2023 - sept. 2023 · 4 meses',
-            type: 'Contrato temporal',
-            description: 'Experiencia continuada en retail, fortaleciendo competencias en comunicación y trabajo en equipo.',
-            technologies: [],
-            current: false
-          },
-          {
-            id: 4,
-            position: 'Técnico de reparación de equipos informáticos',
-            company: 'TecnoManzana Antequera',
-            location: 'Antequera, Andalucía, España · Presencial',
+            position: 'Técnico de Soporte IT',
+            company: 'Tecnomanzana Antequera',
+            location: 'Antequera, España',
             period: 'mar. 2022 - jun. 2022 · 4 meses',
             type: 'Contrato de prácticas',
-            description: 'Diagnóstico y reparación de equipos informáticos. Desarrollo de habilidades técnicas y resolución de problemas en hardware y software.',
-            technologies: ['Hardware', 'Software', 'Diagnóstico', 'Reparación'],
+            description: 'Soporte técnico y resolución de incidencias de hardware, software y configuración de redes locales. Diagnóstico y reparación de equipos electrónicos.',
+            technologies: ['Hardware', 'Redes', 'Software', 'Diagnóstico'],
             current: false
           }
         ]
@@ -128,53 +117,46 @@ export const translations = {
         title: 'Lo que me caracteriza',
         items: [
           {
-            title: 'Desarrollo Full Stack',
-            description: 'Experiencia completa desde bases de datos y APIs hasta interfaces de usuario modernas y responsive.'
+            title: 'Ingeniería de Datos',
+            description: 'Diseño y mantenimiento de pipelines ETL, modelado de bases de datos y optimización de consultas para procesar grandes volúmenes de datos.'
+          },
+          {
+            title: 'Machine Learning aplicado',
+            description: 'Implementación de modelos predictivos con Scikit-learn y análisis exploratorio de datos para extraer insights accionables.'
+          },
+          {
+            title: 'Backend & APIs',
+            description: 'Desarrollo de arquitecturas backend robustas y APIs RESTful con Spring Boot, Django y Node.js en entornos de producción.'
           },
           {
             title: 'Aprendizaje Continuo',
-            description: 'Estudiando Big Data e IA para mantenerme a la vanguardia de la tecnología y ampliar mi stack.'
-          },
-          {
-            title: 'Trabajo en Equipo',
-            description: 'Experiencia colaborando en equipos multidisciplinarios y aplicando metodologías ágiles en proyectos reales.'
-          },
-          {
-            title: 'Arquitectura Completa',
-            description: 'Enfocado en crear soluciones escalables y eficientes que abarquen toda la stack tecnológica.'
+            description: 'Cursando Máster en IA y Big Data, con formación en Snowflake, ClickHouse y dbt para mantenerme a la vanguardia del ecosistema de datos.'
           }
         ]
-      },
-      cta: {
-        title: '¿Trabajamos juntos?',
-        description: 'Estoy siempre abierto a nuevas oportunidades y colaboraciones interesantes',
-        contact: 'Contactar',
-        viewProjects: 'Ver Proyectos',
-        downloadCV: 'Descargar CV'
       }
     },
 
     // Skills Section
     skills: {
       title: 'Habilidades Técnicas',
-      subtitle: 'Mi stack tecnológico y las herramientas que domino para crear soluciones completas',
+      subtitle: 'Mi stack de ingeniería de datos y desarrollo backend: desde pipelines ETL hasta APIs RESTful en producción',
       categories: {
-        frontend: 'Frontend',
-        backend: 'Backend',
-        frameworks: 'Frameworks',
+        frontend: 'Data Engineering',
+        backend: 'Lenguajes',
+        frameworks: 'Frameworks & APIs',
         databases: 'Bases de Datos',
-        tools: 'Herramientas & DevOps',
-        hardware: 'Hardware & IoT'
+        tools: 'DevOps & Herramientas',
+        hardware: 'Machine Learning'
       },
       values: {
-        title: 'Mi Enfoque de Desarrollo',
+        title: 'Mi Enfoque',
         items: [
-          '⚙️ Desarrollo Backend sólido',
-          '🎨 Frontend moderno y responsive',
-          '🏗️ Arquitectura escalable',
+          '⚙️ Pipelines ETL escalables',
+          '🗄️ Modelado y optimización de datos',
+          '🔌 APIs RESTful robustas',
+          '🤖 Machine Learning aplicado',
           '📚 Aprendizaje continuo',
-          '🚀 Pasión por la tecnología',
-          '⚡ Performance y optimización'
+          '⚡ Performance y fiabilidad'
         ]
       },
       stats: {
@@ -188,7 +170,7 @@ export const translations = {
     // Projects Section
     projects: {
       title: 'Mis Proyectos',
-      subtitle: 'Una selección de mis trabajos más destacados, desde desarrollo full stack hasta proyectos de IoT y ciberseguridad',
+      subtitle: 'Proyectos de ingeniería de datos, Machine Learning y desarrollo backend que demuestran mi stack en acción',
       allProjects: 'Todos los Proyectos',
       projectsOf: 'Proyectos de',
       filters: {
@@ -199,11 +181,12 @@ export const translations = {
         iot: 'IoT/Hardware',
         security: 'Seguridad',
         dataScience: 'Data Science',
-        machineLearning: 'Machine Learning'
+        machineLearning: 'Machine Learning',
+        dataEngineering: 'Data Engineering'
       },
       noProjects: {
         title: 'No hay proyectos en esta categoría',
-        message: 'Pero estoy trabajando en nuevos proyectos emocionantes. ¡Mantente atento!'
+        message: 'Pero estoy trabajando en nuevos proyectos. ¡Mantente atento!'
       },
       viewCode: 'Ver código',
       viewLive: 'Ver proyecto en vivo',
@@ -217,12 +200,12 @@ export const translations = {
     // Contact Section
     contact: {
       title: 'Contacto',
-      subtitle: '¿Tienes un proyecto en mente? ¡Hablemos! Estoy disponible para nuevas oportunidades y colaboraciones.',
+      subtitle: '¿Tienes un proyecto de datos o backend en mente? Estoy disponible para nuevas oportunidades y colaboraciones.',
       info: {
         title: 'Información de Contacto',
         email: 'Email',
         location: 'Ubicación',
-        locationValue: 'España'
+        locationValue: 'Málaga, España'
       },
       form: {
         title: 'Envíame un Mensaje',
@@ -241,7 +224,7 @@ export const translations = {
 
     // Footer
     footer: {
-      description: 'Desarrollador Full Stack especializado en crear soluciones web modernas y escalables.',
+      description: 'Data Engineer & Backend Developer especializado en pipelines ETL, optimización de bases de datos y APIs RESTful.',
       quickLinks: 'Enlaces Rápidos',
       contactInfo: 'Información de Contacto',
       followMe: 'Sígueme',
@@ -285,14 +268,14 @@ export const translations = {
     hero: {
       greeting: 'Hello, I\'m',
       name: 'Luis García',
-      role: 'Junior Full Stack Developer',
-      description: 'Full Stack Developer specialized in creating modern and scalable web solutions. I combine frontend and backend expertise to build complete applications that generate real impact.',
+      role: 'Data Engineer & Backend Developer',
+      description: 'Data Engineer and Backend Developer with experience building scalable pipelines, optimizing relational databases, and integrating RESTful APIs. Specialized training in AI and Big Data applied to real production solutions.',
       metrics: {
-        projects: '15+',
+        projects: '10+',
         projectsLabel: 'Completed Projects',
-        experience: '1+',
+        experience: '2+',
         experienceLabel: 'Years of Experience',
-        technologies: '10+',
+        technologies: '15+',
         technologiesLabel: 'Technologies Mastered'
       },
       verProyectos: 'View Projects',
@@ -303,17 +286,17 @@ export const translations = {
     // About Section
     about: {
       title: 'About Me',
-      subtitle: 'Learn more about my journey, experience and what motivates me as a developer',
-      role: 'Junior Full Stack Developer',
-      location: 'Spain',
+      subtitle: 'Learn about my journey, technical expertise and what drives me as a data engineer',
+      role: 'Data Engineer & Backend Developer',
+      location: 'Granada, Spain',
       personalInfo: {
         name: 'Luis García Díaz'
       },
       paragraphs: [
-        'I am a Full Stack developer passionate about technology and continuous learning. My journey in development began with curiosity to understand how complete applications work, from the database to the user interface.',
-        'I currently work at Sexta Dimensión, where I have had the opportunity to collaborate on real projects working on both backend and frontend. This experience has taught me the importance of teamwork and good development practices across the entire technology stack.',
-        'My focus is on creating complete and scalable solutions, working from database architecture to the final user experience. I handle technologies on both the server and client side, and I am expanding my knowledge towards the world of Big Data and Artificial Intelligence.',
-        'When I\'m not programming, I enjoy exploring new technologies from the entire development ecosystem, contributing to open source projects and staying up to date with the latest trends in both backend and frontend.'
+        'I am a Data Engineer and Backend Developer with a solid foundation in data processing, ETL architectures, and API development. My background combines hands-on professional experience with specialized training in AI and Big Data.',
+        'I currently work at NaturalSoft SL as a Data Engineer / Backend Developer, where I develop and maintain ETL processes using PHP and SQL, perform database modeling, and optimize complex queries to improve data performance and availability.',
+        'My core stack revolves around Python, SQL, and modern data engineering tools such as Snowflake, ClickHouse, and dbt. On the backend side, I have worked with Spring Boot, Django, and Node.js, designing and integrating RESTful APIs in production environments.',
+        'I am pursuing a Master\'s in AI and Big Data at Escuela STEM Granada, which allows me to apply Machine Learning techniques and advanced data analysis directly to real-world projects. I am motivated by designing robust architectures that turn raw data into tangible value.'
       ],
       stats: {
         experience: 'Years of experience',
@@ -323,13 +306,13 @@ export const translations = {
       details: {
         title: 'Professional Details',
         experience: 'Experience:',
-        experienceValue: '1+ years of experience',
+        experienceValue: '2+ years in tech',
         currentJob: 'Current Company:',
-        currentJobValue: 'Sexta Dimensión',
+        currentJobValue: 'NaturalSoft SL',
         education: 'Education:',
-        educationValue: 'Studying Big Data & AI',
+        educationValue: 'Master\'s in AI & Big Data',
         location: 'Location:',
-        locationValue: 'Spain'
+        locationValue: 'Granada, Spain'
       },
       experience: {
         title: 'My Professional Journey'
@@ -338,53 +321,42 @@ export const translations = {
         title: 'My Professional Journey',
         badges: {
           current: 'CURRENT',
-          temporary: 'TEMPORARY',
+          temporary: 'CONTRACT',
           internship: 'INTERNSHIP',
           contract: 'CONTRACT'
         },
         jobs: [
           {
             id: 1,
-            position: 'Software Developer',
-            company: 'Sexta Dimensión Software',
-            location: 'Granada, Hybrid',
-            period: 'Mar. 2025 - Dec. 2025 · 10 months',
-            type: 'Part-time',
-            description: 'Junior full stack developer with experience in modern web applications. Working with frontend and backend technologies to create complete and functional solutions.',
-            technologies: ['React', 'Laravel', 'PHP', 'JavaScript', 'MySQL', 'Git'],
+            position: 'Data Engineer / Backend Developer',
+            company: 'NaturalSoft SL',
+            location: 'Granada, Spain',
+            period: 'Feb. 2026 - Present',
+            type: 'Full-time',
+            description: 'Development and maintenance of ETL processes using PHP scripts and SQL queries. Database modeling and optimization of complex queries to improve data performance and availability.',
+            technologies: ['PHP', 'SQL', 'ETL', 'MySQL', 'Data Modeling'],
             current: true
           },
           {
             id: 2,
-            position: 'Sales Specialist',
-            company: 'Carrefour España',
-            location: 'Antequera, Andalusia, Spain · On-site',
-            period: 'Jun. 2024 - Sep. 2024 · 4 months',
-            type: 'Temporary contract',
-            description: 'Customer service and sales in dynamic environment. Development of communication skills and teamwork.',
-            technologies: [],
+            position: 'Junior Full Stack Developer',
+            company: 'Sexta Dimensión',
+            location: 'Granada, Hybrid',
+            period: 'Mar. 2025 - Dec. 2025 · 10 months',
+            type: 'Part-time',
+            description: 'Backend business logic development with Spring Boot and Django. RESTful API design and integration, query optimization in PostgreSQL and MySQL, and CI/CD pipeline implementation with Docker.',
+            technologies: ['Spring Boot', 'Django', 'PostgreSQL', 'MySQL', 'Docker', 'Git'],
             current: false
           },
           {
             id: 3,
-            position: 'Sales Specialist',
-            company: 'Carrefour España',
-            location: 'Antequera, Andalusia, Spain · On-site',
-            period: 'Jun. 2023 - Sep. 2023 · 4 months',
-            type: 'Temporary contract',
-            description: 'Continued experience in retail, strengthening communication and teamwork skills.',
-            technologies: [],
-            current: false
-          },
-          {
-            id: 4,
-            position: 'IT Equipment Repair Technician',
-            company: 'TecnoManzana Antequera',
-            location: 'Antequera, Andalusia, Spain · On-site',
+            position: 'IT Support Technician',
+            company: 'Tecnomanzana Antequera',
+            location: 'Antequera, Spain',
             period: 'Mar. 2022 - Jun. 2022 · 4 months',
-            type: 'Internship contract',
-            description: 'Diagnosis and repair of computer equipment. Development of technical skills and problem solving in hardware and software.',
-            technologies: ['Hardware', 'Software', 'Diagnostics', 'Repair'],
+            type: 'Internship',
+            description: 'Technical support and resolution of hardware, software and local network configuration incidents. Diagnosis and repair of electronic equipment.',
+            technologies: ['Hardware', 'Networking', 'Software', 'Diagnostics'],
             current: false
           }
         ]
@@ -393,53 +365,46 @@ export const translations = {
         title: 'What characterizes me',
         items: [
           {
-            title: 'Full Stack Development',
-            description: 'Complete experience from databases and APIs to modern and responsive user interfaces.'
+            title: 'Data Engineering',
+            description: 'Design and maintenance of ETL pipelines, database modeling, and query optimization to process large volumes of data efficiently.'
+          },
+          {
+            title: 'Applied Machine Learning',
+            description: 'Implementation of predictive models with Scikit-learn and exploratory data analysis to extract actionable insights from raw data.'
+          },
+          {
+            title: 'Backend & APIs',
+            description: 'Robust backend architectures and RESTful APIs built with Spring Boot, Django, and Node.js deployed in production environments.'
           },
           {
             title: 'Continuous Learning',
-            description: 'Studying Big Data and AI to stay at the forefront of technology and expand my stack.'
-          },
-          {
-            title: 'Teamwork',
-            description: 'Experience collaborating in multidisciplinary teams and applying agile methodologies in real projects.'
-          },
-          {
-            title: 'Complete Architecture',
-            description: 'Focused on creating scalable and efficient solutions that cover the entire technology stack.'
+            description: 'Pursuing a Master\'s in AI and Big Data, with training in Snowflake, ClickHouse, and dbt to stay at the forefront of the data ecosystem.'
           }
         ]
-      },
-      cta: {
-        title: 'Shall we work together?',
-        description: 'I am always open to new opportunities and interesting collaborations',
-        contact: 'Contact',
-        viewProjects: 'View Projects',
-        downloadCV: 'Download CV'
       }
     },
 
     // Skills Section
     skills: {
       title: 'Technical Skills',
-      subtitle: 'My technology stack and the tools I master to create complete solutions',
+      subtitle: 'My data engineering and backend stack: from ETL pipelines to production RESTful APIs',
       categories: {
-        frontend: 'Frontend',
-        backend: 'Backend',
-        frameworks: 'Frameworks',
+        frontend: 'Data Engineering',
+        backend: 'Languages',
+        frameworks: 'Frameworks & APIs',
         databases: 'Databases',
-        tools: 'Tools & DevOps',
-        hardware: 'Hardware & IoT'
+        tools: 'DevOps & Tools',
+        hardware: 'Machine Learning'
       },
       values: {
-        title: 'My Development Approach',
+        title: 'My Approach',
         items: [
-          '⚙️ Solid Backend development',
-          '🎨 Modern and responsive Frontend',
-          '🏗️ Scalable architecture',
+          '⚙️ Scalable ETL pipelines',
+          '🗄️ Data modeling & optimization',
+          '🔌 Robust RESTful APIs',
+          '🤖 Applied Machine Learning',
           '📚 Continuous learning',
-          '🚀 Passion for technology',
-          '⚡ Performance and optimization'
+          '⚡ Performance & reliability'
         ]
       },
       stats: {
@@ -453,7 +418,7 @@ export const translations = {
     // Projects Section
     projects: {
       title: 'My Projects',
-      subtitle: 'A selection of my most outstanding work, from full stack development to IoT and cybersecurity projects',
+      subtitle: 'Data engineering, Machine Learning, and backend projects showcasing my stack in action',
       allProjects: 'All Projects',
       projectsOf: 'Projects of',
       filters: {
@@ -464,7 +429,8 @@ export const translations = {
         iot: 'IoT/Hardware',
         security: 'Security',
         dataScience: 'Data Science',
-        machineLearning: 'Machine Learning'
+        machineLearning: 'Machine Learning',
+        dataEngineering: 'Data Engineering'
       },
       noProjects: {
         title: 'No projects in this category',
@@ -482,12 +448,12 @@ export const translations = {
     // Contact Section
     contact: {
       title: 'Contact',
-      subtitle: 'Have a project in mind? Let\'s talk! I\'m available for new opportunities and collaborations.',
+      subtitle: 'Have a data or backend project in mind? I\'m available for new opportunities and collaborations.',
       info: {
         title: 'Contact Information',
         email: 'Email',
         location: 'Location',
-        locationValue: 'Spain'
+        locationValue: 'Málaga, Spain'
       },
       form: {
         title: 'Send me a Message',
@@ -506,7 +472,7 @@ export const translations = {
 
     // Footer
     footer: {
-      description: 'Full Stack developer specialized in creating modern and scalable web solutions.',
+      description: 'Data Engineer & Backend Developer specialized in ETL pipelines, database optimization, and RESTful APIs.',
       quickLinks: 'Quick Links',
       contactInfo: 'Contact Information',
       followMe: 'Follow Me',

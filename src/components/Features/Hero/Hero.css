@@ -1,4 +1,4 @@
-/* === HERO SECTION - ULTRA MODERN === */
+/* === HERO SECTION === */
 .hero {
   background: var(--bg-hero);
   min-height: 100vh;
@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-/* Animated Gradient Background */
+/* Ambient mesh layer */
 .hero::before {
   content: '';
   position: absolute;
@@ -19,21 +19,10 @@
   background: var(--gradient-mesh);
   opacity: 1;
   z-index: 1;
-  animation: gradientShift 15s ease infinite;
+  animation: gradientShift 20s ease infinite;
 }
 
-@keyframes gradientShift {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.1);
-  }
-}
-
-/* Floating particles effect */
+/* Subtle data-flow particles */
 .hero::after {
   content: '';
   position: absolute;
@@ -41,14 +30,19 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-image: 
-    radial-gradient(2px 2px at 20% 30%, rgba(99, 102, 241, 0.3), transparent),
-    radial-gradient(2px 2px at 60% 70%, rgba(236, 72, 153, 0.3), transparent),
-    radial-gradient(1px 1px at 50% 50%, rgba(139, 92, 246, 0.3), transparent),
-    radial-gradient(1px 1px at 80% 10%, rgba(245, 158, 11, 0.3), transparent);
-  background-size: 200% 200%;
-  animation: float 20s ease-in-out infinite;
+  background-image:
+    radial-gradient(1.5px 1.5px at 15% 25%, rgba(6, 182, 212, 0.35), transparent),
+    radial-gradient(1.5px 1.5px at 65% 75%, rgba(99, 102, 241, 0.3), transparent),
+    radial-gradient(1px 1px at 45% 55%, rgba(34, 211, 238, 0.25), transparent),
+    radial-gradient(1px 1px at 85% 15%, rgba(99, 102, 241, 0.2), transparent);
+  background-size: 250% 250%;
+  animation: float 25s ease-in-out infinite;
   z-index: 1;
+}
+
+@keyframes gradientShift {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.75; }
 }
 
 .hero .container {
@@ -73,7 +67,7 @@
   width: 100%;
 }
 
-/* === PROFILE IMAGE - PREMIUM DESIGN === */
+/* === PROFILE IMAGE === */
 .hero-image {
   display: flex;
   justify-content: center;
@@ -83,9 +77,8 @@
 
 .image-container {
   position: relative;
-  width: 320px;
-  height: 320px;
-  filter: drop-shadow(0 20px 60px rgba(99, 102, 241, 0.4));
+  width: 280px;
+  height: 280px;
 }
 
 .profile-image {
@@ -93,27 +86,40 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid transparent;
-  background: linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
-              linear-gradient(135deg, var(--primary), var(--accent)) border-box;
-  box-shadow: 
-    0 0 60px rgba(99, 102, 241, 0.4),
-    0 0 100px rgba(236, 72, 153, 0.3),
+  border: 3px solid transparent;
+  background:
+    linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
+    linear-gradient(135deg, var(--primary), var(--accent)) border-box;
+  box-shadow:
+    0 0 0 1px rgba(6, 182, 212, 0.2),
+    0 0 40px rgba(6, 182, 212, 0.3),
+    0 0 80px rgba(6, 182, 212, 0.12),
     inset 0 0 20px rgba(0, 0, 0, 0.2);
   transition: all var(--transition-smooth);
   position: relative;
   z-index: 2;
-  animation: float 6s ease-in-out infinite;
+  animation: float 7s ease-in-out infinite;
+}
+
+[data-theme="light"] .profile-image {
+  background:
+    linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
+    linear-gradient(135deg, var(--primary), var(--accent)) border-box;
+  box-shadow:
+    0 0 0 1px rgba(8, 145, 178, 0.2),
+    0 0 24px rgba(8, 145, 178, 0.2),
+    0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .profile-image:hover {
-  transform: scale(1.05) rotate(2deg);
-  box-shadow: 
-    0 0 80px rgba(99, 102, 241, 0.6),
-    0 0 120px rgba(236, 72, 153, 0.4);
+  transform: scale(1.04) rotate(2deg);
+  box-shadow:
+    0 0 0 1px rgba(6, 182, 212, 0.35),
+    0 0 60px rgba(6, 182, 212, 0.4),
+    0 0 100px rgba(6, 182, 212, 0.15);
 }
 
-/* Orbital particles around image */
+/* Partícula orbital 1 — cyan */
 .image-decoration {
   position: absolute;
   top: 50%;
@@ -125,57 +131,48 @@
   pointer-events: none;
 }
 
-/* Partícula 1 - Azul */
 .image-decoration::before {
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background: radial-gradient(circle, var(--primary), transparent);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: orbit1 8s linear infinite;
-  box-shadow: 0 0 20px var(--primary);
-  opacity: 0.8;
-}
-
-/* Partícula 2 - Rosa */
-.image-decoration::after {
   content: '';
   position: absolute;
   width: 10px;
   height: 10px;
-  background: radial-gradient(circle, var(--accent), transparent);
+  background: var(--primary);
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: orbit2 6s linear infinite;
-  box-shadow: 0 0 15px var(--accent);
-  opacity: 0.7;
+  animation: orbit1 10s linear infinite;
+  box-shadow: 0 0 16px var(--primary), 0 0 6px var(--primary-light);
+  opacity: 0.9;
 }
 
-/* Órbitas para las partículas */
+/* Partícula orbital 2 — indigo */
+.image-decoration::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: var(--accent-light);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbit2 7s linear infinite;
+  box-shadow: 0 0 12px var(--accent-light);
+  opacity: 0.75;
+}
+
 @keyframes orbit1 {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(180px) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(180px) rotate(-360deg);
-  }
+  0%   { transform: translate(-50%, -50%) rotate(0deg)   translateX(160px) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg) translateX(160px) rotate(-360deg); }
 }
 
 @keyframes orbit2 {
-  0% {
-    transform: translate(-50%, -50%) rotate(120deg) translateX(160px) rotate(-120deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(480deg) translateX(160px) rotate(-480deg);
-  }
+  0%   { transform: translate(-50%, -50%) rotate(120deg) translateX(145px) rotate(-120deg); }
+  100% { transform: translate(-50%, -50%) rotate(480deg) translateX(145px) rotate(-480deg); }
 }
 
+/* === HERO CONTENT === */
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -189,24 +186,32 @@
   font-weight: var(--font-extrabold);
   color: var(--text-hero);
   margin-bottom: var(--spacing-md);
-  line-height: 1.1;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
+/* Nombre con gradiente cyan → indigo */
 .hero-name {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  background: var(--gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  position: relative;
 }
 
 .hero-subtitle {
   font-size: var(--hero-subtitle-size);
   font-weight: var(--font-semibold);
-  color: var(--accent);
+  color: var(--primary);
   margin-bottom: var(--spacing-lg);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: var(--tracking-widest);
+  font-family: var(--font-mono);
+  animation: fadeIn 0.85s ease-out 0.1s both;
+}
+
+[data-theme="light"] .hero-subtitle {
+  color: var(--primary);
 }
 
 .hero-description {
@@ -217,6 +222,7 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  animation: fadeIn 0.9s ease-out 0.2s both;
 }
 
 .hero-actions {
@@ -225,17 +231,25 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: var(--spacing-3xl);
+  animation: fadeIn 1s ease-out 0.35s both;
 }
 
 .hero-code {
-  background: rgba(30, 41, 59, 0.8);
-  border: 1px solid var(--border);
+  background: rgba(11, 17, 32, 0.75);
+  border: 1px solid rgba(6, 182, 212, 0.15);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
   max-width: 500px;
   margin: 0 auto;
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-card);
+  animation: slideInRight 1s ease-out 0.4s both;
+}
+
+[data-theme="light"] .hero-code {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(8, 145, 178, 0.12);
+  box-shadow: var(--shadow-card);
 }
 
 .code-snippet {
@@ -243,88 +257,63 @@
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
   overflow-x: auto;
 }
 
 .code-snippet code {
   color: var(--text-secondary);
+  background: none;
+  border: none;
+  padding: 0;
 }
 
-/* Syntax highlighting simple */
-.code-snippet code::before {
-  content: "";
-}
-
-/* Efectos de animación */
-.hero-title,
-.hero-subtitle,
-.hero-description {
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-.hero-actions {
-  animation: fadeIn 1s ease-out 0.2s forwards;
-  opacity: 0;
-}
-
-.hero-code {
-  animation: slideInRight 1s ease-out 0.4s forwards;
-  opacity: 0;
-}
-
+/* === ANIMACIONES INTERNAS === */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
-/* Responsive Design */
+/* === RESPONSIVE — desktop two-column === */
 @media (min-width: 1024px) {
   .hero-main {
     flex-direction: row;
     align-items: center;
     gap: var(--spacing-4xl);
   }
-  
+
   .hero-content {
     text-align: left;
     align-items: flex-start;
   }
-  
+
   .hero-actions {
     justify-content: flex-start;
   }
-  
+
   .hero-description {
     margin-left: 0;
     margin-right: 0;
   }
-  
-  .image-container {
-    width: 350px;
-    height: 350px;
+
+  .hero-title {
+    font-size: var(--text-6xl); /* 4.5rem en desktop */
   }
-  
+
+  .image-container {
+    width: 320px;
+    height: 320px;
+    flex-shrink: 0;
+  }
+
   .image-decoration {
-    width: 370px;
-    height: 370px;
+    width: 340px;
+    height: 340px;
   }
 }
 
@@ -333,45 +322,47 @@
     min-height: 90vh;
     padding: var(--spacing-xl) 0;
   }
-  
+
   .hero-title {
     font-size: var(--text-4xl);
   }
-  
+
   .hero-subtitle {
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
+    letter-spacing: 0.08em;
   }
-  
+
   .hero-description {
     font-size: var(--text-base);
   }
-  
+
   .hero-actions {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .hero-actions .btn {
     width: 100%;
     max-width: 280px;
+    justify-content: center;
   }
-  
+
   .hero-code {
     padding: var(--spacing-md);
   }
-  
+
   .code-snippet {
     font-size: var(--text-xs);
   }
-  
+
   .image-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .image-decoration {
     width: 220px;
     height: 220px;
-  }
-  
-  .image-decoration {
-    width: 240px;
-    height: 240px;
   }
 }
 
@@ -379,13 +370,14 @@
   .hero-title {
     font-size: var(--text-3xl);
   }
-  
+
   .hero-subtitle {
-    font-size: var(--text-base);
-    letter-spacing: 1px;
+    font-size: var(--text-sm);
   }
-  
+
   .hero-actions {
     gap: var(--spacing-sm);
   }
 }
+
+/* prefers-reduced-motion ya cubierto en globals.css */

@@ -13,7 +13,7 @@ const Hero = () => {
                         <div className="image-container">
                             <img
                                 src={profileImage}
-                                alt="Luis García - Junior Full Stack Developer"
+                                alt="Luis García - Data Engineer & Backend Developer"
                                 className="profile-image"
                             />
                             <div className="image-decoration"></div>
