@@ -26,28 +26,32 @@
 - ✅ **Validación de credenciales**: Verifica que las variables de entorno estén configuradas
 
 ### **4. Headers de Seguridad**
-```html
-<!-- Content Security Policy -->
-<meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
-               script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; 
-               style-src 'self' 'unsafe-inline'; 
-               img-src 'self' data: https: blob:; 
-               font-src 'self' data:; 
-               connect-src 'self' https://api.emailjs.com;
-               frame-ancestors 'none';
-               base-uri 'self';
-               form-action 'self';">
 
-<!-- Prevent MIME type sniffing -->
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
+Los headers que un navegador solo respeta como cabecera HTTP real (`X-Frame-Options`,
+`frame-ancestors` dentro de la CSP) se sirven desde `vercel.json` en cada despliegue.
+El resto se declara también como fallback en `index.html` para que apliquen igual
+en `npm run dev`.
 
-<!-- Prevent clickjacking -->
-<meta http-equiv="X-Frame-Options" content="DENY">
-
-<!-- Referrer policy -->
-<meta name="referrer" content="strict-origin-when-cross-origin">
+```json
+// vercel.json
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://api.emailjs.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}
 ```
+
+> Nota: `X-Frame-Options` y `frame-ancestors` no tienen efecto si se declaran vía
+> `<meta>` — los navegadores los ignoran fuera de una cabecera HTTP real. Por eso
+> viven en `vercel.json`, no en `index.html`.
 
 ### **5. Enlaces Externos Seguros**
 - ✅ Todos los enlaces externos usan `rel="noopener noreferrer"`
@@ -153,6 +157,12 @@ npm outdated
 
 ## 📝 Historial de Seguridad
 
+### **v0.0.0 - Julio 2026**
+- ✅ Headers de seguridad movidos a `vercel.json` (cabeceras HTTP reales en vez
+  de `<meta>`, que el navegador ignora para `X-Frame-Options`/`frame-ancestors`)
+- ✅ CSP actualizada para permitir Google Fonts (`fonts.googleapis.com` /
+  `fonts.gstatic.com`), que antes se bloqueaba silenciosamente
+
 ### **v0.0.0 - Enero 2026**
 - ✅ Implementación inicial de medidas de seguridad
 - ✅ Variables de entorno para API keys
@@ -163,5 +173,4 @@ npm outdated
 
 ---
 
-**Última actualización**: Enero 1, 2026  
-**Próxima revisión**: Febrero 1, 2026
+**Última actualización**: Julio 28, 2026
