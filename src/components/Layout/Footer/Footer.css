@@ -1,170 +1,72 @@
 /* === FOOTER === */
 .footer {
-  background: rgba(6, 11, 24, 0.65);
-  margin-top: 0;
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(24px);
-  border-top: 1px solid rgba(6, 182, 212, 0.08);
-}
-
-[data-theme="light"] .footer {
-  background: rgba(250, 251, 255, 0.9);
-  border-top: 1px solid rgba(8, 145, 178, 0.1);
-  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.04);
-}
-
-/* Línea cyan en el top del footer */
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--primary), var(--accent), transparent);
-  opacity: 0.6;
-}
-
-[data-theme="light"] .footer::before {
-  opacity: 0.4;
+  border-top: 1px solid var(--divider);
+  padding: var(--spacing-8) 0;
 }
 
 .footer__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-lg);
-}
-
-.footer__content {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-2xl);
-}
-
-/* === HEADER === */
-.footer__header {
-  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
+  gap: var(--spacing-5);
 }
 
-.footer__name-section {
-  flex: 1;
+.footer__brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
 }
 
 .footer__name {
-  font-size: var(--text-2xl);
-  font-weight: var(--font-extrabold);
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  font-size: var(--text-base);
   color: var(--text-primary);
-  margin: 0 0 var(--spacing-sm) 0;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-/* Apellido con gradiente cyan → indigo */
-.footer__surname {
-  background: var(--gradient-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.footer__role {
-  font-size: var(--text-sm);
-  color: var(--text-secondary);
-  margin: 0;
-  max-width: 380px;
-  line-height: 1.6;
-  font-family: var(--font-mono);
-}
-
-/* === SOCIAL LINKS === */
-.footer__social {
-  display: flex;
-  gap: var(--spacing-md);
-  align-items: center;
-}
-
-.footer__social-link {
-  color: var(--text-secondary);
-  transition: all var(--transition-normal);
-  padding: var(--spacing-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(6, 182, 212, 0.05);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border);
   text-decoration: none;
 }
 
-[data-theme="light"] .footer__social-link {
-  background: rgba(8, 145, 178, 0.04);
+.footer__role {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.footer__social {
+  display: flex;
+  gap: 0.5rem;
+  order: 3;
+  width: 100%;
+  justify-content: center;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
 }
 
 .footer__social-link:hover {
   color: var(--primary);
-  transform: translateY(-3px);
-  background: rgba(6, 182, 212, 0.1);
-  border-color: rgba(6, 182, 212, 0.2);
-  box-shadow: 0 6px 16px rgba(6, 182, 212, 0.18);
-}
-
-[data-theme="light"] .footer__social-link:hover {
-  background: rgba(8, 145, 178, 0.08);
-  border-color: rgba(8, 145, 178, 0.18);
-  box-shadow: 0 4px 12px rgba(8, 145, 178, 0.12);
-}
-
-.footer__social-link:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 3px;
-}
-
-.footer__social-link svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* === FOOTER BOTTOM === */
-.footer__bottom {
-  border-top: 1px solid var(--border);
-  padding-top: var(--spacing-lg);
+  border-color: var(--primary);
+  background: var(--primary-surface);
 }
 
 .footer__copyright {
   font-size: var(--text-xs);
   color: var(--text-muted);
   margin: 0;
-  text-align: center;
-  font-family: var(--font-mono);
-  letter-spacing: 0.02em;
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  .footer__container {
-    padding: var(--spacing-xl) var(--spacing-sm) var(--spacing-lg);
-  }
-
-  .footer__header {
-    flex-direction: column;
-    gap: var(--spacing-xl);
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer__name {
-    font-size: var(--text-xl);
-  }
-
-  .footer__role {
-    max-width: none;
-    text-align: center;
-  }
-
+@media (min-width: 640px) {
   .footer__social {
-    justify-content: center;
+    order: 2;
+    width: auto;
   }
 }

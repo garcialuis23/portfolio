@@ -115,8 +115,8 @@ const Header = () => {
           </button>
 
           <a
-            href="/Curriculum-Luis_García_Díaz.pdf"
-            download="Curriculum-Luis_García_Díaz.pdf"
+            href="/CV%20Luis_García_Díaz.pdf"
+            download="CV Luis_García_Díaz.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="nav__cv-btn"
@@ -151,8 +151,8 @@ const Header = () => {
           ))}
         </nav>
         <a
-          href="/Curriculum-Luis_García_Díaz.pdf"
-          download="Curriculum-Luis_García_Díaz.pdf"
+          href="/CV%20Luis_García_Díaz.pdf"
+          download="CV Luis_García_Díaz.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="nav__cv-btn nav__cv-btn--mobile"

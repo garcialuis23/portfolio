@@ -178,7 +178,8 @@ export const translations = {
     // Projects Section
     projects: {
       title: 'Mis Proyectos',
-      subtitle: 'Proyectos de ingeniería de datos, Machine Learning y desarrollo backend que demuestran mi stack en acción',
+      heading: 'Cosas que he construido.',
+      subtitle: 'Una selección de proyectos de ingeniería de datos, Machine Learning y desarrollo backend, de principio a fin.',
       allProjects: 'Todos los Proyectos',
       projectsOf: 'Proyectos de',
       filters: {
@@ -208,6 +209,7 @@ export const translations = {
     // Contact Section
     contact: {
       title: 'Contacto',
+      heading: 'Hablemos.',
       subtitle: '¿Tienes un proyecto de datos o backend en mente? Estoy disponible para nuevas oportunidades y colaboraciones.',
       info: {
         title: 'Información de Contacto',
@@ -226,7 +228,8 @@ export const translations = {
         send: 'Enviar Mensaje',
         sending: 'Enviando...',
         successMessage: '¡Mensaje enviado exitosamente! Te responderé pronto.',
-        errorMessage: 'Error al enviar el mensaje. Se abrirá tu cliente de email como alternativa.'
+        errorMessage: 'Error al enviar el mensaje. Se abrirá tu cliente de email como alternativa.',
+        rateLimitMessage: 'Espera unos segundos antes de enviar otro mensaje.'
       }
     },
 
@@ -434,7 +437,8 @@ export const translations = {
     // Projects Section
     projects: {
       title: 'My Projects',
-      subtitle: 'Data engineering, Machine Learning, and backend projects showcasing my stack in action',
+      heading: 'Things I’ve built.',
+      subtitle: 'A selection of data engineering, Machine Learning, and backend projects, end to end.',
       allProjects: 'All Projects',
       projectsOf: 'Projects of',
       filters: {
@@ -464,6 +468,7 @@ export const translations = {
     // Contact Section
     contact: {
       title: 'Contact',
+      heading: 'Let&rsquo;s talk.',
       subtitle: 'Have a data or backend project in mind? I\'m available for new opportunities and collaborations.',
       info: {
         title: 'Contact Information',

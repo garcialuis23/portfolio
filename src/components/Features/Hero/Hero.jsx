@@ -46,8 +46,8 @@ const Hero = () => {
                             </svg>
                         </a>
                         <a
-                            href="/Curriculum-Luis_García_Díaz.pdf"
-                            download="Curriculum-Luis_García_Díaz.pdf"
+                            href="/CV%20Luis_García_Díaz.pdf"
+                            download="CV Luis_García_Díaz.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hero-cv-link"

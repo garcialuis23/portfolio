@@ -1,7 +1,7 @@
 import './About.css';
 import './Timeline.css';
 import { useLanguage } from '../../../context/LanguageContext';
-import aboutIllustration from '../../../assets/images/Fotografía_personal_about.png';
+import aboutIllustration from '../../../assets/images/about-illustration.jpg';
 import { useState, useEffect, useRef } from 'react';
 
 const About = () => {
@@ -21,13 +21,14 @@ const About = () => {
       { threshold: 0.3, rootMargin: '-50px' }
     );
 
-    if (timelineRef.current) {
-      observer.observe(timelineRef.current);
+    const node = timelineRef.current;
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (timelineRef.current) {
-        observer.unobserve(timelineRef.current);
+      if (node) {
+        observer.unobserve(node);
       }
     };
   }, []);
