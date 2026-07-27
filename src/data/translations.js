@@ -39,6 +39,8 @@ export const translations = {
     about: {
       title: 'Sobre Mí',
       subtitle: 'Conoce mi trayectoria, experiencia técnica y lo que me motiva como ingeniero de datos',
+      headingLine1: 'Del soporte técnico',
+      headingLine2: 'a los pipelines de datos.',
       role: 'Data Engineer & Backend Developer',
       location: 'Granada, España',
       personalInfo: {
@@ -139,14 +141,20 @@ export const translations = {
     // Skills Section
     skills: {
       title: 'Habilidades Técnicas',
-      subtitle: 'Mi stack de ingeniería de datos y desarrollo backend: desde pipelines ETL hasta APIs RESTful en producción',
+      heading: 'El stack que uso a diario.',
+      subtitle: 'De pipelines ETL a APIs en producción: estas son las herramientas con las que construyo, ordenadas por lo a fondo que las domino.',
+      legend: {
+        core: 'Dominio sólido',
+        solid: 'Uso habitual',
+        familiar: 'Familiarizado'
+      },
       categories: {
-        frontend: 'Data Engineering',
-        backend: 'Lenguajes',
+        dataEngineering: 'Data Engineering',
+        languages: 'Lenguajes',
         frameworks: 'Frameworks & APIs',
         databases: 'Bases de Datos',
         tools: 'DevOps & Herramientas',
-        hardware: 'Machine Learning'
+        ml: 'Machine Learning'
       },
       values: {
         title: 'Mi Enfoque',
@@ -287,6 +295,8 @@ export const translations = {
     about: {
       title: 'About Me',
       subtitle: 'Learn about my journey, technical expertise and what drives me as a data engineer',
+      headingLine1: 'From IT support',
+      headingLine2: 'to production data pipelines.',
       role: 'Data Engineer & Backend Developer',
       location: 'Granada, Spain',
       personalInfo: {
@@ -387,14 +397,20 @@ export const translations = {
     // Skills Section
     skills: {
       title: 'Technical Skills',
-      subtitle: 'My data engineering and backend stack: from ETL pipelines to production RESTful APIs',
+      heading: 'The stack I use daily.',
+      subtitle: 'From ETL pipelines to production APIs: the tools I build with, ordered by how deep my command of each one goes.',
+      legend: {
+        core: 'Strong command',
+        solid: 'Regular use',
+        familiar: 'Familiar with'
+      },
       categories: {
-        frontend: 'Data Engineering',
-        backend: 'Languages',
+        dataEngineering: 'Data Engineering',
+        languages: 'Languages',
         frameworks: 'Frameworks & APIs',
         databases: 'Databases',
         tools: 'DevOps & Tools',
-        hardware: 'Machine Learning'
+        ml: 'Machine Learning'
       },
       values: {
         title: 'My Approach',

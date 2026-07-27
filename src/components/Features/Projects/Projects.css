@@ -625,44 +625,6 @@
   margin-bottom: var(--spacing-xl);
 }
 
-/* === BOTONES (re-declarados para esta sección) === */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-sm);
-  padding: var(--btn-padding);
-  border-radius: var(--btn-radius);
-  font-size: var(--text-sm);
-  font-weight: var(--font-semibold);
-  text-decoration: none;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  position: relative;
-  overflow: hidden;
-  letter-spacing: 0.01em;
-}
-
-.btn-primary {
-  background: var(--primary);
-  color: white;
-  border-color: var(--primary);
-}
-
-.btn-primary:hover {
-  background: var(--primary-hover);
-  border-color: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-glow);
-  color: white;
-}
-
-.btn-lg {
-  padding: var(--spacing-3) var(--spacing-8);
-  font-size: var(--text-base);
-}
-
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .projects {

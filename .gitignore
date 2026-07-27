@@ -30,3 +30,8 @@ dist-ssr
 
 .vercel
 .playwright-mcp/
+
+# Screenshots from design/agent iterations (root-level captures)
+/*.png
+/*.jpg
+/*.jpeg
