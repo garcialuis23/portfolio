@@ -9,14 +9,6 @@
   padding: calc(var(--spacing-4xl) + var(--spacing-8)) 0 var(--spacing-4xl);
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--gradient-mesh);
-  z-index: 1;
-}
-
 .hero__container {
   position: relative;
   z-index: 2;
@@ -72,10 +64,7 @@
 }
 
 .hero-name {
-  background: var(--gradient-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary);
 }
 
 .hero-description {
@@ -154,16 +143,9 @@
   overflow: hidden;
   border: 1px solid var(--neutral-border);
   box-shadow: var(--shadow-xl);
+  outline: 1px solid rgba(var(--primary-rgb), 0.4);
+  outline-offset: 14px;
   isolation: isolate;
-}
-
-.hero-portrait::before {
-  content: '';
-  position: absolute;
-  inset: -30%;
-  background: var(--gradient-glow);
-  filter: blur(60px);
-  z-index: -1;
 }
 
 .hero-portrait-img {

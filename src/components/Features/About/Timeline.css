@@ -85,7 +85,7 @@
 
 .horizontal-timeline .timeline-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(6, 182, 212, 0.3);
+  border-color: rgba(var(--primary-rgb), 0.3);
 }
 
 .horizontal-timeline .timeline-card-header {
