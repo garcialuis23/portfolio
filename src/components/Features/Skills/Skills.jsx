@@ -1,8 +1,10 @@
 import './Skills.css';
 import { useLanguage } from '../../../context/LanguageContext';
+import { useScrollReveal } from '../../../hooks/useScrollReveal';
 
 const Skills = () => {
   const { t } = useLanguage();
+  const [leadRef, isLeadVisible] = useScrollReveal();
 
   const skillCategories = [
     {
@@ -81,7 +83,7 @@ const Skills = () => {
           {t('skills.title')}
         </div>
 
-        <div className="skills-lead-grid">
+        <div className={`skills-lead-grid ${isLeadVisible ? 'is-revealed' : ''}`} ref={leadRef}>
           <h2 className="skills-heading">{t('skills.heading')}</h2>
           <p className="skills-lead-text">{t('skills.subtitle')}</p>
         </div>

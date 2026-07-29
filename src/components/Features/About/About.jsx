@@ -2,36 +2,12 @@ import './About.css';
 import './Timeline.css';
 import { useLanguage } from '../../../context/LanguageContext';
 import aboutIllustration from '../../../assets/images/about-illustration.jpg';
-import { useState, useEffect, useRef } from 'react';
+import { useScrollReveal } from '../../../hooks/useScrollReveal';
 
 const About = () => {
   const { t } = useLanguage();
-  const [isTimelineVisible, setIsTimelineVisible] = useState(false);
-  const timelineRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsTimelineVisible(true);
-          }
-        });
-      },
-      { threshold: 0.3, rootMargin: '-50px' }
-    );
-
-    const node = timelineRef.current;
-    if (node) {
-      observer.observe(node);
-    }
-
-    return () => {
-      if (node) {
-        observer.unobserve(node);
-      }
-    };
-  }, []);
+  const [timelineRef, isTimelineVisible] = useScrollReveal({ threshold: 0.3, rootMargin: '-50px' });
+  const [leadRef, isLeadVisible] = useScrollReveal();
 
   const experience = t('about.timeline.jobs');
   const paragraphs = t('about.paragraphs');
@@ -81,7 +57,7 @@ const About = () => {
           {t('about.title')}
         </div>
 
-        <div className="about-lead-grid">
+        <div className={`about-lead-grid ${isLeadVisible ? 'is-revealed' : ''}`} ref={leadRef}>
           <h2 className="about-heading">
             {t('about.headingLine1')}<br />
             <span className="about-heading-accent">{t('about.headingLine2')}</span>

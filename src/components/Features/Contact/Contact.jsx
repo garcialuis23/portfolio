@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
+import { useScrollReveal } from '../../../hooks/useScrollReveal';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
   const { t } = useLanguage();
+  const [introRef, isIntroVisible] = useScrollReveal();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -130,7 +132,7 @@ const Contact = () => {
         </div>
 
         <div className="contact-grid">
-          <div className="contact-intro">
+          <div className={`contact-intro ${isIntroVisible ? 'is-revealed' : ''}`} ref={introRef}>
             <h2 className="contact-heading">{t('contact.heading')}</h2>
             <p className="contact-lead-text">{t('contact.subtitle')}</p>
 

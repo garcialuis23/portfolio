@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../../../context/LanguageContext';
+import { useScrollReveal } from '../../../hooks/useScrollReveal';
 import './Projects.css';
 
 const CATEGORY_SLUGS = {
@@ -86,6 +87,7 @@ const LiveIcon = () => (
 const Projects = () => {
   const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('Todos');
+  const [leadRef, isLeadVisible] = useScrollReveal();
 
   const projects = [
     {
@@ -221,7 +223,7 @@ const Projects = () => {
           {t('projects.title')}
         </div>
 
-        <div className="projects-lead-grid">
+        <div className={`projects-lead-grid ${isLeadVisible ? 'is-revealed' : ''}`} ref={leadRef}>
           <h2 className="projects-heading">{t('projects.heading')}</h2>
           <p className="projects-lead-text">{t('projects.subtitle')}</p>
         </div>
