@@ -15,6 +15,18 @@
 - **Tokens:** Botones primarios: texto blanco → oscuro (#0B0C0E) para AA sobre ámbar. Variables.css mantiene nombres, solo valores cambiados.
 - **Por qué:** Navy+cyan+indigo con glow es patrón más repetido en portfolios de IA. Usuario sintió "demasiado de IA" específicamente por combo color (layout ya validado en 28). Referencias (juanma-dev light cálido, kripto negro+cyan neón) no usan esa combinación.
 
+### 2026-07-29 — Copy de About
+
+- **Heading:** "Del soporte técnico a los pipelines de datos." → "De datos crudos a decisiones de negocio." (ES) / "From raw data to business decisions." (EN). Cambio en src/data/translations.js.
+- **Body copy:** 4 párrafos → 2. Eliminados: párrafo sobre puesto actual (redundante con tarjeta "Detalles Profesionales" + timeline) y párrafo sobre stack técnico (redundante con sección Skills). Mantienen: lead de identidad + párrafo de motivación/formación actual.
+- **Por qué:** Usuario vio que el heading anterior centraba la identidad en soporte técnico (puesto que no quiere destacar). Además, el cuerpo tenía duplicación innecesaria de info ya mostrada en otro sitio de la misma página — no fue "recorte por recorte" sino eliminación de ruido informativo.
+
+### 2026-07-29 — Ritmo visual entre secciones
+
+- **Layout:** About, Skills, Projects, Contact compartían fondo plano sin separación → agregados fondos alternativos (var(--bg-secondary) en Skills y Contact vs base) + borde superior 1px (var(--border)) en Skills y Contact. About y Projects mantienen fondo base (visible grid de puntos).
+- **Animaciones:** Añadido hook compartido src/hooks/useScrollReveal.js (fade + rise ~20px al entrar en viewport). Aplicado en eyebrow+heading de las 4 secciones y migrado timeline de About. Respeta prefers-reduced-motion.
+- **Por qué:** Usuario sintió "scroll infinito" → presentadas 3 opciones; eligió (a) marcar transiciones sin bloquear scroll. Scroll-snap real (opción b) habría exigido recortar About (mucho más alta que viewport) con riesgos en accesibilidad. Solución: visual separation sin friction.
+
 ## Bugs corregidos durante el rediseño
 
 1. **CSP bloqueaba Google Fonts**: index.html CSP (`style-src 'self' 'unsafe-inline'`) impedía @import en globals.css. Sitio renderizaba en fallback system fonts. Solucionado: allowlist fonts.googleapis.com + fonts.gstatic.com.
