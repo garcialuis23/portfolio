@@ -39,18 +39,16 @@ export const translations = {
     about: {
       title: 'Sobre Mí',
       subtitle: 'Conoce mi trayectoria, experiencia técnica y lo que me motiva como ingeniero de datos',
-      headingLine1: 'Del soporte técnico',
-      headingLine2: 'a los pipelines de datos.',
+      headingLine1: 'De datos crudos',
+      headingLine2: 'a decisiones de negocio.',
       role: 'Data Engineer & Backend Developer',
       location: 'Granada, España',
       personalInfo: {
         name: 'Luis García Díaz'
       },
       paragraphs: [
-        'Soy Ingeniero de Datos y Desarrollador Backend con una base sólida en procesamiento de datos, arquitecturas ETL y desarrollo de APIs. Mi trayectoria combina experiencia práctica en entornos profesionales con formación especializada en IA y Big Data.',
-        'Actualmente trabajo en NaturalSoft SL como Data Engineer / Backend Developer, donde desarrollo y mantengo procesos ETL con PHP y SQL, realizo modelado de bases de datos y optimizo consultas complejas para mejorar el rendimiento y disponibilidad de los datos.',
-        'Mi stack principal gira en torno a Python, SQL y herramientas modernas de ingeniería de datos como Snowflake, ClickHouse y dbt. En el lado backend he trabajado con Spring Boot, Django y Node.js, diseñando e integrando APIs RESTful en entornos de producción.',
-        'Estoy cursando el Máster en IA y Big Data en Escuela STEM Granada, lo que me permite aplicar técnicas de Machine Learning y análisis avanzado de datos directamente en proyectos reales. Me motiva diseñar arquitecturas robustas que transformen datos en valor tangible.'
+        'Soy Ingeniero de Datos y Desarrollador Backend: diseño pipelines ETL, modelo bases de datos y construyo APIs que ponen esos datos a trabajar en producción.',
+        'Me motiva convertir datos crudos en arquitecturas robustas y decisiones de negocio. Estoy cursando el Máster en IA y Big Data en Escuela STEM Granada, aplicando Machine Learning y análisis avanzado directamente en proyectos reales.'
       ],
       stats: {
         experience: 'Años de experiencia',
@@ -298,18 +296,16 @@ export const translations = {
     about: {
       title: 'About Me',
       subtitle: 'Learn about my journey, technical expertise and what drives me as a data engineer',
-      headingLine1: 'From IT support',
-      headingLine2: 'to production data pipelines.',
+      headingLine1: 'From raw data',
+      headingLine2: 'to business decisions.',
       role: 'Data Engineer & Backend Developer',
       location: 'Granada, Spain',
       personalInfo: {
         name: 'Luis García Díaz'
       },
       paragraphs: [
-        'I am a Data Engineer and Backend Developer with a solid foundation in data processing, ETL architectures, and API development. My background combines hands-on professional experience with specialized training in AI and Big Data.',
-        'I currently work at NaturalSoft SL as a Data Engineer / Backend Developer, where I develop and maintain ETL processes using PHP and SQL, perform database modeling, and optimize complex queries to improve data performance and availability.',
-        'My core stack revolves around Python, SQL, and modern data engineering tools such as Snowflake, ClickHouse, and dbt. On the backend side, I have worked with Spring Boot, Django, and Node.js, designing and integrating RESTful APIs in production environments.',
-        'I am pursuing a Master\'s in AI and Big Data at Escuela STEM Granada, which allows me to apply Machine Learning techniques and advanced data analysis directly to real-world projects. I am motivated by designing robust architectures that turn raw data into tangible value.'
+        'I\'m a Data Engineer and Backend Developer: I design ETL pipelines, model databases, and build APIs that put that data to work in production.',
+        'I\'m driven by turning raw data into robust architectures and business decisions. I\'m pursuing a Master\'s in AI and Big Data at Escuela STEM Granada, applying Machine Learning and advanced analysis directly to real-world projects.'
       ],
       stats: {
         experience: 'Years of experience',
