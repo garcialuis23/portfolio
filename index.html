@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -18,7 +18,23 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
-    <title>Luis García - Data Engineer & Backend Developer</title>
+    <meta name="description" content="Luis García Díaz, Data Engineer y Backend Developer en Granada: pipelines ETL, modelado de bases de datos y APIs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Luis García Díaz, Data Engineer & Backend Developer</title>
+
+    <!-- Aplica el tema antes del primer pintado para evitar el parpadeo -->
+    <script>
+      (function () {
+        var theme;
+        try { theme = localStorage.getItem('portfolio-theme'); } catch (e) {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

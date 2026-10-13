@@ -25,6 +25,7 @@ export const LanguageProvider = ({ children }) => {
   // Guardar idioma en localStorage cuando cambie
   useEffect(() => {
     localStorage.setItem('portfolio-language', language);
+    document.documentElement.lang = language;
   }, [language]);
 
   const toggleLanguage = () => {
