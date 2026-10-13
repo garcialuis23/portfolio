@@ -27,6 +27,16 @@
 - **Animaciones:** Añadido hook compartido src/hooks/useScrollReveal.js (fade + rise ~20px al entrar en viewport). Aplicado en eyebrow+heading de las 4 secciones y migrado timeline de About. Respeta prefers-reduced-motion.
 - **Por qué:** Usuario sintió "scroll infinito" → presentadas 3 opciones; eligió (a) marcar transiciones sin bloquear scroll. Scroll-snap real (opción b) habría exigido recortar About (mucho más alta que viewport) con riesgos en accesibilidad. Solución: visual separation sin friction.
 
+### 2026-10-13 — Rediseño "papel de impresora de datos" (reemplaza todo lo anterior)
+
+- **Concepto:** el oficio de data engineer (datos sucios → tablas limpias) como lenguaje visual. Vernáculo: papel continuo green-bar de los listados de mainframe.
+- **Paleta:** papel #F3F5EE, banda #E3ECDD, tinta #17201B, verde libro mayor #2E6B4C (estructura, estado, niveles) y azul bolígrafo #2C46C9 (acciones y enlaces). Modo oscuro equivalente (#0F1411, #6FBF92, #93A5FF). Tema inicial = preferencia del sistema, persistido en localStorage `portfolio-theme`, aplicado en index.html antes del primer pintado. **Reemplaza a:** grafito + ámbar + slate-teal (07-29).
+- **Tipografía:** Archivo (variable con eje `wdth`; 125% expandida para nombre y titulares) + IBM Plex Mono solo en datos reales (registro crudo, años, stack). Fuera Inter, Space Grotesk y JetBrains Mono.
+- **Estructura:** Hero (nombre gigante + registro CSV sucio que se tacha y sale limpio fila a fila: la única animación de la página) • Perfil (foto + 2 párrafos) • Experiencia (sección propia, filas con periodo/rol/detalle) • Stack (matriz categoría × nivel; el peso tipográfico codifica el dominio) • Proyectos (tabla en hoja de papel continuo con bandas y perforaciones) • Contacto (email grande + copiar, formulario EmailJS con la lógica intacta).
+- **Eliminado a propósito:** eyebrows en mayúsculas, stats 2+/10+/15+, avatar cartoon, tarjetas "Lo que me caracteriza", tarjeta "Detalles profesionales" (duplicaba el registro del hero), timeline horizontal, hook useScrollReveal (fade-up por sección = patrón genérico).
+- **Datos:** proyectos y experiencia viven en translations.js (antes las descripciones de proyectos solo estaban en español). Enlaces compartidos en src/data/links.js, iconos en src/components/icons.jsx.
+- **Por qué:** el usuario quería más originalidad y dio libertad total. El diseño anterior seguía leyéndose como plantilla de portfolio dev (fondo oscuro + acento único + eyebrows mono). El nuevo nace del tema (datos), no de una estética genérica.
+
 ## Bugs corregidos durante el rediseño
 
 1. **CSP bloqueaba Google Fonts**: index.html CSP (`style-src 'self' 'unsafe-inline'`) impedía @import en globals.css. Sitio renderizaba en fallback system fonts. Solucionado: allowlist fonts.googleapis.com + fonts.gstatic.com.
