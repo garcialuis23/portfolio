@@ -55,7 +55,7 @@ const PROJECTS = [
   }
 ];
 
-const CATEGORIES = ['all', 'dataEngineering', 'machineLearning', 'backend', 'fullStack', 'frontend', 'security', 'iot'];
+const CATEGORIES = ['all', 'backend', 'fullStack', 'dataEngineering', 'machineLearning', 'frontend', 'security', 'iot'];
 
 const Projects = () => {
   const { t } = useLanguage();

@@ -19,14 +19,14 @@ export const translations = {
 
     hero: {
       name: 'Luis García Díaz',
-      intro: 'Ingeniero de datos y desarrollador backend. Los datos me llegan sucios y salen listos para usar, como este registro:',
+      intro: 'Desarrollador backend e ingeniero de datos. Construyo APIs y aplicaciones con Java y Spring Boot, y convierto datos sucios en datos listos para usar, como este registro:',
       rawLabel: 'Entrada',
       cleanLabel: 'Salida',
       rows: [
         { raw: '" luis  garcia diaz ",,NULL', key: 'nombre', value: 'Luis García Díaz' },
-        { raw: 'data eng. / backend dev;;', key: 'rol', value: 'Data Engineer & Backend Developer' },
+        { raw: 'backend dev / data eng.;;', key: 'rol', value: 'Backend Developer & Data Engineer' },
         { raw: 'GRANADA , es ,,', key: 'base', value: 'Granada, España' },
-        { raw: 'py,SQL , php,JAVA ,,java', key: 'stack', value: 'Python, SQL, PHP, Java' },
+        { raw: 'JAVA,spring boot , sql,py ,,java', key: 'stack', value: 'Java, Spring Boot, SQL, Python' },
         { raw: 'naturalsoft sl  (02/2026-)', key: 'ahora', value: 'NaturalSoft SL, desde febrero de 2026' },
         { raw: 'MASTER ia+big data ¿en curso?', key: 'formación', value: 'Máster en IA y Big Data, en curso' }
       ],
@@ -40,7 +40,7 @@ export const translations = {
       heading: 'De datos crudos a decisiones de negocio.',
       photoAlt: 'Luis García Díaz con traje gris, al aire libre',
       paragraphs: [
-        'Diseño pipelines ETL, modelo bases de datos y construyo las APIs que ponen esos datos a trabajar en producción.',
+        'Construyo backends y APIs con Java y Spring Boot, y diseño los pipelines ETL y las bases de datos que los alimentan en producción.',
         'Me motiva convertir datos crudos en arquitecturas robustas y decisiones de negocio. Estoy cursando el Máster en IA y Big Data en Escuela STEM Granada, aplicando Machine Learning y análisis avanzado directamente en proyectos reales.'
       ]
     },
@@ -52,13 +52,13 @@ export const translations = {
       jobs: [
         {
           id: 1,
-          position: 'Data Engineer / Backend Developer',
+          position: 'Backend Developer / Data Engineer',
           company: 'NaturalSoft SL',
           location: 'Granada',
           period: 'Feb. 2026 – hoy',
           type: 'Jornada completa',
-          description: 'Desarrollo y mantenimiento de procesos ETL con scripts PHP y SQL. Modelado de bases de datos y optimización de consultas complejas para mejorar el rendimiento y la disponibilidad de los datos.',
-          technologies: ['PHP', 'SQL', 'ETL', 'MySQL', 'Data Modeling'],
+          description: 'Desarrollo una aplicación en Java con Spring Boot, desde el diseño de su API hasta la lógica de negocio. Integro soluciones de IA en el software de la empresa para automatizar tareas y mejorar el producto. Además, mantengo los procesos ETL en PHP y SQL, modelo las bases de datos y optimizo consultas complejas.',
+          technologies: ['Java', 'Spring Boot', 'IA', 'PHP', 'SQL', 'MySQL', 'ETL'],
           current: true
         },
         {
@@ -108,7 +108,7 @@ export const translations = {
     projects: {
       title: 'Proyectos',
       heading: 'Cosas que he construido.',
-      subtitle: 'Ingeniería de datos, Machine Learning y backend, de principio a fin.',
+      subtitle: 'Backend, ingeniería de datos y Machine Learning, de principio a fin.',
       filterLabel: 'Filtrar por categoría',
       all: 'Todos',
       columns: {
@@ -194,14 +194,14 @@ export const translations = {
 
     hero: {
       name: 'Luis García Díaz',
-      intro: 'Data engineer and backend developer. Data reaches me messy and leaves ready to use, like this record:',
+      intro: 'Backend developer and data engineer. I build APIs and applications with Java and Spring Boot, and turn messy data into data that’s ready to use, like this record:',
       rawLabel: 'Input',
       cleanLabel: 'Output',
       rows: [
         { raw: '" luis  garcia diaz ",,NULL', key: 'name', value: 'Luis García Díaz' },
-        { raw: 'data eng. / backend dev;;', key: 'role', value: 'Data Engineer & Backend Developer' },
+        { raw: 'backend dev / data eng.;;', key: 'role', value: 'Backend Developer & Data Engineer' },
         { raw: 'GRANADA , es ,,', key: 'based in', value: 'Granada, Spain' },
-        { raw: 'py,SQL , php,JAVA ,,java', key: 'stack', value: 'Python, SQL, PHP, Java' },
+        { raw: 'JAVA,spring boot , sql,py ,,java', key: 'stack', value: 'Java, Spring Boot, SQL, Python' },
         { raw: 'naturalsoft sl  (02/2026-)', key: 'now', value: 'NaturalSoft SL, since February 2026' },
         { raw: 'MASTER ia+big data ¿en curso?', key: 'education', value: 'Master’s in AI and Big Data, ongoing' }
       ],
@@ -215,7 +215,7 @@ export const translations = {
       heading: 'From raw data to business decisions.',
       photoAlt: 'Luis García Díaz in a grey suit, outdoors',
       paragraphs: [
-        'I design ETL pipelines, model databases, and build the APIs that put that data to work in production.',
+        'I build backends and APIs with Java and Spring Boot, and design the ETL pipelines and databases that feed them in production.',
         'I’m driven by turning raw data into robust architectures and business decisions. I’m pursuing a Master’s in AI and Big Data at Escuela STEM Granada, applying Machine Learning and advanced analysis directly to real-world projects.'
       ]
     },
@@ -227,13 +227,13 @@ export const translations = {
       jobs: [
         {
           id: 1,
-          position: 'Data Engineer / Backend Developer',
+          position: 'Backend Developer / Data Engineer',
           company: 'NaturalSoft SL',
           location: 'Granada',
           period: 'Feb. 2026 – now',
           type: 'Full-time',
-          description: 'Building and maintaining ETL processes with PHP scripts and SQL. Database modeling and optimization of complex queries to improve data performance and availability.',
-          technologies: ['PHP', 'SQL', 'ETL', 'MySQL', 'Data Modeling'],
+          description: 'I’m building a Java application with Spring Boot, from API design to business logic. I integrate AI solutions into the company’s software to automate tasks and improve the product. I also maintain the ETL processes in PHP and SQL, model the databases and optimise complex queries.',
+          technologies: ['Java', 'Spring Boot', 'AI', 'PHP', 'SQL', 'MySQL', 'ETL'],
           current: true
         },
         {
@@ -283,7 +283,7 @@ export const translations = {
     projects: {
       title: 'Projects',
       heading: 'Things I’ve built.',
-      subtitle: 'Data engineering, Machine Learning and backend, end to end.',
+      subtitle: 'Backend, data engineering and Machine Learning, end to end.',
       filterLabel: 'Filter by category',
       all: 'All',
       columns: {

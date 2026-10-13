@@ -37,6 +37,12 @@
 - **Datos:** proyectos y experiencia viven en translations.js (antes las descripciones de proyectos solo estaban en español). Enlaces compartidos en src/data/links.js, iconos en src/components/icons.jsx.
 - **Por qué:** el usuario quería más originalidad y dio libertad total. El diseño anterior seguía leyéndose como plantilla de portfolio dev (fondo oscuro + acento único + eyebrows mono). El nuevo nace del tema (datos), no de una estética genérica.
 
+### 2026-10-13 — Backend primero
+
+- **Rol:** "Backend Developer & Data Engineer" (antes al revés) en hero, título, meta y puesto de NaturalSoft. Stack del hero: Java, Spring Boot, SQL, Python. Filas de Stack y filtros de Proyectos reordenados con backend delante.
+- **NaturalSoft:** la descripción empieza por la app Java/Spring Boot y la integración de IA; el ETL en PHP/SQL pasa a segundo plano.
+- **Por qué:** el usuario quiere que se le identifique primero como backend developer.
+
 ## Bugs corregidos durante el rediseño
 
 1. **CSP bloqueaba Google Fonts**: index.html CSP (`style-src 'self' 'unsafe-inline'`) impedía @import en globals.css. Sitio renderizaba en fallback system fonts. Solucionado: allowlist fonts.googleapis.com + fonts.gstatic.com.
