@@ -19,7 +19,7 @@ export const translations = {
 
     hero: {
       name: 'Luis García Díaz',
-      intro: 'Desarrollador backend e ingeniero de datos. Construyo APIs y aplicaciones con Java y Spring Boot, y convierto datos sucios en datos listos para usar, como este registro:',
+      intro: 'Desarrollador backend e ingeniero de datos. Construyo APIs y aplicaciones, y convierto datos sucios en datos listos para usar, como este registro:',
       rawLabel: 'Entrada',
       cleanLabel: 'Salida',
       rows: [
@@ -194,7 +194,7 @@ export const translations = {
 
     hero: {
       name: 'Luis García Díaz',
-      intro: 'Backend developer and data engineer. I build APIs and applications with Java and Spring Boot, and turn messy data into data that’s ready to use, like this record:',
+      intro: 'Backend developer and data engineer. I build APIs and applications, and turn messy data into data that’s ready to use, like this record:',
       rawLabel: 'Input',
       cleanLabel: 'Output',
       rows: [
