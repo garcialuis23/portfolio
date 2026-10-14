@@ -27,8 +27,8 @@ export const translations = {
         { raw: 'backend dev / data eng.;;', key: 'rol', value: 'Backend Developer & Data Engineer' },
         { raw: 'GRANADA , es ,,', key: 'base', value: 'Granada, España' },
         { raw: 'JAVA,spring boot , sql,py ,,java', key: 'stack', value: 'Java, Spring Boot, SQL, Python' },
-        { raw: 'naturalsoft sl  (02/2026-)', key: 'ahora', value: 'NaturalSoft SL, desde febrero de 2026' },
-        { raw: 'MASTER ia+big data ¿en curso?', key: 'formación', value: 'Máster en IA y Big Data, en curso' }
+        { raw: 'naturalsoft sl ;soft. MEDICO ,,', key: 'ahora', value: 'NaturalSoft SL, software médico' },
+        { raw: 'master IA+BIG data ;stem gr. ✓', key: 'formación', value: 'Máster en IA y Big Data' }
       ],
       summary: '6 campos normalizados, 1 duplicado y 1 nulo eliminados',
       verProyectos: 'Ver proyectos',
@@ -41,13 +41,13 @@ export const translations = {
       photoAlt: 'Luis García Díaz con traje gris, al aire libre',
       paragraphs: [
         'Construyo backends y APIs con Java y Spring Boot, y diseño los pipelines ETL y las bases de datos que los alimentan en producción.',
-        'Me motiva convertir datos crudos en arquitecturas robustas y decisiones de negocio. Estoy cursando el Máster en IA y Big Data en Escuela STEM Granada, aplicando Machine Learning y análisis avanzado directamente en proyectos reales.'
+        'Hoy trabajo en NaturalSoft SL, una empresa de software médico: un sector donde la fiabilidad del sistema y la calidad del dato importan de verdad. Terminé el Máster en IA y Big Data en Escuela STEM Granada, y lo que aprendí allí ya no se queda en clase: lo aplico en producción.'
       ]
     },
 
     experience: {
       title: 'Experiencia',
-      lead: 'Dónde he trabajado y qué hacía allí.',
+      lead: 'Dónde he trabajado y qué he construido.',
       current: 'Ahora',
       jobs: [
         {
@@ -57,7 +57,7 @@ export const translations = {
           location: 'Granada',
           period: 'Feb. 2026 – hoy',
           type: 'Jornada completa',
-          description: 'Desarrollo una aplicación en Java con Spring Boot, desde el diseño de su API hasta la lógica de negocio. Integro soluciones de IA en el software de la empresa para automatizar tareas y mejorar el producto. Además, mantengo los procesos ETL en PHP y SQL, modelo las bases de datos y optimizo consultas complejas.',
+          description: 'Empresa de software médico. Desarrollo una aplicación en Java con Spring Boot, del diseño de la API a la lógica de negocio, e integro soluciones de IA para mejorar el producto. También mantengo los procesos ETL en PHP y SQL, modelo las bases de datos y optimizo consultas complejas.',
           technologies: ['Java', 'Spring Boot', 'IA', 'PHP', 'SQL', 'MySQL', 'ETL'],
           current: true
         },
@@ -68,7 +68,7 @@ export const translations = {
           location: 'Granada, híbrido',
           period: 'Mar. 2025 – dic. 2025',
           type: 'Jornada parcial',
-          description: 'Lógica de negocio backend con Spring Boot y Django. Diseño e integración de APIs RESTful, optimización de consultas en PostgreSQL y MySQL, y flujos de CI/CD con Docker.',
+          description: 'Desarrollé lógica de negocio backend con Spring Boot y Django, diseñé e integré APIs RESTful, optimicé consultas en PostgreSQL y MySQL y monté flujos de CI/CD con Docker.',
           technologies: ['Spring Boot', 'Django', 'PostgreSQL', 'MySQL', 'Docker', 'Git'],
           current: false
         },
@@ -79,7 +79,7 @@ export const translations = {
           location: 'Antequera',
           period: 'Mar. 2022 – jun. 2022',
           type: 'Prácticas',
-          description: 'Resolución de incidencias de hardware, software y redes locales. Diagnóstico y reparación de equipos.',
+          description: 'Resolví incidencias de hardware, software y redes locales, y diagnostiqué y reparé equipos.',
           technologies: ['Hardware', 'Redes', 'Diagnóstico'],
           current: false
         }
@@ -202,8 +202,8 @@ export const translations = {
         { raw: 'backend dev / data eng.;;', key: 'role', value: 'Backend Developer & Data Engineer' },
         { raw: 'GRANADA , es ,,', key: 'based in', value: 'Granada, Spain' },
         { raw: 'JAVA,spring boot , sql,py ,,java', key: 'stack', value: 'Java, Spring Boot, SQL, Python' },
-        { raw: 'naturalsoft sl  (02/2026-)', key: 'now', value: 'NaturalSoft SL, since February 2026' },
-        { raw: 'MASTER ia+big data ¿en curso?', key: 'education', value: 'Master’s in AI and Big Data, ongoing' }
+        { raw: 'naturalsoft sl ;soft. MEDICO ,,', key: 'now', value: 'NaturalSoft SL, medical software' },
+        { raw: 'master IA+BIG data ;stem gr. ✓', key: 'education', value: 'Master’s in AI and Big Data' }
       ],
       summary: '6 fields normalised, 1 duplicate and 1 null removed',
       verProyectos: 'See projects',
@@ -216,13 +216,13 @@ export const translations = {
       photoAlt: 'Luis García Díaz in a grey suit, outdoors',
       paragraphs: [
         'I build backends and APIs with Java and Spring Boot, and design the ETL pipelines and databases that feed them in production.',
-        'I’m driven by turning raw data into robust architectures and business decisions. I’m pursuing a Master’s in AI and Big Data at Escuela STEM Granada, applying Machine Learning and advanced analysis directly to real-world projects.'
+        'I currently work at NaturalSoft SL, a medical software company: a field where system reliability and data quality really matter. I completed a Master’s in AI and Big Data at Escuela STEM Granada, and what I learned there doesn’t stay in the classroom: I apply it in production.'
       ]
     },
 
     experience: {
       title: 'Experience',
-      lead: 'Where I’ve worked and what I did there.',
+      lead: 'Where I’ve worked and what I’ve built.',
       current: 'Now',
       jobs: [
         {
@@ -232,7 +232,7 @@ export const translations = {
           location: 'Granada',
           period: 'Feb. 2026 – now',
           type: 'Full-time',
-          description: 'I’m building a Java application with Spring Boot, from API design to business logic. I integrate AI solutions into the company’s software to automate tasks and improve the product. I also maintain the ETL processes in PHP and SQL, model the databases and optimise complex queries.',
+          description: 'Medical software company. I’m building a Java application with Spring Boot, from API design to business logic, and integrating AI solutions to improve the product. I also maintain the ETL processes in PHP and SQL, model the databases and optimise complex queries.',
           technologies: ['Java', 'Spring Boot', 'AI', 'PHP', 'SQL', 'MySQL', 'ETL'],
           current: true
         },
@@ -243,7 +243,7 @@ export const translations = {
           location: 'Granada, hybrid',
           period: 'Mar. 2025 – Dec. 2025',
           type: 'Part-time',
-          description: 'Backend business logic with Spring Boot and Django. RESTful API design and integration, query optimization in PostgreSQL and MySQL, and CI/CD workflows with Docker.',
+          description: 'Built backend business logic with Spring Boot and Django, designed and integrated RESTful APIs, optimised queries in PostgreSQL and MySQL, and set up CI/CD workflows with Docker.',
           technologies: ['Spring Boot', 'Django', 'PostgreSQL', 'MySQL', 'Docker', 'Git'],
           current: false
         },
@@ -254,7 +254,7 @@ export const translations = {
           location: 'Antequera',
           period: 'Mar. 2022 – Jun. 2022',
           type: 'Internship',
-          description: 'Resolving hardware, software and local network issues. Diagnosing and repairing equipment.',
+          description: 'Resolved hardware, software and local network issues, and diagnosed and repaired equipment.',
           technologies: ['Hardware', 'Networking', 'Diagnostics'],
           current: false
         }
