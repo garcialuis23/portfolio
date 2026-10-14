@@ -41,7 +41,7 @@ export const translations = {
       photoAlt: 'Luis García Díaz con traje gris, al aire libre',
       paragraphs: [
         'Construyo backends y APIs con Java y Spring Boot, y diseño los pipelines ETL y las bases de datos que los alimentan en producción.',
-        'Hoy trabajo en NaturalSoft SL, una empresa de software médico: un sector donde la fiabilidad del sistema y la calidad del dato importan de verdad. Terminé el Máster en IA y Big Data en Escuela STEM Granada, y lo que aprendí allí ya no se queda en clase: lo aplico en producción.'
+        'Hoy trabajo en NaturalSoft SL, una empresa de software médico: un sector donde la fiabilidad del sistema y la calidad del dato importan de verdad. Tengo un máster en Big Data e IA que me ha permitido profundizar y aprender muchísimo más sobre el campo que me apasiona: la inteligencia artificial.'
       ]
     },
 
@@ -216,7 +216,7 @@ export const translations = {
       photoAlt: 'Luis García Díaz in a grey suit, outdoors',
       paragraphs: [
         'I build backends and APIs with Java and Spring Boot, and design the ETL pipelines and databases that feed them in production.',
-        'I currently work at NaturalSoft SL, a medical software company: a field where system reliability and data quality really matter. I completed a Master’s in AI and Big Data at Escuela STEM Granada, and what I learned there doesn’t stay in the classroom: I apply it in production.'
+        'I currently work at NaturalSoft SL, a medical software company: a field where system reliability and data quality really matter. I hold a Master’s in Big Data and AI, which let me dig deeper and learn far more about the field I’m passionate about: artificial intelligence.'
       ]
     },
 
