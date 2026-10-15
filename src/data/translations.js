@@ -29,7 +29,7 @@ export const translations = {
         { raw: 'GRANADA , es ,,', key: 'base', value: 'Granada, España' },
         { raw: 'JAVA,spring boot , sql,py ,,java', key: 'stack', value: 'Java, Spring Boot, SQL, Python' },
         { raw: 'naturalsoft sl ;soft. MEDICO ,,', key: 'ahora', value: 'NaturalSoft SL, software médico' },
-        { raw: 'master IA+BIG data ;stem gr. ✓', key: 'formación', value: 'Máster en IA y Big Data' }
+        { raw: 'curso espec. IA+BIG data ;stem ✓', key: 'formación', value: 'Especialización en IA y Big Data' }
       ],
       summary: '6 campos normalizados, 1 duplicado y 1 nulo eliminados',
       verProyectos: 'Ver proyectos',
@@ -42,7 +42,7 @@ export const translations = {
       photoAlt: 'Luis García Díaz con traje gris, al aire libre',
       paragraphs: [
         'Construyo backends y APIs con Java y Spring Boot, y diseño los pipelines ETL y las bases de datos que los alimentan en producción.',
-        'Hoy trabajo en NaturalSoft SL, una empresa de software médico: un sector donde la fiabilidad del sistema y la calidad del dato importan de verdad. Tengo un máster en Big Data e IA que me ha permitido profundizar y aprender muchísimo más sobre el campo que me apasiona: la inteligencia artificial.'
+        'Hoy trabajo en NaturalSoft SL, una empresa de software médico: un sector donde la fiabilidad del sistema y la calidad del dato importan de verdad. He terminado el Curso de Especialización en IA y Big Data, que me ha permitido profundizar y aprender muchísimo más sobre el campo que me apasiona: la inteligencia artificial.'
       ]
     },
 
@@ -58,7 +58,7 @@ export const translations = {
           location: 'Granada',
           period: 'Feb. 2026 – hoy',
           type: 'Jornada completa',
-          description: 'Empresa de software médico. Desarrollo una aplicación en Java con Spring Boot, del diseño de la API a la lógica de negocio, e integro soluciones de IA para mejorar el producto. También mantengo los procesos ETL en PHP y SQL, modelo las bases de datos y optimizo consultas complejas.',
+          description: 'Empresa de software médico. Desarrollo una aplicación en Java con Spring Boot, del diseño de la API a la lógica de negocio, y me apoyo en la IA y en chatbots para programar las integraciones entre sistemas. También mantengo los procesos ETL en PHP y SQL, modelo las bases de datos y optimizo consultas complejas.',
           technologies: ['Java', 'Spring Boot', 'IA', 'PHP', 'SQL', 'MySQL', 'ETL'],
           current: true
         },
@@ -84,6 +84,13 @@ export const translations = {
           technologies: ['Hardware', 'Redes', 'Diagnóstico'],
           current: false
         }
+      ],
+      educationTitle: 'Formación',
+      education: [
+        { id: 'civica', title: 'Curso de Data Engineer', school: 'Civica', period: 'Mar. 2026 – may. 2026' },
+        { id: 'ce-ia', title: 'Curso de Especialización en IA y Big Data', school: 'Escuela STEM Granada', period: 'Sep. 2025 – jun. 2026' },
+        { id: 'daw', title: 'Técnico Superior en Desarrollo de Aplicaciones Web (DAW)', school: 'Escuela STEM Granada', period: 'Sep. 2023 – sep. 2025' },
+        { id: 'smr', title: 'Técnico en Sistemas Microinformáticos y Redes (SMR)', school: 'Instituto Tecnológico Poniente', period: 'Sep. 2021 – jun. 2023' }
       ]
     },
 
@@ -136,7 +143,7 @@ export const translations = {
       },
       descriptions: {
         heart: 'Predicción de enfermedades cardíacas con ~90 % de accuracy. EDA completo, feature engineering e imputación de variables clínicas. Comparativa de SVM, KNN y árboles de decisión con validación cruzada.',
-        hellcorp: 'Pipeline completo: limpieza y transformación de más de 27.500 registros con Pandas, carga en MySQL con integridad referencial y consultas SQL avanzadas.',
+        hellcorp: 'Pipeline completo sobre datos de origen irregulares: más de 27.500 registros que exigieron muchas transformaciones con Pandas para limpiarlos y normalizarlos antes de cargarlos en MySQL con integridad referencial. Consultas SQL avanzadas sobre el modelo resultante.',
         energy: 'Predicción de consumo energético para el Ayuntamiento de Granada. Limpieza de históricos, ingeniería de features, benchmark de algoritmos y aplicación web con FastAPI y PostgreSQL.',
         stemfounding: 'Plataforma de crowdfunding para proyectos STEM: React en el frontend, Laravel en el backend, perfiles y donaciones.',
         sleepsync: 'Aplicación para registrar el sueño: patrones, rutinas personalizadas y análisis de la calidad del descanso.',
@@ -206,7 +213,7 @@ export const translations = {
         { raw: 'GRANADA , es ,,', key: 'based in', value: 'Granada, Spain' },
         { raw: 'JAVA,spring boot , sql,py ,,java', key: 'stack', value: 'Java, Spring Boot, SQL, Python' },
         { raw: 'naturalsoft sl ;soft. MEDICO ,,', key: 'now', value: 'NaturalSoft SL, medical software' },
-        { raw: 'master IA+BIG data ;stem gr. ✓', key: 'education', value: 'Master’s in AI and Big Data' }
+        { raw: 'curso espec. IA+BIG data ;stem ✓', key: 'education', value: 'Specialisation in AI and Big Data' }
       ],
       summary: '6 fields normalised, 1 duplicate and 1 null removed',
       verProyectos: 'See projects',
@@ -219,7 +226,7 @@ export const translations = {
       photoAlt: 'Luis García Díaz in a grey suit, outdoors',
       paragraphs: [
         'I build backends and APIs with Java and Spring Boot, and design the ETL pipelines and databases that feed them in production.',
-        'I currently work at NaturalSoft SL, a medical software company: a field where system reliability and data quality really matter. I hold a Master’s in Big Data and AI, which let me dig deeper and learn far more about the field I’m passionate about: artificial intelligence.'
+        'I currently work at NaturalSoft SL, a medical software company: a field where system reliability and data quality really matter. I’ve completed a specialisation course in AI and Big Data, which let me dig deeper and learn far more about the field I’m passionate about: artificial intelligence.'
       ]
     },
 
@@ -235,7 +242,7 @@ export const translations = {
           location: 'Granada',
           period: 'Feb. 2026 – now',
           type: 'Full-time',
-          description: 'Medical software company. I’m building a Java application with Spring Boot, from API design to business logic, and integrating AI solutions to improve the product. I also maintain the ETL processes in PHP and SQL, model the databases and optimise complex queries.',
+          description: 'Medical software company. I’m building a Java application with Spring Boot, from API design to business logic, and I rely on AI and chatbots to build the integrations between systems. I also maintain the ETL processes in PHP and SQL, model the databases and optimise complex queries.',
           technologies: ['Java', 'Spring Boot', 'AI', 'PHP', 'SQL', 'MySQL', 'ETL'],
           current: true
         },
@@ -261,6 +268,13 @@ export const translations = {
           technologies: ['Hardware', 'Networking', 'Diagnostics'],
           current: false
         }
+      ],
+      educationTitle: 'Education',
+      education: [
+        { id: 'civica', title: 'Data Engineer course', school: 'Civica', period: 'Mar. 2026 – May 2026' },
+        { id: 'ce-ia', title: 'Specialisation course in AI and Big Data', school: 'Escuela STEM Granada', period: 'Sep. 2025 – Jun. 2026' },
+        { id: 'daw', title: 'Higher Vocational Diploma in Web Application Development (DAW)', school: 'Escuela STEM Granada', period: 'Sep. 2023 – Sep. 2025' },
+        { id: 'smr', title: 'Vocational Diploma in Computer Systems and Networks (SMR)', school: 'Instituto Tecnológico Poniente', period: 'Sep. 2021 – Jun. 2023' }
       ]
     },
 
@@ -313,7 +327,7 @@ export const translations = {
       },
       descriptions: {
         heart: 'Heart disease prediction with ~90% accuracy. Full EDA, feature engineering and imputation of clinical variables. SVM, KNN and decision trees compared with cross-validation.',
-        hellcorp: 'End-to-end pipeline: cleaning and transforming 27,500+ records with Pandas, loading into MySQL with referential integrity, and advanced SQL queries.',
+        hellcorp: 'End-to-end pipeline on messy source data: 27,500+ records that needed heavy transformation with Pandas to clean and normalise them before loading into MySQL with referential integrity. Advanced SQL queries on the resulting model.',
         energy: 'Energy consumption forecasting for Granada City Council. Historical data cleaning, feature engineering, algorithm benchmarking and a web app built with FastAPI and PostgreSQL.',
         stemfounding: 'Crowdfunding platform for STEM projects: React on the frontend, Laravel on the backend, profiles and donations.',
         sleepsync: 'Sleep tracking app: patterns, personalised routines and analysis of rest quality.',
