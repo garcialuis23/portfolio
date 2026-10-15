@@ -47,6 +47,28 @@
   border-radius: var(--radius);
 }
 
+/*
+ * De noche la hoja sigue siendo papel: un listado impreso, algo atenuado,
+ * sobre la mesa oscura. Las perforaciones dejan ver el fondo de la página.
+ */
+[data-theme="dark"] .sheet {
+  --paper-raised: #C9CEC2;
+  --band: #B8C5B0;
+  --ink: #17201B;
+  --ink-soft: #36433B;
+  --ink-faint: #435049;
+  --rule: rgba(23, 32, 27, 0.16);
+  --rule-strong: rgba(23, 32, 27, 0.34);
+  --ledger: #1F4F37;
+  --pen: #1E2F99;
+  --pen-hover: #14206E;
+  --hole: #0F1411;
+  --selection: rgba(30, 47, 153, 0.2);
+  color: var(--ink);
+  border-color: transparent;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4), 0 12px 32px -12px rgba(0, 0, 0, 0.6);
+}
+
 /* Perforaciones de arrastre a ambos lados, separadas por una línea de corte */
 .sheet::before,
 .sheet::after {
