@@ -43,6 +43,15 @@
 - **NaturalSoft:** la descripción empieza por la app Java/Spring Boot y la integración de IA; el ETL en PHP/SQL pasa a segundo plano.
 - **Por qué:** el usuario quiere que se le identifique primero como backend developer.
 
+### 2026-10-15 — Auditoría: accesibilidad, SEO y perfil backend
+
+- **Contraste:** `--ink-faint` claro #6F7C74 → #5E6B63 (AA sobre papel y sobre bandas; antes 3.6:1 en bandas).
+- **Stack:** Java, Spring Boot y FastAPI pasan a "Dominio sólido". Columna core de Data Engineering sigue vacía a propósito.
+- **Proyectos:** campo `alsoIn` = categorías secundarias solo para filtros (la etiqueta visible sigue siendo `category`). Backend incluye Energy Forecast, StemFounding y SleepSync.
+- **Open Graph:** public/og.png (1200×630) renderizada desde HTML con la estética del sitio; regenerarla si cambia el rol o el stack del hero.
+- **Animación del hero:** se mantiene en ~3.2 s a propósito (es la firma; el registro sucio es legible desde el inicio).
+- **CV:** archivo físico `CV_Luis_Garcia_Diaz.pdf`; el nombre legible va en `CV_FILENAME` (atributo download).
+
 ## Bugs corregidos durante el rediseño
 
 1. **CSP bloqueaba Google Fonts**: index.html CSP (`style-src 'self' 'unsafe-inline'`) impedía @import en globals.css. Sitio renderizaba en fallback system fonts. Solucionado: allowlist fonts.googleapis.com + fonts.gstatic.com.
