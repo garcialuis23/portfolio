@@ -239,6 +239,11 @@ td.ledger__year {
     width: auto;
   }
 
+  /* La columna vuelve a ser bloque aquí; el stack ya va bajo la descripción */
+  .ledger td.ledger__stack {
+    display: none;
+  }
+
   td.ledger__year {
     grid-row: 1;
   }
