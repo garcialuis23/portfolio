@@ -51,6 +51,9 @@
 - **Open Graph:** public/og.png (1200×630) renderizada desde HTML con la estética del sitio; regenerarla si cambia el rol o el stack del hero.
 - **Animación del hero:** se mantiene en ~3.2 s a propósito (es la firma; el registro sucio es legible desde el inicio).
 - **CV:** archivo físico `CV_Luis_Garcia_Diaz.pdf`; el nombre legible va en `CV_FILENAME` (atributo download).
+- **Hoja de proyectos en modo oscuro:** la hoja sigue siendo papel (atenuado, #C9CEC2 / bandas #B8C5B0) sobre fondo oscuro; las perforaciones muestran el fondo de la página. Antes era una tabla oscura que no se leía como papel.
+- **Formación:** sub-sección dentro de Experiencia (mismas filas, compactas). Se usa "Curso de Especialización en IA y Big Data", no "Máster" (denominación indicada por el usuario).
+- **NaturalSoft:** no mencionar el "segundo cerebro" (confidencial en la empresa).
 
 ## Bugs corregidos durante el rediseño
 
