@@ -41,6 +41,7 @@ const Header = () => {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#0F1411' : '#F3F5EE');
     try {
       localStorage.setItem('portfolio-theme', theme);
     } catch {
@@ -61,6 +62,8 @@ const Header = () => {
   const isDark = theme === 'dark';
 
   return (
+    <>
+    <a href="#main" className="skip-link">{t('header.skipToContent')}</a>
     <header className={`nav ${isScrolled ? 'nav--scrolled' : ''} ${isMenuOpen ? 'nav--open' : ''}`}>
       <div className="nav__inner">
         <a
@@ -141,6 +144,7 @@ const Header = () => {
         </a>
       </div>
     </header>
+    </>
   );
 };
 

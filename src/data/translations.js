@@ -1,6 +1,7 @@
 export const translations = {
   es: {
     header: {
+      skipToContent: 'Saltar al contenido',
       nav: {
         perfil: 'Perfil',
         experiencia: 'Experiencia',
@@ -170,12 +171,14 @@ export const translations = {
     },
 
     footer: {
+      downloadCV: 'CV',
       backToTop: 'Volver arriba'
     }
   },
 
   en: {
     header: {
+      skipToContent: 'Skip to content',
       nav: {
         perfil: 'Profile',
         experiencia: 'Experience',
@@ -345,6 +348,7 @@ export const translations = {
     },
 
     footer: {
+      downloadCV: 'Résumé',
       backToTop: 'Back to top'
     }
   }

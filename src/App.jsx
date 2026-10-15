@@ -14,7 +14,7 @@ function App() {
     <LanguageProvider>
       <div className="App">
         <Header />
-        <main>
+        <main id="main" tabIndex={-1}>
           <Hero />
           <About />
           <Experience />
