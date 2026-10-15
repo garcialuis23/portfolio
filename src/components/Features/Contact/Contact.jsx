@@ -11,7 +11,8 @@ const Contact = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    _gotcha: ''
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -39,6 +40,12 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (formData._gotcha) {
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '', _gotcha: '' });
+      return;
+    }
 
     const now = Date.now();
     const timeSinceLastSubmit = now - lastSubmitTime;
@@ -117,25 +124,36 @@ const Contact = () => {
         <form className="contact__form" onSubmit={handleSubmit}>
           <h3 className="contact__form-title">{t('contact.form.title')}</h3>
 
+          <input
+            type="text"
+            name="_gotcha"
+            value={formData._gotcha}
+            onChange={handleInputChange}
+            tabIndex={-1}
+            autoComplete="off"
+            style={{ display: 'none' }}
+            aria-hidden="true"
+          />
+
           <div className="field-row">
             <div className="field">
               <label htmlFor="name">{t('contact.form.name')}</label>
-              <input type="text" id="name" name="name" autoComplete="name" value={formData.name} onChange={handleInputChange} required />
+              <input type="text" id="name" name="name" autoComplete="name" maxLength={100} value={formData.name} onChange={handleInputChange} required />
             </div>
             <div className="field">
               <label htmlFor="email">{t('contact.form.email')}</label>
-              <input type="email" id="email" name="email" autoComplete="email" value={formData.email} onChange={handleInputChange} required />
+              <input type="email" id="email" name="email" autoComplete="email" maxLength={150} value={formData.email} onChange={handleInputChange} required />
             </div>
           </div>
 
           <div className="field">
             <label htmlFor="subject">{t('contact.form.subject')}</label>
-            <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleInputChange} placeholder={t('contact.form.subjectPlaceholder')} />
+            <input type="text" id="subject" name="subject" maxLength={200} value={formData.subject} onChange={handleInputChange} placeholder={t('contact.form.subjectPlaceholder')} />
           </div>
 
           <div className="field">
             <label htmlFor="message">{t('contact.form.message')}</label>
-            <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleInputChange} placeholder={t('contact.form.messagePlaceholder')} required></textarea>
+            <textarea id="message" name="message" rows="5" maxLength={3000} value={formData.message} onChange={handleInputChange} placeholder={t('contact.form.messagePlaceholder')} required></textarea>
           </div>
 
           <button type="submit" className="btn btn-primary contact__submit" disabled={isLoading}>

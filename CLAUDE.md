@@ -54,6 +54,7 @@
 - **Hoja de proyectos en modo oscuro:** la hoja sigue siendo papel (atenuado, #C9CEC2 / bandas #B8C5B0) sobre fondo oscuro; las perforaciones muestran el fondo de la página. Antes era una tabla oscura que no se leía como papel.
 - **Formación:** sub-sección dentro de Experiencia (mismas filas, compactas). Se usa "Curso de Especialización en IA y Big Data", no "Máster" (denominación indicada por el usuario).
 - **NaturalSoft:** no mencionar el "segundo cerebro" (confidencial en la empresa).
+- **Interacción y seguridad:** títulos de proyectos clicables directos hacia código/demo, portfolio marcado como terminado (2026), cierre de menú móvil con tecla Escape, protección honeypot y longitudes máximas en formulario de contacto, y sincronización reactiva de meta-description al cambiar idioma.
 
 ## Bugs corregidos durante el rediseño
 

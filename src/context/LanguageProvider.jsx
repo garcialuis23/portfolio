@@ -13,10 +13,19 @@ export const LanguageProvider = ({ children }) => {
     }
   }, []);
 
-  // Guardar idioma en localStorage cuando cambie
+  // Guardar idioma en localStorage cuando cambie y actualizar metadatos
   useEffect(() => {
     localStorage.setItem('portfolio-language', language);
     document.documentElement.lang = language;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute(
+        'content',
+        language === 'es'
+          ? 'Luis García Díaz, Backend Developer y Data Engineer en Granada: APIs con Java y Spring Boot, pipelines ETL y bases de datos.'
+          : 'Luis García Díaz, Backend Developer & Data Engineer in Granada, Spain: APIs with Java & Spring Boot, ETL pipelines, and databases.'
+      );
+    }
   }, [language]);
 
   const toggleLanguage = () => {

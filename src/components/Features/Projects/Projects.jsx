@@ -29,7 +29,7 @@ const PROJECTS = [
     links: { github: 'https://github.com/garcialuis23/sleepsync' }
   },
   {
-    id: 'portfolio', title: 'Portfolio', category: 'frontend', year: 2025, done: false,
+    id: 'portfolio', title: 'Portfolio', category: 'frontend', year: 2026, done: true,
     technologies: ['React', 'Vite', 'CSS', 'EmailJS'],
     links: { github: 'https://github.com/garcialuis23/portfolio' }
   },
@@ -105,15 +105,29 @@ const Projects = () => {
               </tr>
             </thead>
             <tbody>
-              {visible.map((project) => (
-                <tr key={project.id}>
-                  <td className="ledger__year mono">{project.year}</td>
-                  <td className="ledger__project">
-                    <h3 className="ledger__title">{project.title}</h3>
-                    <span className="ledger__category">{t(`projects.categories.${project.category}`)}</span>
-                    <p className="ledger__desc">{t(`projects.descriptions.${project.id}`)}</p>
-                    <p className="ledger__stack-inline mono">{project.technologies.join(', ')}</p>
-                  </td>
+              {visible.map((project) => {
+                const primaryLink = project.links.live || project.links.github;
+                return (
+                  <tr key={project.id}>
+                    <td className="ledger__year mono">{project.year}</td>
+                    <td className="ledger__project">
+                      {primaryLink ? (
+                        <a
+                          href={primaryLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="ledger__title-link"
+                          aria-label={`${project.title} (${project.links.live ? t('projects.viewLive') : t('projects.viewCode')})`}
+                        >
+                          <h3 className="ledger__title">{project.title}</h3>
+                        </a>
+                      ) : (
+                        <h3 className="ledger__title">{project.title}</h3>
+                      )}
+                      <span className="ledger__category">{t(`projects.categories.${project.category}`)}</span>
+                      <p className="ledger__desc">{t(`projects.descriptions.${project.id}`)}</p>
+                      <p className="ledger__stack-inline mono">{project.technologies.join(', ')}</p>
+                    </td>
                   <td className="ledger__stack mono">{project.technologies.join(', ')}</td>
                   <td className="ledger__status">
                     <span className={`status ${project.done ? 'status--done' : 'status--progress'}`}>
@@ -145,8 +159,9 @@ const Projects = () => {
                     )}
                   </td>
                 </tr>
-              ))}
-            </tbody>
+              );
+            })}
+          </tbody>
           </table>
 
           <p className="sheet__footer mono" aria-live="polite">
