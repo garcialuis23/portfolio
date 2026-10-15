@@ -111,57 +111,54 @@ const Projects = () => {
                   <tr key={project.id}>
                     <td className="ledger__year mono">{project.year}</td>
                     <td className="ledger__project">
-                      {primaryLink ? (
-                        <a
-                          href={primaryLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="ledger__title-link"
-                          aria-label={`${project.title} (${project.links.live ? t('projects.viewLive') : t('projects.viewCode')})`}
-                        >
-                          <h3 className="ledger__title">{project.title}</h3>
-                        </a>
-                      ) : (
+                      {/* Atajo para ratón y táctil; con teclado se usan los enlaces de la última columna */}
+                      <a
+                        href={primaryLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ledger__title-link"
+                        tabIndex={-1}
+                      >
                         <h3 className="ledger__title">{project.title}</h3>
-                      )}
+                      </a>
                       <span className="ledger__category">{t(`projects.categories.${project.category}`)}</span>
                       <p className="ledger__desc">{t(`projects.descriptions.${project.id}`)}</p>
                       <p className="ledger__stack-inline mono">{project.technologies.join(', ')}</p>
                     </td>
-                  <td className="ledger__stack mono">{project.technologies.join(', ')}</td>
-                  <td className="ledger__status">
-                    <span className={`status ${project.done ? 'status--done' : 'status--progress'}`}>
-                      {project.done ? t('projects.status.done') : t('projects.status.progress')}
-                    </span>
-                  </td>
-                  <td className="ledger__links">
-                    {project.links.github && (
-                      <a
-                        href={project.links.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-link"
-                        aria-label={`${t('projects.viewCode')}: ${project.title}`}
-                      >
-                        {t('projects.viewCode')}
-                      </a>
-                    )}
-                    {project.links.live && (
-                      <a
-                        href={project.links.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-link"
-                        aria-label={`${t('projects.viewLive')}: ${project.title}`}
-                      >
-                        {t('projects.viewLive')}
-                      </a>
-                    )}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
+                    <td className="ledger__stack mono">{project.technologies.join(', ')}</td>
+                    <td className="ledger__status">
+                      <span className={`status ${project.done ? 'status--done' : 'status--progress'}`}>
+                        {project.done ? t('projects.status.done') : t('projects.status.progress')}
+                      </span>
+                    </td>
+                    <td className="ledger__links">
+                      {project.links.github && (
+                        <a
+                          href={project.links.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-link"
+                          aria-label={`${t('projects.viewCode')}: ${project.title}`}
+                        >
+                          {t('projects.viewCode')}
+                        </a>
+                      )}
+                      {project.links.live && (
+                        <a
+                          href={project.links.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-link"
+                          aria-label={`${t('projects.viewLive')}: ${project.title}`}
+                        >
+                          {t('projects.viewLive')}
+                        </a>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
           </table>
 
           <p className="sheet__footer mono" aria-live="polite">

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../../../context/useLanguage';
 import { SunIcon, MoonIcon } from '../../icons';
 import { CV_URL, CV_FILENAME } from '../../../data/links';
@@ -19,6 +19,7 @@ const Header = () => {
   const [theme, setTheme] = useState(readTheme);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const burgerRef = useRef(null);
 
   const { language, toggleLanguage, t } = useLanguage();
 
@@ -52,7 +53,10 @@ const Header = () => {
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : '';
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') setIsMenuOpen(false);
+      if (e.key === 'Escape') {
+        setIsMenuOpen(false);
+        burgerRef.current?.focus();
+      }
     };
     if (isMenuOpen) {
       window.addEventListener('keydown', handleKeyDown);
@@ -122,6 +126,7 @@ const Header = () => {
           </a>
 
           <button
+            ref={burgerRef}
             className="nav__burger"
             onClick={() => setIsMenuOpen((prev) => !prev)}
             aria-label={isMenuOpen ? t('header.cerrarMenu') : t('header.abrirMenu')}

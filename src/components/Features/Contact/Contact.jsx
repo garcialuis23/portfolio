@@ -124,15 +124,14 @@ const Contact = () => {
         <form className="contact__form" onSubmit={handleSubmit}>
           <h3 className="contact__form-title">{t('contact.form.title')}</h3>
 
+          {/* Honeypot: invisible para personas; si llega relleno, es un bot */}
           <input
             type="text"
             name="_gotcha"
             value={formData._gotcha}
             onChange={handleInputChange}
-            tabIndex={-1}
             autoComplete="off"
             style={{ display: 'none' }}
-            aria-hidden="true"
           />
 
           <div className="field-row">
