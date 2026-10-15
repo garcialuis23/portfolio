@@ -1,5 +1,9 @@
 export const translations = {
   es: {
+    meta: {
+      title: 'Luis García Díaz, Backend Developer & Data Engineer',
+      description: 'Luis García Díaz, Backend Developer y Data Engineer en Granada: APIs con Java y Spring Boot, pipelines ETL y bases de datos.'
+    },
     header: {
       skipToContent: 'Saltar al contenido',
       nav: {
@@ -184,6 +188,10 @@ export const translations = {
   },
 
   en: {
+    meta: {
+      title: 'Luis García Díaz, Backend Developer & Data Engineer',
+      description: 'Luis García Díaz, Backend Developer & Data Engineer in Granada, Spain: APIs with Java and Spring Boot, ETL pipelines and databases.'
+    },
     header: {
       skipToContent: 'Skip to content',
       nav: {
