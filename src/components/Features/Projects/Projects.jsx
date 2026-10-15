@@ -109,6 +109,7 @@ const Projects = () => {
                     <h3 className="ledger__title">{project.title}</h3>
                     <span className="ledger__category">{t(`projects.categories.${project.category}`)}</span>
                     <p className="ledger__desc">{t(`projects.descriptions.${project.id}`)}</p>
+                    <p className="ledger__stack-inline mono">{project.technologies.join(', ')}</p>
                   </td>
                   <td className="ledger__stack mono">{project.technologies.join(', ')}</td>
                   <td className="ledger__status">

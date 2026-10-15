@@ -138,6 +138,10 @@ td.ledger__year {
   --nudge: 0.3rem;
 }
 
+.ledger__stack-inline {
+  display: none;
+}
+
 .ledger__status-col {
   width: 9rem;
 }
@@ -190,6 +194,13 @@ td.ledger__year {
   .ledger__stack-col,
   .ledger__stack {
     display: none;
+  }
+
+  .ledger__stack-inline {
+    display: block;
+    margin-top: var(--space-2);
+    color: var(--ink-soft);
+    font-size: 0.8125rem;
   }
 }
 
