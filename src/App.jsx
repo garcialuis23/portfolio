@@ -1,5 +1,5 @@
 import './styles/globals.css';
-import { LanguageProvider } from './context/LanguageContext';
+import { LanguageProvider } from './context/LanguageProvider';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
 import Hero from './components/Features/Hero/Hero';

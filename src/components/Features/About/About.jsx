@@ -1,5 +1,5 @@
 import './About.css';
-import { useLanguage } from '../../../context/LanguageContext';
+import { useLanguage } from '../../../context/useLanguage';
 import portrait from '../../../assets/images/Fotografía_personal.jpg';
 
 const About = () => {

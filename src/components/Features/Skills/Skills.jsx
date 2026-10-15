@@ -1,5 +1,5 @@
 import './Skills.css';
-import { useLanguage } from '../../../context/LanguageContext';
+import { useLanguage } from '../../../context/useLanguage';
 
 // Nivel por herramienta: core = dominio sólido, solid = uso habitual, familiar = familiarizado
 const STACK = [

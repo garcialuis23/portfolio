@@ -1,5 +1,5 @@
 import './Experience.css';
-import { useLanguage } from '../../../context/LanguageContext';
+import { useLanguage } from '../../../context/useLanguage';
 
 const Experience = () => {
   const { t } = useLanguage();

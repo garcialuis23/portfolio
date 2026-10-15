@@ -1,5 +1,5 @@
 import './Hero.css';
-import { useLanguage } from '../../../context/LanguageContext';
+import { useLanguage } from '../../../context/useLanguage';
 import { GithubIcon, LinkedinIcon } from '../../icons';
 import { GITHUB_URL, LINKEDIN_URL } from '../../../data/links';
 

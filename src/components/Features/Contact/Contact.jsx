@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLanguage } from '../../../context/LanguageContext';
+import { useLanguage } from '../../../context/useLanguage';
 import { GithubIcon, LinkedinIcon } from '../../icons';
 import { EMAIL, GITHUB_URL, LINKEDIN_URL } from '../../../data/links';
 import emailjs from '@emailjs/browser';

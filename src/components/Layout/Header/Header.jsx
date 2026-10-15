@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useLanguage } from '../../../context/LanguageContext';
+import { useLanguage } from '../../../context/useLanguage';
 import { SunIcon, MoonIcon } from '../../icons';
 import { CV_URL, CV_FILENAME } from '../../../data/links';
 import './Header.css';
