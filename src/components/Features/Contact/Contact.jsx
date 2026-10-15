@@ -67,7 +67,7 @@ const Contact = () => {
         from_email: sanitizeInput(formData.email),
         subject: sanitizeInput(formData.subject) || 'Contacto desde Portfolio',
         message: sanitizeInput(formData.message),
-        to_email: 'garciadiazluis23@gmail.com'
+        to_email: EMAIL
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
@@ -83,7 +83,7 @@ const Contact = () => {
         `Hola Luis,\n\nMi nombre es ${formData.name}.\n\n${formData.message}\n\nSaludos,\n${formData.name}\n${formData.email}`
       );
 
-      window.location.href = `mailto:garciadiazluis23@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
     } finally {
       setIsLoading(false);
     }
