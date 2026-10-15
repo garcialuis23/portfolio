@@ -4,6 +4,7 @@ import { useLanguage } from '../../../context/useLanguage';
 const Experience = () => {
   const { t } = useLanguage();
   const jobs = t('experience.jobs');
+  const education = t('experience.education');
 
   return (
     <section className="section experience" id="experiencia" aria-labelledby="experience-title">
@@ -33,6 +34,21 @@ const Experience = () => {
               <div className="job__detail">
                 <p className="job__desc">{job.description}</p>
                 <p className="job__tech mono">{job.technologies.join(', ')}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <h3 className="experience__subtitle">{t('experience.educationTitle')}</h3>
+        <ol className="jobs jobs--education">
+          {education.map((item) => (
+            <li key={item.id} className="job">
+              <div className="job__period">
+                <span className="mono">{item.period}</span>
+              </div>
+              <div className="job__role">
+                <h4 className="job__title">{item.title}</h4>
+                <p className="job__meta">{item.school}</p>
               </div>
             </li>
           ))}
