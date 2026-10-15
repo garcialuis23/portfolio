@@ -3,8 +3,8 @@ import { useLanguage } from '../../../context/useLanguage';
 
 // Nivel por herramienta: core = dominio sólido, solid = uso habitual, familiar = familiarizado
 const STACK = [
-  { key: 'languages', skills: { core: ['SQL', 'Python'], solid: ['PHP', 'JavaScript', 'Java'], familiar: [] } },
-  { key: 'frameworks', skills: { core: [], solid: ['Spring Boot', 'Django', 'FastAPI'], familiar: ['Node.js'] } },
+  { key: 'languages', skills: { core: ['SQL', 'Python', 'Java'], solid: ['PHP', 'JavaScript'], familiar: [] } },
+  { key: 'frameworks', skills: { core: ['Spring Boot', 'FastAPI'], solid: ['Django'], familiar: ['Node.js'] } },
   { key: 'databases', skills: { core: ['MySQL'], solid: ['PostgreSQL'], familiar: [] } },
   { key: 'dataEngineering', skills: { core: [], solid: ['Snowflake', 'SQLAlchemy', 'ClickHouse'], familiar: ['dbt', 'Airflow'] } },
   { key: 'ml', skills: { core: ['Pandas', 'Scikit-learn', 'Jupyter'], solid: ['NumPy'], familiar: [] } },

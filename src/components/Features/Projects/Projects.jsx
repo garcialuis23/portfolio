@@ -19,12 +19,12 @@ const PROJECTS = [
     links: { github: 'https://github.com/garcialuis23/hellcorp' }
   },
   {
-    id: 'energy', title: 'Granada Smart City Energy Forecast', category: 'dataEngineering', year: 2025, done: true,
+    id: 'energy', title: 'Granada Smart City Energy Forecast', category: 'dataEngineering', alsoIn: ['backend'], year: 2025, done: true,
     technologies: ['Python', 'FastAPI', 'PostgreSQL', 'Scikit-learn'],
     links: { github: 'https://github.com/garcialuis23/granada-energy-forecast' }
   },
   {
-    id: 'sleepsync', title: 'SleepSync', category: 'fullStack', year: 2025, done: false,
+    id: 'sleepsync', title: 'SleepSync', category: 'fullStack', alsoIn: ['backend'], year: 2025, done: false,
     technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
     links: { github: 'https://github.com/garcialuis23/sleepsync' }
   },
@@ -34,7 +34,7 @@ const PROJECTS = [
     links: { github: 'https://github.com/garcialuis23/portfolio' }
   },
   {
-    id: 'stemfounding', title: 'StemFounding', category: 'fullStack', year: 2024, done: true,
+    id: 'stemfounding', title: 'StemFounding', category: 'fullStack', alsoIn: ['backend'], year: 2024, done: true,
     technologies: ['React', 'Laravel', 'PHP', 'MySQL'],
     links: { github: 'https://github.com/garcialuis23/stemfounding-react' }
   },
@@ -61,10 +61,13 @@ const Projects = () => {
   const { t } = useLanguage();
   const [filter, setFilter] = useState('all');
 
-  const countFor = (category) =>
-    category === 'all' ? PROJECTS.length : PROJECTS.filter((p) => p.category === category).length;
+  // La categoría principal es la etiqueta visible; alsoIn solo amplía los filtros
+  const matches = (project, category) =>
+    category === 'all' || project.category === category || project.alsoIn?.includes(category);
 
-  const visible = filter === 'all' ? PROJECTS : PROJECTS.filter((p) => p.category === filter);
+  const countFor = (category) => PROJECTS.filter((p) => matches(p, category)).length;
+
+  const visible = PROJECTS.filter((p) => matches(p, filter));
   const labelFor = (category) => (category === 'all' ? t('projects.all') : t(`projects.categories.${category}`));
 
   return (
