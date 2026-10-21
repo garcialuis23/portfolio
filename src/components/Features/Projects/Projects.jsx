@@ -4,9 +4,9 @@ import './Projects.css';
 
 const PROJECTS = [
   {
-    id: 'medical', title: 'Medical API', category: 'backend', alsoIn: ['security'], year: 2026, done: true,
-    technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker'],
-    links: { github: 'https://github.com/garcialuis23/medical-api' }
+    id: 'runway', title: 'context-runway', category: 'tooling', year: 2026, done: false,
+    technologies: ['Node.js', 'VS Code API', 'GitHub Actions'],
+    links: { github: 'https://github.com/garcialuis23/context-runway' }
   },
   {
     id: 'medalists', title: 'Paris 2024 Medallion Pipeline', category: 'dataEngineering', year: 2026, done: true,
@@ -14,19 +14,24 @@ const PROJECTS = [
     links: { github: 'https://github.com/garcialuis23/2024_medalists_all' }
   },
   {
-    id: 'runway', title: 'context-runway', category: 'tooling', year: 2026, done: false,
-    technologies: ['Node.js', 'VS Code API', 'GitHub Actions'],
-    links: { github: 'https://github.com/garcialuis23/context-runway' }
-  },
-  {
     id: 'heart', title: 'Heart Attack Prediction', category: 'machineLearning', year: 2026, done: true,
     technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy'],
     links: { github: 'https://github.com/garcialuis23/heart-attack-prediction' }
   },
   {
+    id: 'medical', title: 'Medical API', category: 'backend', alsoIn: ['security'], year: 2026, done: true,
+    technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker'],
+    links: { github: 'https://github.com/garcialuis23/medical-api' }
+  },
+  {
     id: 'passport', title: 'Product Passport', category: 'frontend', year: 2026, done: false,
     technologies: ['Next.js', 'React Native', 'Vercel'],
     links: { github: 'https://github.com/garcialuis23/product-passport', live: 'https://product-passport-six.vercel.app/' }
+  },
+  {
+    id: 'portfolio', title: 'Portfolio', category: 'frontend', year: 2026, done: true,
+    technologies: ['React', 'Vite', 'CSS', 'EmailJS'],
+    links: { github: 'https://github.com/garcialuis23/portfolio' }
   },
   {
     id: 'hellcorp', title: 'Hellcorp', category: 'dataEngineering', year: 2025, done: true,
@@ -42,11 +47,6 @@ const PROJECTS = [
     id: 'sleepsync', title: 'SleepSync', category: 'fullStack', alsoIn: ['backend'], year: 2025, done: false,
     technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
     links: { github: 'https://github.com/garcialuis23/sleepsync' }
-  },
-  {
-    id: 'portfolio', title: 'Portfolio', category: 'frontend', year: 2026, done: true,
-    technologies: ['React', 'Vite', 'CSS', 'EmailJS'],
-    links: { github: 'https://github.com/garcialuis23/portfolio' }
   },
   {
     id: 'stemfounding', title: 'StemFounding', category: 'fullStack', alsoIn: ['backend'], year: 2024, done: true,
