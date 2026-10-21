@@ -142,10 +142,14 @@ export const translations = {
         backend: 'Backend',
         fullStack: 'Full Stack',
         frontend: 'Frontend',
+        tooling: 'Herramientas dev',
         iot: 'IoT y hardware',
         security: 'Seguridad'
       },
       descriptions: {
+        medical: 'API REST para gestión de pacientes en entorno sanitario: autenticación JWT stateless, contraseñas con BCrypt, enmascarado de datos sensibles y registro de auditoría de cada acción. Documentada con OpenAPI y desplegable con Docker Compose.',
+        medalists: 'Arquitectura medallón (Bronze → Silver → Gold) sobre los medallistas de París 2024 en Snowflake. Modelo estrella con dbt, deduplicación y limpieza de nulos, tests de integridad referencial, orquestación con Dagster e informe en Power BI.',
+        runway: 'Herramienta open source para Claude Code: status line con el contexto restante y los límites de uso, notas de traspaso entre sesiones y extensión de VS Code con históricos. CI con tests y CodeQL.',
         heart: 'Predicción de enfermedades cardíacas con ~90 % de accuracy. EDA completo, feature engineering e imputación de variables clínicas. Comparativa de SVM, KNN y árboles de decisión con validación cruzada.',
         hellcorp: 'Pipeline completo sobre datos de origen irregulares: más de 27.500 registros que exigieron muchas transformaciones con Pandas para limpiarlos y normalizarlos antes de cargarlos en MySQL con integridad referencial. Consultas SQL avanzadas sobre el modelo resultante.',
         energy: 'Predicción de consumo energético para el Ayuntamiento de Granada. Limpieza de históricos, ingeniería de features, benchmark de algoritmos y aplicación web con FastAPI y PostgreSQL.',
@@ -154,7 +158,7 @@ export const translations = {
         monarch: 'API RESTful con Spring Boot para gestionar reinos medievales y monarcas, con MySQL y documentación en Postman.',
         cyber: 'Detección y prevención de amenazas en aplicaciones web mediante modelos de IA.',
         arduino: 'Coche autónomo con Arduino: control de motores, detección de obstáculos y navegación.',
-        passport: 'Aplicación para gestionar y consultar la información de productos, con prototipo público en Vercel.',
+        passport: 'Pasaporte digital de producto: una marca crea productos y el usuario los escanea desde el móvil (simulando NFC/QR) para ver su historial y autenticidad. Web en Next.js y app en React Native.',
         portfolio: 'Este portfolio: React y Vite, sistema de diseño propio, modo claro y oscuro, español e inglés.'
       }
     },
@@ -330,10 +334,14 @@ export const translations = {
         backend: 'Backend',
         fullStack: 'Full Stack',
         frontend: 'Frontend',
+        tooling: 'Dev tooling',
         iot: 'IoT and hardware',
         security: 'Security'
       },
       descriptions: {
+        medical: 'REST API for patient management in healthcare: stateless JWT authentication, BCrypt-hashed passwords, masking of sensitive data and an audit log of every action. Documented with OpenAPI and deployable with Docker Compose.',
+        medalists: 'Medallion architecture (Bronze → Silver → Gold) on Paris 2024 medalists in Snowflake. Star schema built with dbt, deduplication and null cleanup, referential integrity tests, Dagster orchestration and a Power BI report.',
+        runway: 'Open source tool for Claude Code: a status line showing remaining context and usage limits, handoff notes between sessions and a VS Code extension with history charts. CI with tests and CodeQL.',
         heart: 'Heart disease prediction with ~90% accuracy. Full EDA, feature engineering and imputation of clinical variables. SVM, KNN and decision trees compared with cross-validation.',
         hellcorp: 'End-to-end pipeline on messy source data: 27,500+ records that needed heavy transformation with Pandas to clean and normalise them before loading into MySQL with referential integrity. Advanced SQL queries on the resulting model.',
         energy: 'Energy consumption forecasting for Granada City Council. Historical data cleaning, feature engineering, algorithm benchmarking and a web app built with FastAPI and PostgreSQL.',
@@ -342,7 +350,7 @@ export const translations = {
         monarch: 'RESTful API with Spring Boot for managing medieval kingdoms and monarchs, with MySQL and Postman documentation.',
         cyber: 'Threat detection and prevention for web applications using AI models.',
         arduino: 'Autonomous Arduino car: motor control, obstacle detection and navigation.',
-        passport: 'App for managing and browsing product information, with a public prototype on Vercel.',
+        passport: 'Digital product passport: a brand creates products and users scan them from their phone (simulating NFC/QR) to see their history and authenticity. Next.js web app and React Native mobile app.',
         portfolio: 'This portfolio: React and Vite, custom design system, light and dark mode, Spanish and English.'
       }
     },

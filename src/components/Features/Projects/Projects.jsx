@@ -4,6 +4,21 @@ import './Projects.css';
 
 const PROJECTS = [
   {
+    id: 'medical', title: 'Medical API', category: 'backend', alsoIn: ['security'], year: 2026, done: true,
+    technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker'],
+    links: { github: 'https://github.com/garcialuis23/medical-api' }
+  },
+  {
+    id: 'medalists', title: 'Paris 2024 Medallion Pipeline', category: 'dataEngineering', year: 2026, done: true,
+    technologies: ['Snowflake', 'dbt', 'Dagster', 'Power BI'],
+    links: { github: 'https://github.com/garcialuis23/2024_medalists_all' }
+  },
+  {
+    id: 'runway', title: 'context-runway', category: 'tooling', year: 2026, done: false,
+    technologies: ['Node.js', 'VS Code API', 'GitHub Actions'],
+    links: { github: 'https://github.com/garcialuis23/context-runway' }
+  },
+  {
     id: 'heart', title: 'Heart Attack Prediction', category: 'machineLearning', year: 2026, done: true,
     technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy'],
     links: { github: 'https://github.com/garcialuis23/heart-attack-prediction' }
@@ -11,7 +26,7 @@ const PROJECTS = [
   {
     id: 'passport', title: 'Product Passport', category: 'frontend', year: 2026, done: false,
     technologies: ['Next.js', 'React Native', 'Vercel'],
-    links: { live: 'https://product-passport-six.vercel.app/' }
+    links: { github: 'https://github.com/garcialuis23/product-passport', live: 'https://product-passport-six.vercel.app/' }
   },
   {
     id: 'hellcorp', title: 'Hellcorp', category: 'dataEngineering', year: 2025, done: true,
@@ -55,7 +70,7 @@ const PROJECTS = [
   }
 ];
 
-const CATEGORIES = ['all', 'backend', 'fullStack', 'dataEngineering', 'machineLearning', 'frontend', 'security', 'iot'];
+const CATEGORIES = ['all', 'backend', 'fullStack', 'dataEngineering', 'machineLearning', 'frontend', 'tooling', 'security', 'iot'];
 
 const Projects = () => {
   const { t } = useLanguage();
